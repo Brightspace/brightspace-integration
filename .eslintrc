@@ -1,0 +1,6 @@
+{
+  "extends": "brightspace",
+  "env": {
+    "node": true
+  }
+}

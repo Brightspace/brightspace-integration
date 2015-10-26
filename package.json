@@ -1,6 +1,6 @@
 {
   "name": "brightspace-integration",
-  "version": "10.5.4",
+  "version": "10.5.5",
   "description": "Integration project for components consumed by Brightspace.",
   "private": true,
   "main": "src/index.js",
@@ -8,7 +8,7 @@
     "autoprefix": "postcss -c postcss.config.json",
     "prebuild": "rimraf dist && mkdir dist",
     "build": "npm run build:js && npm run build:sass && npm run build:icons",
-    "build:js": "gulp javascript",
+    "build:js": "browserify -g uglifyify ./src/index.js > ./dist/bsi.js",
     "postbuild:js": "npm run uglify:js",
     "build:sass": "node-sass --output-style expanded ./src/vui.scss ./dist/bsi.css",
     "postbuild:sass": "npm run autoprefix && npm run uglify:css",
@@ -37,15 +37,19 @@
   },
   "devDependencies": {
     "autoprefixer": "^5.2.0",
+    "browserify": "^11.2.0",
     "cpy": "^3.4.0",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
+    "d2l-intl": "^0.1.0",
+    "eslint": "^1.6.0",
+    "eslint-config-brightspace": "0.0.2",
+    "eslint-plugin-react": "^3.5.1",
     "frau-publisher": "^2.5.2",
     "http-server": "^0.8.0",
     "lie": "^3.0.1",
     "node-sass": "^3.3.2",
     "postcss-cli": "^2.1.0",
     "rimraf": "^2.4.2",
-    "uglify": "^0.1.5"
+    "uglify": "^0.1.5",
+    "uglifyify": "^3.0.1"
   }
 }

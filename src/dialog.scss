@@ -1,0 +1,14 @@
+@import '../bower_components/vui-typography/typography.scss';
+
+.dbd_dialog .d2l-dialog-title .d2l-heading .vui-heading-1 {
+	color: $vui-fontColor;
+	font-size: 1em;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+.ddial_t a,
+.ddial_t a:hover,
+.ddial_t a:focus {
+	color: $vui-fontColor;
+}

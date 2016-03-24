@@ -1,6 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
+    "brightspace-navigation": "https://github.com/Brightspace/navigation-ui.git",
     "jquery-vui-accordion": "~0.3.0",
     "jquery-vui-collapsible-section": "~1.1.0",
     "jquery-vui-change-tracking": "~0.4.0",
@@ -14,13 +15,13 @@
     "vui-icons": "~1.1.0",
     "vui-input": "~1.5.5",
     "vui-link": "~1.1.1",
-    "vui-loading-spinner":"~1.0.0",
+    "vui-loading-spinner": "~1.0.0",
     "vui-image-action": "~0.2.1",
     "vui-list": "~1.0.1",
     "vui-offscreen": "~0.3.0",
     "vui-typography": "~2.0.2",
-    "vui-table":"~0.0.10",
-    "vui-validation":"~1.0.5"
+    "vui-table": "~0.0.10",
+    "vui-validation": "~1.0.5"
   },
   "private": true
 }

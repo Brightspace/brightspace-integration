@@ -9,7 +9,8 @@
     "vui-focus": "~0.7.1",
     "vui-icons": "~1.1.0",
     "vui-loading-spinner":"~1.0.0",
-    "vui-offscreen": "~0.3.0"
+    "vui-offscreen": "~0.3.0",
+    "vui-typography": "~3.0.0"
   },
   "private": true
 }

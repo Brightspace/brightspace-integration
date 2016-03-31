@@ -6,9 +6,11 @@
     "jquery-vui-change-tracking": "~0.4.0",
     "jquery-vui-scrollspy": "~0.2.0",
     "polymer": "^1.3.0",
+    "vui-button": "~2.0.0",
     "vui-focus": "~0.7.1",
     "vui-icons": "~1.1.0",
-    "vui-loading-spinner":"~1.0.0",
+    "vui-loading-spinner": "~1.0.0",
+    "vui-link": "~2.0.0",
     "vui-offscreen": "~0.3.0",
     "vui-typography": "~3.0.0"
   },

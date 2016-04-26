@@ -1,7 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "d2l-navigation": "https://github.com/Brightspace/navigation-ui.git#0.0.3",
+    "d2l-navigation": "https://github.com/Brightspace/navigation-ui.git#0.0.4",
     "jquery-vui-accordion": "~0.3.0",
     "jquery-vui-collapsible-section": "~1.1.0",
     "jquery-vui-change-tracking": "~0.4.0",

@@ -1,0 +1,145 @@
+.d2l-dialog {
+	background-color: #f4f4f4;
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.d2l-dialog-inner {
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.d2l-dialog-title {
+	background: #f8f8f8; /* Old browsers */
+	background: -moz-linear-gradient(top, #f8f8f8 0%, #f2f2f2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f8f8f8 0%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f8f8f8 0%,#f2f2f2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f8f8f8 0%,#f2f2f2 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f8f8f8 0%,#f2f2f2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+	border-bottom: 1px solid #cccccc;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 0 0 #ffffff;
+	-moz-box-shadow: inset 0 1px 0 0 #ffffff;
+	box-shadow: inset 0 1px 0 0 #ffffff;
+	padding: 5px 46px 5px 10px;
+	zoom: 1;
+}
+
+[dir='rtl'] .d2l-dialog-title {
+	padding-right: 10px;
+	padding-left: 46px;
+}
+
+.d2l-dialog-title .d2l-heading {
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.d2l-dialog-container {
+	background-color: #ffffff;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+}
+
+.d2l-dialog-close {
+	border-left: 1px solid #cccccc;
+	height: 100%;
+}
+
+[dir='rtl'] .d2l-dialog-close {
+	border-left: none;
+	border-right: 1px solid #cccccc;
+}
+
+.d2l-dialog-close > span {
+	background-image: url(/d2l/img/lp/dialog/x.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: block;
+	height: 100%;
+	padding: 0 10px;
+	width: 16px;
+}
+
+.d2l-dialog-closed {
+	-webkit-transition:all 0.5s ease-out;
+	-moz-transition:all 0.5s ease-out;
+	-o-transition:all 0.5s ease-out;
+	transition:all 0.5s ease-out;
+}
+
+.d2l-dialog-open {
+	position: static;
+}
+
+.d2l-dialog-body {
+	-moz-box-shadow: 0 2px 1px #F4F4F4 inset;
+	-webkit-box-shadow: 0 2px 1px #F4F4F4 inset;
+	box-shadow: 0 2px 1px #F4F4F4 inset;
+}
+
+.d2l-dialog-frame {
+	height: 300px;
+	position: absolute;
+	width: 100%;
+}
+
+.d2l-dialog-footer {
+	background-color: #f4f4f4;
+	border-top: 1px solid #d7d7d7;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	min-height: 26px;
+}
+
+.d2l-dialog-footer-container {
+	box-shadow: 0 0 6px 1px rgba(180, 180, 205, 0.8);
+	position: absolute;
+}
+
+.d2l-dialog-optional-footer {
+	background-color:#f1f4ff;
+	border-top: 1px solid #cccccc;
+}
+
+.d2l-dialog-resize {
+	margin: 0 7px 9px 0;
+}
+
+.d2l-dialog-loading {
+	width: 100%;
+}
+
+[dir='rtl'] .d2l-dialog-resize {
+	margin-right: 0;
+	margin-left: 7px;
+}
+
+.d2l-dialog-width {
+	background-color: #ffffff;
+}
+
+.d2l-dialog-buttons {
+	padding: 10px;
+}
+
+.d2l-dialog-hidden {
+	display: none;
+}

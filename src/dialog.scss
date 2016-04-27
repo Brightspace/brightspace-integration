@@ -1,0 +1,30 @@
+.d2l-dialog-container {
+	background-color: #ffffff;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+}
+.d2l-dialog-frame {
+	width: 100%;
+}
+.d2l-dialog-loading {
+	width: 100%;
+}
+.d2l-dialog-closed {
+	-webkit-transition:all 0.5s ease-out;
+	-moz-transition:all 0.5s ease-out;
+	-o-transition:all 0.5s ease-out;
+	transition:all 0.5s ease-out;
+}
+.d2l-dialog-open {
+	position: static;
+}
+.d2l-dialog-width {
+	background-color: #ffffff;
+}
+.d2l-dialog-buttons {
+	padding: 10px;
+}
+.d2l-dialog-hidden {
+	display: none;
+}

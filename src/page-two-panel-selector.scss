@@ -9,8 +9,8 @@
 }
 
 .d2l-twopanelselector-side {
-	max-width: 20.5rem;
-	width: 20.5rem;
+	max-width: 410px;
+	width: 410px;
 }
 
 .d2l-twopanelselector-side.d2l-twopanelselector-side-sep,
@@ -58,4 +58,5 @@
 
 .d2l-twopanelselector-wrapper {
 	background-color: $vui-color-regolith;
+	background: linear-gradient(to right, #ffffff 0%, $vui-color-regolith 410px);
 }

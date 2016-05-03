@@ -1,0 +1,129 @@
+<dom-module id="bsi-htmlblock">
+	<template>
+		<style include="vui-colors">
+			.vui-typography .d2l-htmlblock {
+				line-height: normal;
+				text-align: left;
+				overflow-x: auto;
+				overflow-y: hidden;
+			}
+
+			.vui-typography .d2l-htmlblock ul,
+			.vui-typography .d2l-htmlblock ol {
+				list-style-position: outside;
+				margin: 1em 0;
+				padding-left: 3em;
+			}
+
+			.vui-typography .d2l-htmlblock ul,
+			.vui-typography .d2l-htmlblock ul[type="disc"] {
+				list-style-type: disc;
+			}
+
+			.vui-typography .d2l-htmlblock ul ul,
+			.vui-typography .d2l-htmlblock ul ol,
+			.vui-typography .d2l-htmlblock ol ul,
+			.vui-typography .d2l-htmlblock ol ol {
+				margin-top: 0;
+				margin-bottom:0;
+			}
+
+			.vui-typography .d2l-htmlblock ul ul,
+			.vui-typography .d2l-htmlblock ol ul,
+			.vui-typography .d2l-htmlblock ul[type="circle"] {
+				list-style-type: circle;
+			}
+
+			.vui-typography .d2l-htmlblock ul ul ul,
+			.vui-typography .d2l-htmlblock ul ol ul,
+			.vui-typography .d2l-htmlblock ol ul ul,
+			.vui-typography .d2l-htmlblock ol ol ul,
+			.vui-typography .d2l-htmlblock ul[type="square"] {
+				list-style-type: square;
+			}
+
+			.vui-typography .d2l-htmlblock h1,
+			.vui-typography .d2l-htmlblock h2,
+			.vui-typography .d2l-htmlblock h3,
+			.vui-typography .d2l-htmlblock h4,
+			.vui-typography .d2l-htmlblock h5,
+			.vui-typography .d2l-htmlblock h6,
+			.vui-typography .d2l-htmlblock b,
+			.vui-typography .d2l-htmlblock strong,
+			.vui-typography .d2l-htmlblock b *,
+			.vui-typography .d2l-htmlblock strong * {
+				font-weight: bold;
+			}
+
+			.vui-typography .d2l-htmlblock a,
+			.vui-typography .d2l-htmlblock a:visited {
+				color: var(--vui-color-celestine);
+				cursor: pointer;
+				font-weight: normal;
+				text-decoration: none;
+			}
+			.vui-typography .d2l-htmlblock a:hover,
+			.vui-typography .d2l-htmlblock a:focus {
+				color: var(--vui-color-celestuba);
+				text-decoration: underline;
+			}
+
+			.vui-typography .d2l-htmlblock h1 {
+				font-size: 2em;
+				line-height: 37px;
+				margin: 21.43px 0;
+			}
+
+			.vui-typography .d2l-htmlblock h2 {
+				font-size: 1.5em;
+				line-height: 27px;
+				margin: 19.92px 0;
+			}
+
+			.vui-typography .d2l-htmlblock  h3 {
+				font-size: 1.2em;
+				line-height: 23px;
+				margin: 18.72px 0;
+			}
+
+			.vui-typography .d2l-htmlblock  h4 {
+				font-size: 1em;
+				line-height: 20px;
+				margin: 21.28px 0;
+			}
+
+			.vui-typography .d2l-htmlblock h5 {
+				font-size: 0.83em;
+				line-height: 16px;
+				margin: 22.13px 0;
+			}
+
+			.vui-typography .d2l-htmlblock  h6 {
+				font-size: 0.67em;
+				line-height: 13px;
+				margin: 24.97px 0;
+			}
+
+			.vui-typography .d2l-htmlblock pre {
+				font-family: Monospace;
+				font-size: 13px;
+				margin: 13px 0;
+			}
+
+			.vui-typography .d2l-htmlblock p {
+				margin: 0.5em 0 1em 0;
+			}
+
+			[dir='rtl'] .vui-typography .d2l-htmlblock {
+				text-align: right;
+			}
+
+			[dir='rtl'] .vui-typography .d2l-htmlblock ul,
+			[dir='rtl'] .vui-typography .d2l-htmlblock ol {
+				padding-left: 0;
+				padding-right: 3em;
+			}
+
+		</style>
+	</template>
+</dom-module>

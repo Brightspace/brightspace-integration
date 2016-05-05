@@ -40,7 +40,7 @@
     "browserify": "^11.2.0",
     "clean-css": "^3.4.9",
     "cpy": "^3.4.0",
-    "d2l-intl": "^0.2.1",
+    "d2l-intl": "^0.3.0",
     "eslint": "^1.6.0",
     "eslint-config-brightspace": "0.0.2",
     "eslint-plugin-react": "^3.5.1",

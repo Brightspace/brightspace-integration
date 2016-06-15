@@ -54,7 +54,6 @@
     "rimraf": "^2.4.2",
     "uglify-js": "^2.6.1",
     "uglifyify": "^3.0.1",
-    "vui-table": "git://github.com/Brightspace/valence-ui-table.git#bsi-wc",
     "vui-validation": "git://github.com/Brightspace/valence-ui-validation.git#bsi-wc",
     "web-component-shards": "^1.1.3"
   }

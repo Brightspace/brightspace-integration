@@ -23,7 +23,6 @@
     "vui-focus": "~0.7.1",
     "vui-input": "~1.6.0",
     "vui-list": "~1.1.0",
-    "vui-loading-spinner": "~1.0.0",
     "vui-table": "~0.1.0",
     "vui-validation": "~1.1.0"
   },

@@ -1,5 +1,5 @@
 @import '../bower_components/d2l-colors/d2l-colors.scss';
-@import '../bower_components/vui-loading-spinner/loadingSpinner.scss';
+@import './deprecated/loadingSpinner.scss';
 
 $dialog-media-break-small: "(max-device-width: 767px), screen and (max-width:767px)";
 $dialog-media-break-small-iframe: "(max-device-width: 767px)";

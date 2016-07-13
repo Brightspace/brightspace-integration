@@ -1,0 +1,6 @@
+@import './loadingSpinner';
+
+.vui-loading-spinner {
+	@include vui-loading-spinner;
+}
+

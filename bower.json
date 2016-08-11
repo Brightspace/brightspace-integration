@@ -8,7 +8,7 @@
     "d2l-link": "~3.0.0",
     "d2l-loading-spinner": "~4.0.0",
     "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#0.9.4",
-    "d2l-navigation": "https://github.com/Brightspace/d2l-navigation-ui.git#0.9.1",
+    "d2l-navigation": "https://github.com/Brightspace/d2l-navigation-ui.git#0.9.2",
     "d2l-offscreen": "~2.1.0",
     "d2l-typography": "~4.0.1",
     "iron-icon": "~1.0.8",

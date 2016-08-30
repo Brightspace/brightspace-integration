@@ -1,5 +1,5 @@
 language: node_js
-node_js: stable
+node_js: "5"
 sudo: false
 after_success:
 - '[ "$TRAVIS_SECURE_ENV_VARS" = "true" ] && [ "x$TRAVIS_TAG" != "x" ] && npm run

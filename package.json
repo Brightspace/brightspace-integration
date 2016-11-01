@@ -22,7 +22,7 @@
     "serve": "http-server dist --cors",
     "test": "npm run build",
     "uglify:css": "cleancss -s ./dist/bsi.css -o ./dist/bsi.min.css -c",
-    "uglify:html": "posthtml -i ./dist/*.html -r -c posthtml.js",
+    "uglify:html": "node posthtml -i ./dist/*.html -r -c posthtml.js",
     "uglify:js": "uglifyjs ./dist/bsi.js --compress --mangle -o ./dist/bsi.min.js",
     "jsonpify-imports": "node jsonp-imports.js './dist/*.html'"
   },

@@ -1,0 +1,8 @@
+@@ parameterized
+    | deviceType    | tags      | size      |
+    | Desktop       | desktop   | 1024x768  |
+    | Mobile        | mobile    | 320x600   |
+
+Font styles rendered on ${deviceType}
+    http://localhost:8089/fonts.html ${size}
+        check test/fonts.gspec --include "${tags}"

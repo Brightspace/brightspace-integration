@@ -1,0 +1,41 @@
+@objects
+    link-standard           #link-std
+    link-main               #link-main
+    link-small              #link-small
+    link-standard-hover     #link-std-hover
+    link-main-hover         #link-main-hover
+    link-small-hover        #link-small-hover
+    
+= Link Font Styles Alignment =
+    @on desktop
+        link-standard:
+            css color is "rgba(0, 111, 191, 1)"
+            css font-size is "19px"
+            css font-weight is "300"
+        link-main:
+            css color is "rgba(0, 111, 191, 1)"
+            css font-size is "19px"
+            css font-weight is "bold"
+        link-small:
+            css color is "rgba(0, 111, 191, 1)"
+            css font-size is "14px"
+            css font-weight is "normal"
+            css line-height is "20px"
+            css letter-spacing matches "0\.40+.*px"
+        link-standard-hover:
+            css color is "rgba(28, 82, 149, 1)"
+            css font-size is "19px"
+            css font-weight is "300"
+            css text-decoration is "underline"
+        link-main-hover:
+            css color is "rgba(28, 82, 149, 1)"
+            css font-size is "19px"
+            css font-weight is "bold"
+            css text-decoration is "underline"
+        link-small-hover:
+            css color is "rgba(28, 82, 149, 1)"
+            css font-size is "14px"
+            css font-weight is "normal"
+            css line-height is "20px"
+            css letter-spacing matches "0\.40+.*px"
+            css text-decoration is "underline"

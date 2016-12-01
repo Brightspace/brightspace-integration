@@ -5,8 +5,8 @@
     link-standard-hover     #link-std-hover
     link-main-hover         #link-main-hover
     link-small-hover        #link-small-hover
-    
-= Link Font Styles Alignment =
+
+= Link Font Styles =
     @on desktop
         link-standard:
             css color is "rgba(0, 111, 191, 1)"

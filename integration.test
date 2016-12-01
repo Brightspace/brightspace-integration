@@ -1,8 +1,15 @@
-@@ parameterized
+@@ table devices
     | deviceType    | tags      | size      |
     | Desktop       | desktop   | 1024x768  |
-    | Mobile        | mobile    | 320x600   |
 
+@@ parameterized using devices
+Input styles rendered on ${deviceType}
+    http://localhost:8089/inputs.html ${size}
+        wait 1s
+        check test/inputs.gspec --include "${tags}"
+
+@@ parameterized using devices
 Font styles rendered on ${deviceType}
     http://localhost:8089/fonts.html ${size}
+        wait 1s
         check test/fonts.gspec --include "${tags}"

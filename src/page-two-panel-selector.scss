@@ -70,7 +70,6 @@
 		.d2l-twopanelselector-side {
 			display: block;
 			max-width: none;
-			min-height: 100vh;
 			width: auto;
 			&.d2l-twopanelselector-side-sep {
 				background-color: $d2l-color-regolith;
@@ -80,6 +79,12 @@
 		.d2l-twopanelselector-main {
 			display: block;
 			min-height: 100vh;
+
+			.d2l-page-header {
+				border-top: 1px solid $d2l-color-titanius;
+				margin-top: 1.5rem;
+				padding-top: 1.5rem;
+			}
 		}
 
 		.d2l-twopanelselector-side-padding,

@@ -14,6 +14,7 @@
     "d2l-navigation": "https://github.com/Brightspace/d2l-navigation-ui.git#0.14.20",
     "d2l-offscreen": "^2.2.3",
     "d2l-performance": "^0.0.4",
+    "d2l-siren-parser": "git://github.com/Brightspace/d2l-siren-parser-ui.git#^1.1.3",
     "d2l-table": "^0.5.4",
     "d2l-typography": "^5.2.3",
     "jquery-vui-accordion": "^0.3.2",

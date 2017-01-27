@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html style="font-size: 20px;">
+<head>
+	<meta charset="utf-8">
+	<title>Typography Snapshot</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+	<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
+	<link rel="import" href="http://localhost:8088/bsi.html">
+	<link rel="stylesheet" type="text/css" href="http://localhost:8088/bsi.css">
+	<style is="custom-style" include="bsi-style"></style>
+</head>
+
+<body class="d2l-body d2l-typography">
+	<div id="input-inline" style="display:-webkit-flex;display:flex;">
+		<button class="vui-button" id="input-button">Press Here</button>
+		<input class="vui-input" type="text" id="input-text" />
+		<select class="vui-input" id="input-select">
+			<option>Select This Option</option>
+		</select>
+		<div id="input-search" class="vui-input-search-container">
+			<input type="search"/>
+			<input type="button" value="Search" class="vui-input-search-button" />
+		</div>
+		<button id="button-menu" class="d2l-button-menu bsi-button-menu"><span>Button Menu</span></button>
+	</div>
+</body>
+</html>

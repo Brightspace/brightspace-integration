@@ -1,0 +1,14 @@
+@objects
+    input-text        #input-text
+    input-button      #input-button
+    input-select      #input-select
+    input-search      #input-search
+    button-menu       #button-menu
+
+= Input Font Styles =
+    @on desktop
+        input-button:
+            aligned horizontally all input-text
+            aligned horizontally all input-select
+            aligned horizontally all input-search
+            aligned horizontally all button-menu

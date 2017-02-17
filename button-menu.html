@@ -53,6 +53,11 @@
 				cursor: default;
 			}
 
+			.bsi-button-menu.bsi-button-menu-primary {
+				box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0);
+				transition: box-shadow 0.2s;
+			}
+
 			.bsi-button-menu.bsi-button-menu-primary,
 			.bsi-button-menu.bsi-button-menu-primary.vui-disabled:hover,
 			.bsi-button-menu.bsi-button-menu-primary.vui-disabled:focus {
@@ -60,9 +65,10 @@
 				border-color: var(--d2l-color-celestuba);
 				color: var(--d2l-color-white);
 			}
+
 			.bsi-button-menu.bsi-button-menu-primary:hover,
 			.bsi-button-menu.bsi-button-menu-primary:focus {
-				background-color: var(--d2l-color-celestuba);
+				box-shadow: 0 0 0 1.5px var(--d2l-color-celestine);
 			}
 
 		</style>

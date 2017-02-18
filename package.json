@@ -8,7 +8,7 @@
     "autoprefix": "postcss -c postcss.config.json",
     "prebuild": "rimraf dist && mkdir dist",
     "build": "npm run build:js && npm run build:sass && npm run build:icons && npm run build:wc",
-    "build:js": "browserify -g uglifyify ./src/index.js > ./dist/bsi.js",
+    "build:js": "rollup -c -- ./src/index.js > ./dist/bsi.js",
     "postbuild:js": "npm run uglify:js",
     "build:sass": "node-sass --output-style expanded ./src/bsi.scss ./dist/bsi.css && node-sass --output-style expanded ./src/datagrid/datagrid.scss ./dist/datagrid.css",
     "postbuild:sass": "npm run autoprefix && npm run uglify:css",
@@ -43,7 +43,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
-    "browserify": "^13.1.0",
     "clean-css": "^3.4.19",
     "cpy-cli": "^1.0.1",
     "d2l-intl": "^0.3.2",
@@ -58,8 +57,11 @@
     "node-sass": "^3.10.1",
     "postcss-cli": "^2.6.0",
     "rimraf": "^2.5.4",
+    "rollup": "^0.41.4",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-json": "^2.1.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
     "uglify-js": "^2.7.3",
-    "uglifyify": "^3.0.2",
     "web-component-shards": "^1.1.4"
   }
 }

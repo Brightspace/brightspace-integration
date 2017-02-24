@@ -1,7 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "d2l-alert": "https://github.com/Brightspace/alert.git#0.0.1",
+    "d2l-alert": "https://github.com/Brightspace/alert.git#0.0.2",
     "d2l-button": "^3.0.8",
     "d2l-button-group": "^0.5.0",
     "d2l-colors": "^2.2.3",
@@ -12,8 +12,8 @@
     "d2l-loading-spinner": "^5.0.3",
     "d2l-menu": "^0.3.1",
     "d2l-more-less": "^2.1.7",
-    "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#0.31.0",
-    "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#0.0.2",
+    "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#0.31.1",
+    "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#0.0.4",
     "d2l-navigation": "https://github.com/Brightspace/d2l-navigation-ui.git#0.15.1",
     "d2l-offscreen": "^2.2.5",
     "d2l-performance": "^0.0.4",

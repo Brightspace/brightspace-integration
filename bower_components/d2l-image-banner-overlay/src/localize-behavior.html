@@ -1,0 +1,81 @@
+<link rel="import" href="../../app-localize-behavior/app-localize-behavior.html">
+
+<script>
+	'use strict';
+
+	(function() {
+		window.D2L = window.D2L || {};
+		window.D2L.ImageBanner = window.D2L.ImageBanner || {};
+
+		/*
+		* Behavior for elements that require localization, based on `app-localize-behavior`
+		* @polymerBehavior window.D2L.ImageBanner.LocalizeBehavior
+		*/
+		window.D2L.ImageBanner.LocalizeBehaviorImpl = {
+			properties: {
+				language: {
+					type: String,
+					computed: '_determineLanguage(locale, resources)'
+				},
+				locale: {
+					type: String,
+					value: function() {
+						return document.documentElement.lang
+							|| document.documentElement.getAttribute('data-lang-default')
+							|| 'en-us';
+					}
+				},
+				resources: {
+					value: function() {
+						var langs = {
+							'en': {
+								'removeBanner': 'Remove This Banner',
+								'bannerSettings': 'Banner Settings',
+								'bannerRemoved': 'Banner removed! You can re-enable the banner in {placeholder}.',
+								'courseOfferingInformation': 'Course Offering Information',
+								'undo': 'Undo',
+								'closeAlert': 'Close Alert',
+								'somethingWentWrong': 'Oops! Something went wrong. {placeholder}.',
+								'refreshAndTryAgain': 'Refresh and try again'
+							},
+							'ar': {},
+							'es': {},
+							'fr': {},
+							'ja': {},
+							'ko': {},
+							'nl': {},
+							'pt': {},
+							'sv': {},
+							'tr': {},
+							'zh': {},
+							'zh-tw': {}
+						};
+
+						return langs;
+					}
+				}
+			},
+			_determineLanguage: function(locale, resources) {
+				locale = locale.toLowerCase();
+
+				if (resources[locale]) {
+					return locale;
+				}
+
+				var langAndRegion = locale.split('-');
+
+				if (resources[langAndRegion[0]]) {
+					return langAndRegion[0];
+				}
+
+				return 'en';
+			}
+		};
+
+		/* @polymerBehavior */
+		window.D2L.ImageBanner.LocalizeBehavior = [
+			Polymer.AppLocalizeBehavior,
+			window.D2L.ImageBanner.LocalizeBehaviorImpl
+		];
+	})();
+</script>

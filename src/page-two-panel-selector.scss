@@ -16,6 +16,10 @@ $d2l-twopanelselector-width: 320px;
 	width: $d2l-twopanelselector-width;
 }
 
+.daylight .d2l-twopanelselector-side.d2l-repsonsive-collapse-layout {
+	position: relative;
+}
+
 .d2l-twopanelselector-main {
 	max-width: 909px;
 }

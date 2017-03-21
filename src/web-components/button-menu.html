@@ -22,6 +22,7 @@
 				outline: none;
 				padding: 0.5rem 1.5rem;
 				text-align: center;
+				transition: box-shadow 0.2s;
 				-webkit-user-select: none;
 				-moz-user-select: none;
 				-ms-user-select: none;
@@ -29,6 +30,7 @@
 				vertical-align: middle;
 				white-space: nowrap;
 				width: auto;
+				@apply(--d2l-button-clear-focus);
 			}
 
 			[dir='rtl'] .bsi-button-menu {
@@ -44,8 +46,11 @@
 				color: var(--d2l-color-ferrite);
 			}
 
-			.bsi-button-menu:hover, .bsi-button-menu:focus {
+			.bsi-button-menu:hover {
 				background-color: var(--d2l-color-gypsum);
+			}
+			.bsi-button-menu.button-enabled:focus {
+				@apply(--d2l-button-focus);
 			}
 
 			.bsi-button-menu.vui-disabled {
@@ -60,11 +65,10 @@
 				border-color: var(--d2l-color-celestuba);
 				color: var(--d2l-color-white);
 			}
-			.bsi-button-menu.bsi-button-menu-primary:hover,
-			.bsi-button-menu.bsi-button-menu-primary:focus {
+
+			.bsi-button-menu.bsi-button-menu-primary:hover {
 				background-color: var(--d2l-color-celestuba);
 			}
-
 		</style>
 	</template>
 </dom-module>

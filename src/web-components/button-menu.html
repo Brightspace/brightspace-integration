@@ -49,8 +49,8 @@
 			.bsi-button-menu:hover {
 				background-color: var(--d2l-color-gypsum);
 			}
-			.bsi-button-menu.button-enabled:focus {
-				@apply(--d2l-button-focus);
+			.bsi-button-menu:not(.vui-disabled):not(.bsi-button-menu-primary):focus {
+				@apply(--d2l-secondary-button-focus);
 			}
 
 			.bsi-button-menu.vui-disabled {
@@ -68,6 +68,9 @@
 
 			.bsi-button-menu.bsi-button-menu-primary:hover {
 				background-color: var(--d2l-color-celestuba);
+			}
+			.bsi-button-menu.bsi-button-menu-primary:not(.vui-disabled):focus {
+				@apply(--d2l-primary-button-focus);
 			}
 		</style>
 	</template>

@@ -13,7 +13,7 @@
     "d2l-menu": "^0.3.5",
     "d2l-more-less": "^2.2.0",
     "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#1.4.1",
-    "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#^1.0.0",
+    "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#^1.0.2",
     "d2l-navigation": "https://github.com/Brightspace/d2l-navigation-ui.git#0.15.2",
     "d2l-offscreen": "^2.2.5",
     "d2l-performance": "^0.0.4",

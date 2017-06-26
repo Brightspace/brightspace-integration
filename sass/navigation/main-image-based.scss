@@ -33,6 +33,7 @@
 }
 
 .d2l-navigation-ib-item-link {
+	background-color: transparent;
 	border-radius: 0.4rem;
 	border: 1px solid transparent;
 	box-sizing: border-box;
@@ -42,6 +43,16 @@
 	padding-top: 0.75rem;
 	text-align: center;
 	width: 7.3rem;
+	padding-left: 0;
+	padding-right: 0;
+	line-height: 1rem;
+}
+
+.d2l-navigation-ib-item-group {
+	line-height: 1rem;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0.5rem;
 }
 
 .d2l-navigation-ib-item-link:focus,
@@ -58,12 +69,40 @@
 	box-shadow: 0 0 0 4px rgba(0, 111, 191, 0.3);
 }
 
-.d2l-navigation-ib-item-link-icon {
+.d2l-navigation-ib-item-link-icon,
+.d2l-navigation-ib-item-group-icons {
 	border-radius: 0.4rem;
 	height: 4rem;
+	width: 4rem;
+}
+
+.d2l-navigation-ib-item-link-icon {
+	display: block;
+	margin: 0 auto;
 	object-fit: cover;
 	object-position: 0 0;
-	width: 4rem;
+}
+
+.d2l-navigation-ib-item-group-icons {
+	background-color: $d2l-color-sylvite;
+	border: 1px solid $d2l-color-gypsum;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 6px;
+}
+
+.d2l-navigation-ib-item-group-icon {
+	height: 0.9rem;
+	width: 0.9rem;
+}
+
+.d2l-navigation-ib-item-group-content {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 450px;
 }
 
 .d2l-navigation-ib-item-link-text {

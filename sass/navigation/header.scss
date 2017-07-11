@@ -38,14 +38,9 @@
 	padding: 0 7px;
 
 	.d2l-navigation-s-header-container & {
-		&.d2l-navigation-s-header-no-home-icon .d2l-navigation-s-logo-divider {
-			@media (min-width: $d2l-navigation-bp-mobile-menu) {
-				display: none;
-			}
-		}
 		& .d2l-navigation-s-home-icon,
-		.d2l-navigation-s-has-title & .d2l-navigation-s-logo-divider,
-		.d2l-navigation-s-has-title & .d2l-navigation-s-logo {
+		& .d2l-navigation-s-logo-divider,
+		& .d2l-navigation-s-logo {
 			@media (max-width: $d2l-navigation-bp-mobile-menu) {
 				display: none;
 			}

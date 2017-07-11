@@ -1,3 +1,5 @@
+@import 'common.scss';
+
 .d2l-navigation-s-admin-menu {
 	display: inline-block;
 	flex: 0 0 auto;
@@ -17,7 +19,7 @@
 	line-height: 1.5rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: $d2l-navigation-bp-mobile-menu) {
 	.d2l-navigation-s-admin-menu {
 		display: none;
 	}

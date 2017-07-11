@@ -4,8 +4,15 @@
 .d2l-navigation-s-logo {
 	align-items: center;
 	display: inline-flex;
+	flex-shrink: 0;
+	-webkit-flex-shrink: 0;
+	-moz-flex-shrink: 0;
 	height: 100%;
+	margin-right: $d2l-navigation-margin-regular;
 	position: relative;
+	@media (max-width: $d2l-navigation-bp-separators) {
+		margin-right: $d2l-navigation-margin-compact;
+	}
 }
 
 .d2l-navigation-s-logo-wrapper > a {

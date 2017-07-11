@@ -1,3 +1,5 @@
+@import 'common.scss';
+
 .d2l-navigation-s-header-course {
 	align-items: center;
 	display: flex;
@@ -18,7 +20,7 @@
 	white-space: nowrap;
 }
 
-@media (max-width: 992px) {
+@media (max-width: $d2l-navigation-bp-title-hidden) {
 	.d2l-navigation-s-header-course {
 		display: none;
 	}

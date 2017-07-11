@@ -1,9 +1,14 @@
+@import 'common.scss';
+
 .d2l-navigation-s-course-menu {
 	height: 100%;
-}
-
-.d2l-navigation-s-course-menu .d2l-navigation-s-button-highlight {
-	margin: 0 5px;
+	margin-right: $d2l-navigation-margin-regular;
+	@media (max-width: $d2l-navigation-bp-mobile-menu) {
+		display: none;
+	}
+	@media (max-width: $d2l-navigation-bp-separators) {
+		margin-right: $d2l-navigation-margin-compact;
+	}
 }
 
 .d2l-navigation-s-course-menu d2l-dropdown {
@@ -14,9 +19,6 @@
 	line-height: 1.5rem;
 }
 
-@media (max-width: 554px) {
-	.d2l-navigation-s-course-menu,
-	.d2l-navigation-s-divider.d2l-navigation-s-course-menu-divider {
-		display: none;
-	}
+.d2l-navigation-s-divider.d2l-navigation-s-course-menu-divider {
+	margin-left: -16px;
 }

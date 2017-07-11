@@ -1,4 +1,5 @@
 @import '../../bower_components/d2l-colors/d2l-colors.scss';
+@import 'common.scss';
 
 .d2l-navigation-s-header {
 	border-bottom: 1px solid $d2l-color-gypsum;
@@ -21,6 +22,7 @@
 	display: inline-block;
 	flex: 0 1 auto;
 	height: 100%;
+	margin-right: $d2l-navigation-margin-compact;
 	@media (min-width: $d2l-navigation-bp-mobile-menu) {
 		display: none;
 	}
@@ -36,9 +38,6 @@
 	padding: 0 7px;
 
 	.d2l-navigation-s-header-container & {
-		@media (max-width: $d2l-navigation-bp-title) {
-			display: none;
-		}
 		&.d2l-navigation-s-header-no-home-icon .d2l-navigation-s-logo-divider {
 			@media (min-width: $d2l-navigation-bp-mobile-menu) {
 				display: none;
@@ -51,9 +50,13 @@
 				display: none;
 			}
 		}
-		.d2l-navigation-s-branding-off & {
-			@media (max-width: $d2l-navigation-bp-mobile-menu) {
-				display: none;
+		& .d2l-navigation-s-home-icon {
+			flex-shrink: 0;
+			-webkit-flex-shrink: 0;
+			-moz-flex-shrink: 0;
+			margin-right: $d2l-navigation-margin-regular;
+			@media (max-width: $d2l-navigation-bp-separators) {
+				margin-right: $d2l-navigation-margin-compact;
 			}
 		}
 	}
@@ -71,4 +74,16 @@
 
 .d2l-navigation-s-has-branding .d2l-navigation-s-header-logo-area > .d2l-navigation-s-link {
 	font-size: 1.25rem;
+	@media (max-width: $d2l-navigation-bp-username) {
+		font-size: 1.1rem;
+	}
+	@media (max-width: $d2l-navigation-bp-separators) {
+		font-size: 1rem;
+	}
+	@media (max-width: $d2l-navigation-bp-title-compact) {
+		font-size: 0.9rem;
+	}
+	@media (max-width: $d2l-navigation-bp-title-hidden) {
+		display: none;
+	}
 }

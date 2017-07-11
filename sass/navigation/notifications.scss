@@ -1,3 +1,5 @@
+@import 'common.scss';
+
 .d2l-navigation-s-notifications {
 	display: inline-block;
 	flex: 0 0 auto;
@@ -7,13 +9,12 @@
 .d2l-navigation-s-notifications-wrapper {
 	display: inline-block;
 	height: 100%;
-	margin: 0 -15px;
 }
 
 .d2l-navigation-s-notification {
 	display: inline-block;
 	height: 100%;
-	margin: 0 15px;
+	margin-right: $d2l-navigation-margin-regular;
 	d2l-dropdown {
 		height: 100%;
 	}
@@ -33,17 +34,20 @@
 	&[data-has-notifications] .d2l-navigation-s-notification-indicator {
 		display: inline-block;
 	}
+	@media (max-width: $d2l-navigation-bp-separators) {
+		margin-right: 20px;
+	}
 }
 
 .d2l-navigation-s-notifications-div {
 	display: inline-block;
 	min-width: 10px;
-}
-
-@media (max-width: 554px) {
-	.d2l-navigation-s-divider.d2l-navigation-s-notifications-divider {
+	@media (max-width: $d2l-navigation-bp-separators) {
 		display: none;
 	}
+}
+
+@media (max-width: $d2l-navigation-bp-mobile-menu) {
 	.d2l-navigation-s-notifications-div {
 		min-width: 30px;
 	}

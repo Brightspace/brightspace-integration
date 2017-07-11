@@ -34,7 +34,7 @@
 	margin-left: 0;
 	margin-right: 10px;
 }
-@media (max-width: 992px) {
+@media (max-width: $d2l-navigation-bp-username) {
 	.d2l-navigation-s-personal-menu-text {
 		@include d2l-offscreen();
 	}

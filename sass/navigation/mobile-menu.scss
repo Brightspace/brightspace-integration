@@ -67,12 +67,13 @@
 	align-items: center;
 	border-bottom: 1px solid $d2l-color-gypsum;
 	display: flex;
-	height: $d2l-navigation-header-height;
+	height: $d2l-navigation-header-height-mobile;
 	padding: 0 1rem;
 	font-size: 1.1rem;
 	font-weight: 700;
-	@media (max-width: $d2l-navigation-bp-mobile-menu-medium) {
-		height: $d2l-navigation-header-height-mobile;
+
+	.d2l-navigation-s-gutter {
+		display: none;
 	}
 }
 
@@ -165,11 +166,11 @@
 	font-size: 1rem;
 	font-weight: 700;
 	overflow: hidden;
-	padding: 0.75rem 1.5rem 1rem 1.5rem;
+	padding: 1rem 1rem;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 
-	@media (max-width: $d2l-navigation-bp-title) {
+	@media (max-width: $d2l-navigation-bp-mobile-menu-title) {
 		display: block;
 	}
 }
@@ -182,7 +183,23 @@
 	}
 
 	.d2l-navigation-s-link {
-		font-size: 1rem;
+		font-size: 0.9rem;
+		margin-right: $d2l-navigation-margin-regular;
+		@media (max-width: $d2l-navigation-bp-mobile-menu-title) {
+			display: none;
+		}
+	}
+
+	.d2l-navigation-s-divider {
+			display: inline-block;
+			@media (max-width: $d2l-navigation-bp-mobile-menu-separators) {
+				display: none;
+			}
+			&.d2l-navigation-s-title-divider {
+				@media (max-width: $d2l-navigation-bp-mobile-menu-title) {
+					display: none;
+				}
+			}
 	}
 
 	.d2l-navigation-s-logo {
@@ -192,22 +209,20 @@
 		}
 	}
 
-	@media (max-width: $d2l-navigation-bp-title) {
-		.d2l-navigation-s-title-divider {
-			d2l-icon {
-				display: none;
-			}
-		}
-
-		.d2l-navigation-s-link {
-			display: none;
+	.d2l-navigation-s-home-icon {
+		flex-shrink: 0;
+		-webkit-flex-shrink: 0;
+		-moz-flex-shrink: 0;
+		margin-right: $d2l-navigation-margin-regular;
+		@media (max-width: $d2l-navigation-bp-mobile-menu-separators) {
+			margin-right: $d2l-navigation-margin-compact;
 		}
 	}
-	@media (max-width: $d2l-navigation-bp-mobile-menu-small) {
-		.d2l-navigation-s-logo-divider {
-			d2l-icon {
-				display: none;
-			}
+
+	.d2l-navigation-s-logo {
+		margin-right: $d2l-navigation-margin-regular;
+		@media (max-width: $d2l-navigation-bp-mobile-menu-separators) {
+			margin-right: 0;
 		}
 	}
 }

@@ -6,10 +6,16 @@ $d2l-navigation-header-height-mobile: 72px;
 $d2l-navigation-header-height-mobile: 72px;
 $d2l-navigation-small-logo-height: 40px;
 $d2l-navigation-small-logo-width: 173px;
-$d2l-navigation-bp-mobile-menu: 992px;
-$d2l-navigation-bp-mobile-menu-medium: 615px;
-$d2l-navigation-bp-mobile-menu-small: 380px;
-$d2l-navigation-bp-title: 740px;
+$d2l-navigation-bp-username: 1055px;
+$d2l-navigation-bp-separators: 931px;
+$d2l-navigation-bp-mobile-menu: 767px;
+$d2l-navigation-bp-title-compact: 615px;
+$d2l-navigation-bp-title-hidden: 478px;
+$d2l-navigation-bp-mobile-menu-title: 700px;
+$d2l-navigation-bp-mobile-menu-separators: 380px;
+$d2l-navigation-margin-regular: 30px;
+$d2l-navigation-margin-compact: 20px;
+
 
 .d2l-navigation-s-centerer {
 	margin: 0 auto;
@@ -52,7 +58,7 @@ a.d2l-navigation-s-link:focus {
 	width: calc(100% + 14px);
 }
 
-@media (max-width: 615px) {
+@media (max-width: $d2l-navigation-bp-mobile-menu) {
 	.d2l-navigation-s-header-container {
 		height: $d2l-navigation-header-height-mobile;
 	}

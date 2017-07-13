@@ -45,8 +45,7 @@
     "tag": "v0.15.1",
     "commit": "804cc41e461501822b5979302b901abe9e07e1cb"
   },
-  "_source": "git://github.com/Brightspace/d2l-navigation-ui.git",
+  "_source": "https://github.com/Brightspace/d2l-navigation-ui.git",
   "_target": "0.15.1",
-  "_originalSource": "git://github.com/Brightspace/d2l-navigation-ui.git",
-  "_direct": true
+  "_originalSource": "https://github.com/Brightspace/d2l-navigation-ui.git"
 }

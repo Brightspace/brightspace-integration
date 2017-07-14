@@ -9,6 +9,7 @@
 		$has-text: true,
 		$height: auto,
 		$line-height: 1.4rem,
+		$min-width: 0,
 		$padding: 0.3rem 1rem,
 		$padding-focus: calc(0.3rem - 1px) calc(1rem - 1px),
 		$width : 100%
@@ -20,6 +21,9 @@
 	display: inline-block;
 	height: $height;
 	margin: 0;
+	@if $min-width != 0 {
+		min-width: $min-width;
+	}
 	vertical-align: middle;
 	width: $width;
 	transition: {

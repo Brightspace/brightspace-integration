@@ -48,13 +48,11 @@
 }
 
 .dcm.dcm_handle.bsi-button-menu,
+.dcm.bsi-button-menu,
 .d2l-contextmenu-ph {
 	@include vui-dropdown-context-menu;
 	margin-left: 0.25rem;
-	[dir='rtl'] & {
-		margin-left: auto;
-		margin-right: 0.25rem;
-	}
+	margin-right: 0.25rem;
 }
 
 .dcm.dcm_handle.d2l-contextmenu-opener-open,

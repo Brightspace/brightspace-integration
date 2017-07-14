@@ -17,15 +17,15 @@
     "package.json"
   ],
   "homepage": "https://github.com/Brightspace/valence-ui-input",
-  "version": "2.0.1",
-  "_release": "2.0.1",
+  "version": "2.0.2",
+  "_release": "2.0.2",
   "_resolution": {
     "type": "version",
-    "tag": "v2.0.1",
-    "commit": "44ebf73f18cfee14c9de776664d2e987cdda598e"
+    "tag": "v2.0.2",
+    "commit": "bf7336f3af96f12e8fe39ebac770cece533ce2e6"
   },
   "_source": "https://github.com/Brightspace/valence-ui-input.git",
-  "_target": "2.0.1",
+  "_target": "2.0.2",
   "_originalSource": "vui-input",
   "_direct": true
 }

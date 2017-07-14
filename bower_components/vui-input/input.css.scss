@@ -3,14 +3,18 @@
 @import 'input-radio.scss';
 @import 'search.scss';
 @import 'select.scss';
+@import 'text.scss';
 @import 'textarea.scss';
 
-.vui-input,
+.vui-input {
+	@include vui-input();
+}
+
 .vui-input[type="email"],
 .vui-input[type="password"],
 .vui-input[type="text"],
 .vui-input[type="url"] {
-	@include vui-input();
+	@include vui-input-text();
 }
 
 .vui-input[type="checkbox"] {

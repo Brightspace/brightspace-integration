@@ -193,6 +193,12 @@
 		}
 	}
 
+	.d2l-navigation-s-svg-logo {
+		img {
+			height: $d2l-navigation-small-logo-height;
+		}
+	}
+
 	@media (max-width: $d2l-navigation-bp-title) {
 		.d2l-navigation-s-title-divider {
 			d2l-icon {

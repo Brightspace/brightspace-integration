@@ -1,7 +1,6 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "d2l-activity-exemptions": "https://github.com/Brightspace/d2l-activity-exemptions.git#0.0.4",
     "d2l-button": "^3.3.0",
     "d2l-button-group": "^0.6.0",
     "d2l-colors": "^2.4.0",
@@ -18,6 +17,7 @@
     "d2l-offscreen": "^2.2.5",
     "d2l-performance": "^0.0.4",
     "d2l-polymer-behaviors": "^1.1.0",
+    "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay#^1.1.1",
     "d2l-scroll-spy": "^0.0.2",
     "d2l-table": "^0.6.8",
     "d2l-typography": "^5.4.0",

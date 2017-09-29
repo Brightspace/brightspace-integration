@@ -1,6 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
+    "d2l-activity-exemptions": "https://github.com/Brightspace/d2l-activity-exemptions.git#0.0.4",
     "d2l-button": "^3.3.0",
     "d2l-button-group": "^0.6.0",
     "d2l-colors": "^2.4.0",

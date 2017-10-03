@@ -1,7 +1,6 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "d2l-activity-exemptions": "https://github.com/Brightspace/d2l-activity-exemptions.git#0.0.4",
     "d2l-fastdom-import": "https://github.com/Brightspace/fastdom-import.git#v1.0.2",
     "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay#^1.1.1",
     "jquery-vui-accordion": "~0.3.0",

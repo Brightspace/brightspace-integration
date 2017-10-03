@@ -6,7 +6,6 @@ const project = new PolymerProject({
 	"entrypoint": "web-components/index.html",
 	"fragments": [
 		"bsi.html",
-		"d2l-activity-exemptions.html",
 		"d2l-simple-overlay.html",
 	],
 	"sources": []

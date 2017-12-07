@@ -6,6 +6,7 @@ const svg2png = require("svg2png");
 	'tier2/quizzing',
 	'tier2/media',
 	'tier2/file-document',
+	'tier2/file-image',
 	'tier2/google-drive',
 	'tier2/one-drive',
 	'tier1/bullet'

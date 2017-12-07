@@ -2,13 +2,10 @@ const fs = require("fs-extra");
 const svg2png = require("svg2png");
 
 [
-	'tier3/assignments',
-	'tier3/quizzing',
-	'tier3/play',
-	'tier3/image',
-	'tier2/file-audio',
+	'tier2/assignments',
+	'tier2/quizzing',
+	'tier2/media',
 	'tier2/file-document',
-	'tier2/file-video',
 	'tier2/google-drive',
 	'tier2/one-drive',
 	'tier1/bullet'

@@ -93,6 +93,8 @@ $dialog-resize: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.
 	height: 100%;
 	width: 100% !important;
 	position: absolute;
+}
+:not(.d2l-dialog-css-fix).d2l-dialog-flex {
 	overflow: hidden !important;
 }
 

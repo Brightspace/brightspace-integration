@@ -18,7 +18,7 @@
     "d2l-loading-spinner": "^5.0.4",
     "d2l-menu": "^0.3.7",
     "d2l-more-less": "^2.2.2",
-    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^3.3.4",
+    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^3.3.5",
     "d2l-image-banner-overlay": "Brightspace/d2l-image-banner-overlay#^2.2.3",
     "d2l-offscreen": "^2.2.5",
     "d2l-polymer-behaviors": "^1.1.0",

@@ -1,4 +1,6 @@
 const fs = require("fs-extra");
+const imagemin = require('imagemin');
+const optipng = require('imagemin-optipng');
 const svg2png = require("svg2png");
 
 [
@@ -13,6 +15,7 @@ const svg2png = require("svg2png");
 ].forEach( filePath =>
 	fs.readFile(`bower_components/d2l-icons/images/${filePath}.svg`)
 		.then(svg2png)
+		.then(buffer => imagemin.buffer(buffer, { use: [optipng({ opimizationLevel: 7 })] }))
 		.then(buffer => fs.outputFile(`dist/images/email-icons/${filePath}.png`, buffer))
 		.catch(e => {
 			console.error(e);

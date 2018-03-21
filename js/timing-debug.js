@@ -1,9 +1,9 @@
-import FastDom from '../d2l-fastdom.js';
+import FastDom from 'd2l-fastdom2.js';
 
 window.addEventListener('d2l-performance-measure', function addTiming(e) {
 
 	var res = /(\?|&)timingdebug=(1|0)/gi.exec(location.search);
-	if ( res !== null && res.length === 3 ) {
+	if (res !== null && res.length === 3) {
 		var timingVal = (res[2] === '0') ? false : true;
 		try {
 			if (timingVal) {
@@ -11,13 +11,17 @@ window.addEventListener('d2l-performance-measure', function addTiming(e) {
 			} else {
 				window.sessionStorage.removeItem('TimingDebug');
 			}
-		} catch (e) {}
+		} catch (e) {
+			// swallow exception
+		}
 	}
 
 	var timingDebug = false;
 	try {
 		timingDebug = (window.sessionStorage.getItem('TimingDebug') !== null);
-	} catch (e) {}
+	} catch (e) {
+		// swallow exception
+	}
 
 	if (!timingDebug) {
 		return;

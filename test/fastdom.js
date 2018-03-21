@@ -98,7 +98,7 @@ describe('d2l-fastdom', () => {
 			});
 
 			it('should throw if fastdom is not available during and after WCR', () => {
-				var expectedError = `Cannot read property \'${method}\' of undefined`;
+				var expectedError = `Cannot read property '${method}' of undefined`;
 				d2lFastDom[method]();
 				expect(() => {
 					triggerWebComponentReady();
@@ -117,7 +117,7 @@ describe('d2l-fastdom', () => {
 			});
 
 			it('should remove WCR event listener', () => {
-				var id = d2lFastDom[method]();
+				d2lFastDom[method]();
 				global.window['fastdom'] = fastdomMock;
 				triggerWebComponentReady();
 				global.window.removeEventListener.should.have.been.called.once;
@@ -126,8 +126,8 @@ describe('d2l-fastdom', () => {
 			it('should call into fastdom for each item in the queue', () => {
 				var cb1 = sinon.spy(),
 					cb2 = sinon.spy();
-				var id1 = d2lFastDom[method](cb1);
-				var id2 = d2lFastDom[method](cb2);
+				d2lFastDom[method](cb1);
+				d2lFastDom[method](cb2);
 				global.window['fastdom'] = fastdomMock;
 				triggerWebComponentReady();
 				fastdomMock[method].should.have.been.calledWith(cb1);

@@ -1,6 +1,9 @@
 language: node_js
 node_js: node
 sudo: false
+script:
+- npm run test
+- npm run build
 after_success:
 - '[ "$TRAVIS_SECURE_ENV_VARS" = "true" ] && [ "x$TRAVIS_TAG" != "x" ] && npm run
   publish:cdn'

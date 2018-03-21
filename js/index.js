@@ -1,5 +1,3 @@
-'use strict';
-
 import './polyfill/Array.prototype.includes.js';
 import Lie from 'lie';
 if (typeof Promise === 'undefined') {
@@ -11,7 +9,7 @@ window.D2L = window.D2L || {};
 import FastDom from './d2l-fastdom.js';
 window.D2L.FastDom = FastDom;
 
-import './page-loading/timing-debug.js';
+import './timing-debug.js';
 
 import '../bower_components/jquery-vui-accordion/accordion.js';
 import '../bower_components/jquery-vui-change-tracking/changeTracker.js';

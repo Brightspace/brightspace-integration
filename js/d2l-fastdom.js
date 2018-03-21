@@ -38,7 +38,7 @@ module.exports = {
 	},
 	clear: function(id) {
 		var fastDomId = id;
-		if (idMap[id] !== undefined ) {
+		if (idMap[id] !== undefined) {
 			if (idMap[id].id === 'pending') {
 				idMap[id].id = 'cleared';
 				return;

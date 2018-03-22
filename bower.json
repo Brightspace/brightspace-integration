@@ -1,6 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
+    "Stickyfill": "https://github.com/wilddeer/stickyfill.git#ec3a2ba7466515c7863eb108282ad18b10543a15",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#1c7b334b36508c939fa64d2b4dc8d7c412f536f8",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#bc6b1ca7a783913cc880858722bf8c10d5a325a5",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#ec051badc534f4eed0b568070ba4151950d5b59e",
@@ -66,7 +67,6 @@
     "polymer": "https://github.com/Polymer/polymer.git#937021964c80c55ed3a2218d830b2520f8195d43",
     "shadycss": "https://github.com/webcomponents/shadycss.git#de07897166484a04d16740d176cd8e7e5fafe639",
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
-    "Stickyfill": "https://github.com/wilddeer/stickyfill.git#ec3a2ba7466515c7863eb108282ad18b10543a15",
     "susy": "https://github.com/ericam/susy.git#edcded39bf4626b072d7768b70b26a9dfee02d17",
     "vui-breadcrumbs": "https://github.com/Brightspace/valence-ui-breadcrumbs.git#1a0c1af6745a73b601597eb0d965df9c329bbc12",
     "vui-dropdown": "https://github.com/Brightspace/valence-ui-dropdown.git#5c50e4d8ae2d19b33514c477c20812f2264837f0",
@@ -81,6 +81,7 @@
   },
   "private": true,
   "resolutions": {
+    "Stickyfill": "ec3a2ba7466515c7863eb108282ad18b10543a15",
     "app-localize-behavior": "1c7b334b36508c939fa64d2b4dc8d7c412f536f8",
     "d2l-alert": "bc6b1ca7a783913cc880858722bf8c10d5a325a5",
     "d2l-button": "ec051badc534f4eed0b568070ba4151950d5b59e",
@@ -146,7 +147,6 @@
     "polymer": "937021964c80c55ed3a2218d830b2520f8195d43",
     "shadycss": "de07897166484a04d16740d176cd8e7e5fafe639",
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
-    "Stickyfill": "ec3a2ba7466515c7863eb108282ad18b10543a15",
     "susy": "edcded39bf4626b072d7768b70b26a9dfee02d17",
     "vui-breadcrumbs": "1a0c1af6745a73b601597eb0d965df9c329bbc12",
     "vui-dropdown": "5c50e4d8ae2d19b33514c477c20812f2264837f0",

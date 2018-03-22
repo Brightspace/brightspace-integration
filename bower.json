@@ -162,6 +162,7 @@
   "bowerLocker": {
     "lastUpdated": "2018-03-22T14:30:58.266Z",
     "lockedVersions": {
+      "Stickyfill": "2.0.3",
       "app-localize-behavior": "2.0.1",
       "d2l-alert": "3.0.1",
       "d2l-button": "4.0.3",
@@ -227,7 +228,6 @@
       "polymer": "1.11.3",
       "shadycss": "1.1.1",
       "siren-parser-import": "7.0.0",
-      "Stickyfill": "2.0.3",
       "susy": "2.2.12",
       "vui-breadcrumbs": "2.1.1",
       "vui-dropdown": "0.9.1",

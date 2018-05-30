@@ -22,7 +22,7 @@
     "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^4.5.1",
     "d2l-offscreen": "^3.0.3",
     "d2l-polymer-behaviors": "^1.5.0",
-    "d2l-rubric": "Brightspace/d2l-rubric#^0.52.0",
+    "d2l-rubric": "Brightspace/d2l-rubric#^0.55.0",
     "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay#^2.1.2",
     "d2l-scroll-spy": "^0.0.3",
     "d2l-table": "^1.4.4",

@@ -11,7 +11,7 @@
     "d2l-fetch-auth": "Brightspace/d2l-fetch-auth#^0.9.0",
     "d2l-fetch-dedupe": "Brightspace/d2l-fetch-dedupe#^0.13.0",
     "d2l-fetch-simple-cache": "Brightspace/d2l-fetch-simple-cache#^0.6.0",
-    "d2l-icons": "^4.14.0",
+    "d2l-icons": "^5.0.0",
     "d2l-image-action": "^2.0.2",
     "d2l-image-banner-overlay": "Brightspace/d2l-image-banner-overlay#^3.1.7",
     "d2l-intl-import": "^1.0.0",
@@ -22,7 +22,7 @@
     "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^5.0.0",
     "d2l-offscreen": "^3.0.3",
     "d2l-polymer-behaviors": "^1.5.0",
-    "d2l-rubric": "Brightspace/d2l-rubric#^0.66.0",
+    "d2l-rubric": "Brightspace/d2l-rubric#^0.69.0",
     "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay#^2.1.2",
     "d2l-scroll-spy": "^0.0.3",
     "d2l-table": "^1.4.4",
@@ -49,6 +49,7 @@
     "iron-iconset-svg": "fix-empty-iconset",
     "webcomponentsjs": "^0.7",
     "shadycss": "^1.2.0",
-    "d2l-text-input": "^0.4.0"
+    "d2l-text-input": "^0.4.0",
+    "d2l-icons": "^5.0.0"
   }
 }

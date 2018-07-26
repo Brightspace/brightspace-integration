@@ -33,7 +33,7 @@
     "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d1b764b90c349a20aa77c63978f960552882b1a5",
     "d2l-polymer-behaviors": "https://github.com/Brightspace/d2l-polymer-behaviors-ui.git#b4a9df1eab33436a3ca6fa8b0a9f5c817096ca4f",
     "d2l-resize-observer-polyfill-import": "https://github.com/Brightspace/resize-observer-polyfill-import.git#4101abe201c413a4255be22095c05e0e2f562313",
-    "d2l-rubric": "https://github.com/Brightspace/d2l-rubric.git#0c003101a2ced13bf225e64862894364f2edbf7a",
+    "d2l-rubric": "https://github.com/Brightspace/d2l-rubric.git#624812a4328d54cb0eb31da03c41cf0690c6f7ad",
     "d2l-save-status": "https://github.com/Brightspace/d2l-save-status.git#fed3609163f312418df71f2d5e5fda9b7ae52d78",
     "d2l-scroll-spy": "https://github.com/BrightspaceUI/scroll-spy.git#1163917d64637971ac6d3c8e16ca31c1350c269d",
     "d2l-search-widget": "git://github.com/Brightspace/d2l-search-widget-ui.git#b4bed57523eb3f94bf92c46f2848fab84bac133e",
@@ -113,7 +113,7 @@
     "d2l-organization-hm-behavior": "d1b764b90c349a20aa77c63978f960552882b1a5",
     "d2l-polymer-behaviors": "b4a9df1eab33436a3ca6fa8b0a9f5c817096ca4f",
     "d2l-resize-observer-polyfill-import": "4101abe201c413a4255be22095c05e0e2f562313",
-    "d2l-rubric": "0c003101a2ced13bf225e64862894364f2edbf7a",
+    "d2l-rubric": "624812a4328d54cb0eb31da03c41cf0690c6f7ad",
     "d2l-save-status": "fed3609163f312418df71f2d5e5fda9b7ae52d78",
     "d2l-scroll-spy": "1163917d64637971ac6d3c8e16ca31c1350c269d",
     "d2l-search-widget": "b4bed57523eb3f94bf92c46f2848fab84bac133e",
@@ -160,7 +160,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-07-25T23:11:50.801Z",
+    "lastUpdated": "2018-07-26T17:51:35.614Z",
     "lockedVersions": {
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
@@ -194,7 +194,7 @@
       "d2l-organization-hm-behavior": "2.0.3",
       "d2l-polymer-behaviors": "1.6.2",
       "d2l-resize-observer-polyfill-import": "1.5.0",
-      "d2l-rubric": "0.75.0",
+      "d2l-rubric": "0.76.0",
       "d2l-save-status": "0.8.0",
       "d2l-scroll-spy": "0.0.3",
       "d2l-search-widget": "3.1.0",

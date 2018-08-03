@@ -29,6 +29,7 @@
     "d2l-menu": "https://github.com/BrightspaceUI/menu.git#c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "https://github.com/BrightspaceUI/more-less.git#28b81ce5b8ae56b9590b1d8afca4c65d537f3ef2",
     "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#476d17bf7afca64ae901be095fdb7304549b620f",
+    "d2l-my-dashboards": "https://github.com/Brightspace/d2l-my-dashboards-ui.git#05f9d7f7aa9e13ef24525c255d7b935e0a48c9be",
     "d2l-navigation": "https://github.com/BrightspaceUI/navigation.git#cc75f8dfbbde833dda4c3a1f55a547ae41822dbc",
     "d2l-offscreen": "https://github.com/BrightspaceUI/offscreen.git#2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d1b764b90c349a20aa77c63978f960552882b1a5",
@@ -110,6 +111,7 @@
     "d2l-menu": "c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "28b81ce5b8ae56b9590b1d8afca4c65d537f3ef2",
     "d2l-my-courses": "476d17bf7afca64ae901be095fdb7304549b620f",
+    "d2l-my-dashboards": "05f9d7f7aa9e13ef24525c255d7b935e0a48c9be",
     "d2l-navigation": "cc75f8dfbbde833dda4c3a1f55a547ae41822dbc",
     "d2l-offscreen": "2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "d1b764b90c349a20aa77c63978f960552882b1a5",
@@ -162,7 +164,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-08-02T18:43:57.383Z",
+    "lastUpdated": "2018-08-03T13:50:41.120Z",
     "lockedVersions": {
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
@@ -192,6 +194,7 @@
       "d2l-menu": "1.1.0",
       "d2l-more-less": "4.3.0",
       "d2l-my-courses": "5.6.1",
+      "d2l-my-dashboards": "1.0.0",
       "d2l-navigation": "0.2.0",
       "d2l-offscreen": "3.0.3",
       "d2l-organization-hm-behavior": "2.0.3",

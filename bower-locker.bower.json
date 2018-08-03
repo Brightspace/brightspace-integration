@@ -34,7 +34,8 @@
     "jquery-vui-collapsible-section": "^1.2.2",
     "jquery-vui-change-tracking": "^0.6.0",
     "polymer": "^1.11.3",
-    "susy": "^2.2.12"
+    "susy": "^2.2.12",
+    "d2l-my-dashboards": "^1.0.0"
   },
   "private": true,
   "resolutions": {

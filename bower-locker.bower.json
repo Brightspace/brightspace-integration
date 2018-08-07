@@ -27,6 +27,7 @@
     "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay#^2.2.0",
     "d2l-scroll-spy": "^0.0.3",
     "d2l-table": "^1.7.0",
+    "d2l-telemetry-browser-client": "Brightspace/d2l-telemetry-browser-client#^0.4.0",
     "d2l-typography": "^6.1.2",
     "fetch": "whatwg-fetch#^2.0.4",
     "iron-icon": "PolymerElements/iron-icon#^2.0.1",

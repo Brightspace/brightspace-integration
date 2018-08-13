@@ -1,6 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
+    "1.x-hybrid-components": "https://github.com/BrightspaceHypermediaComponents/1.x-hybrid-components.git#427b7b2639987d091f23f7c80a14a8cb2e610833",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#8316dd9dd4b4437a568ae9da6cd80b83a0849688",
@@ -17,7 +18,7 @@
     "d2l-fetch-simple-cache": "https://github.com/Brightspace/d2l-fetch-simple-cache.git#a7e1b7ae02962639ffcf4af222af540203f35b59",
     "d2l-fetch-siren-entity-behavior": "https://github.com/Brightspace/d2l-fetch-siren-entity-behavior.git#a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "https://github.com/BrightspaceUI/hierarchical-view.git#345e6a50e9f9dd7d4f783908329686a7b35b378c",
-    "d2l-hm-constants-behavior": "git://github.com/Brightspace/d2l-hm-constants-behavior.git#6a5984d5cf2d92b54432264ae7478650aa7c1e6f",
+    "d2l-hm-constants-behavior": "https://github.com/Brightspace/d2l-hm-constants-behavior.git#6a5984d5cf2d92b54432264ae7478650aa7c1e6f",
     "d2l-icons": "https://github.com/BrightspaceUI/icons.git#0022e27109f79a109f281974c9b3f5b949a7a29c",
     "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#6cc7dab3e398a44e97021b23120ad82c368cc6cf",
     "d2l-image-selector": "git://github.com/Brightspace/image-selector.git#6278acf1f91811a4eb4b7d39b0c5b872466aaaa9",
@@ -38,7 +39,7 @@
     "d2l-polymer-siren-behaviors": "https://github.com/Brightspace/polymer-siren-behaviors.git#ddb19883d523e4ae9fe630e177d8bb9004b1e9e1",
     "d2l-resize-observer-polyfill-import": "https://github.com/Brightspace/resize-observer-polyfill-import.git#4101abe201c413a4255be22095c05e0e2f562313",
     "d2l-rubric": "https://github.com/Brightspace/d2l-rubric.git#56c802bf2b3066333cdc137b1dc4e2bbb872b07d",
-    "d2l-save-status": "https://github.com/Brightspace/d2l-save-status.git#fed3609163f312418df71f2d5e5fda9b7ae52d78",
+    "d2l-save-status": "https://github.com/Brightspace/d2l-save-status.git#8069fa09465ec05dd7e07ce3a2f0b1f4a264cce9",
     "d2l-scroll-spy": "https://github.com/BrightspaceUI/scroll-spy.git#1163917d64637971ac6d3c8e16ca31c1350c269d",
     "d2l-search-widget": "git://github.com/Brightspace/d2l-search-widget-ui.git#b4bed57523eb3f94bf92c46f2848fab84bac133e",
     "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay.git#8bb1fb9dd9ca2bc18f4940b938e29b25c0c9a184",
@@ -82,10 +83,15 @@
     "Sortable": "https://github.com/RubaXa/Sortable.git#8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
+    "vui-dropdown": "https://github.com/Brightspace/valence-ui-dropdown.git#5c50e4d8ae2d19b33514c477c20812f2264837f0",
+    "vui-focus": "https://github.com/Brightspace/valence-ui-focus.git#d092b7aa3c9eff70cbbbfc8567317f31fee4e563",
+    "vui-grid-system": "https://github.com/Brightspace/valence-ui-grid-system.git#0384e87cd068617419d42b3c8a8b6cb773fc507d",
+    "vui-list": "https://github.com/Brightspace/valence-ui-list.git#95245dcfc833c1eae49f3d840ba12b6c2674a55a",
     "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "private": true,
   "resolutions": {
+    "1.x-hybrid-components": "427b7b2639987d091f23f7c80a14a8cb2e610833",
     "app-localize-behavior": "530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "8316dd9dd4b4437a568ae9da6cd80b83a0849688",
@@ -123,7 +129,7 @@
     "d2l-polymer-siren-behaviors": "ddb19883d523e4ae9fe630e177d8bb9004b1e9e1",
     "d2l-resize-observer-polyfill-import": "4101abe201c413a4255be22095c05e0e2f562313",
     "d2l-rubric": "56c802bf2b3066333cdc137b1dc4e2bbb872b07d",
-    "d2l-save-status": "fed3609163f312418df71f2d5e5fda9b7ae52d78",
+    "d2l-save-status": "8069fa09465ec05dd7e07ce3a2f0b1f4a264cce9",
     "d2l-scroll-spy": "1163917d64637971ac6d3c8e16ca31c1350c269d",
     "d2l-search-widget": "b4bed57523eb3f94bf92c46f2848fab84bac133e",
     "d2l-simple-overlay": "8bb1fb9dd9ca2bc18f4940b938e29b25c0c9a184",
@@ -167,11 +173,16 @@
     "Sortable": "8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
+    "vui-dropdown": "5c50e4d8ae2d19b33514c477c20812f2264837f0",
+    "vui-focus": "d092b7aa3c9eff70cbbbfc8567317f31fee4e563",
+    "vui-grid-system": "0384e87cd068617419d42b3c8a8b6cb773fc507d",
+    "vui-list": "95245dcfc833c1eae49f3d840ba12b6c2674a55a",
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-08-13T19:02:29.204Z",
+    "lastUpdated": "2018-08-13T20:02:04.400Z",
     "lockedVersions": {
+      "1.x-hybrid-components": "427b7b2639",
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
       "d2l-button": "4.6.0",
@@ -209,7 +220,7 @@
       "d2l-polymer-siren-behaviors": "0.0.1",
       "d2l-resize-observer-polyfill-import": "1.5.0",
       "d2l-rubric": "0.87.0",
-      "d2l-save-status": "0.8.0",
+      "d2l-save-status": "0.10.0",
       "d2l-scroll-spy": "0.0.3",
       "d2l-search-widget": "3.1.0",
       "d2l-simple-overlay": "2.2.0",
@@ -253,6 +264,10 @@
       "Sortable": "8794188794",
       "stickyfill": "2.0.5",
       "susy": "2.2.14",
+      "vui-dropdown": "5c50e4d8ae",
+      "vui-focus": "d092b7aa3c",
+      "vui-grid-system": "0384e87cd0",
+      "vui-list": "95245dcfc8",
       "webcomponentsjs": "0.7.24"
     }
   }

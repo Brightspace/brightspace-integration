@@ -140,10 +140,8 @@
 
 .d2l-navigation-s-edit-menu {
 	@include d2l-page-padding-right();
-	opacity: 0;
 	position: absolute;
 	right: 0;
-	transition: opacity 0.25s;
 }
 
 [dir="rtl"] .d2l-navigation-s-edit-menu {
@@ -157,10 +155,5 @@
 }
 
 .d2l-navigation-main-tb .d2l-navigation-s-edit-menu {
-	top: 12.5px;
-}
-
-.d2l-navigation-main-tb[main-tb-hover] .d2l-navigation-s-edit-menu,
-.d2l-navigation-main-tb[main-tb-focus] .d2l-navigation-s-edit-menu {
-	opacity: 1;
+	top: 8.5px;
 }

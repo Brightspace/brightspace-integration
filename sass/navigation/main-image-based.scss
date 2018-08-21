@@ -225,7 +225,7 @@ div.d2l-navigation-ib-item-icon-group-icon {
 }
 
 .d2l-navigation-main-ib-pully[shown]:focus,
-.d2l-navigation-main-ib-pully[shown]:hover {	
+.d2l-navigation-main-ib-pully[shown]:hover {
 	outline: none;
 }
 
@@ -407,11 +407,6 @@ div.d2l-navigation-ib-item-icon-group-icon {
 
 .d2l-navigation-main-ib-tray .d2l-navigation-s-edit-menu {
 	top: 10px;
-}
-
-.d2l-navigation-main-ib-tray[ib-tray-hover] .d2l-navigation-s-edit-menu,
-.d2l-navigation-main-ib-tray[ib-tray-focus] .d2l-navigation-s-edit-menu {
-	opacity: 1;
 }
 
 @keyframes d2l-navigation-main-ib-swing {

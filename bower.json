@@ -2,7 +2,6 @@
   "name": "brightspace-integration",
   "dependencies": {
     "1.x-hybrid-components": "https://github.com/BrightspaceHypermediaComponents/1.x-hybrid-components.git#ad4fc6a90082efa0c37774f4a2692636d68c2a54",
-    "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#25c592e0e5cd77e1b2c4e523750defe58a4c9ce6",
@@ -31,7 +30,7 @@
     "d2l-menu": "https://github.com/BrightspaceUI/menu.git#c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "https://github.com/BrightspaceUI/more-less.git#7fb6369c8792407c6a40aaec8ec47a847f8ef0bb",
     "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#31c61b9b51b71d26626e7a01bde8cf7907866e8d",
-    "d2l-my-dashboards": "https://github.com/Brightspace/d2l-my-dashboards-ui.git#a05f873cfc25dbb2edc47cfb0481146fda473b3d",
+    "d2l-my-dashboards": "https://github.com/Brightspace/d2l-my-dashboards-ui.git#d74d01f2fb3fdce9759f6ac7ddd396d3ca6b093f",
     "d2l-navigation": "https://github.com/BrightspaceUI/navigation.git#cc75f8dfbbde833dda4c3a1f55a547ae41822dbc",
     "d2l-offscreen": "https://github.com/BrightspaceUI/offscreen.git#2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d1b764b90c349a20aa77c63978f960552882b1a5",
@@ -81,6 +80,7 @@
     "s-html": "https://github.com/Brightspace/s-html.git#a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "https://github.com/webcomponents/shadycss.git#b71741bfb593ea313d6095f7fc101778ec87202c",
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
+    "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
@@ -88,7 +88,6 @@
   "private": true,
   "resolutions": {
     "1.x-hybrid-components": "ad4fc6a90082efa0c37774f4a2692636d68c2a54",
-    "Sortable": "a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "app-localize-behavior": "530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "25c592e0e5cd77e1b2c4e523750defe58a4c9ce6",
@@ -117,7 +116,7 @@
     "d2l-menu": "c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "7fb6369c8792407c6a40aaec8ec47a847f8ef0bb",
     "d2l-my-courses": "31c61b9b51b71d26626e7a01bde8cf7907866e8d",
-    "d2l-my-dashboards": "a05f873cfc25dbb2edc47cfb0481146fda473b3d",
+    "d2l-my-dashboards": "d74d01f2fb3fdce9759f6ac7ddd396d3ca6b093f",
     "d2l-navigation": "cc75f8dfbbde833dda4c3a1f55a547ae41822dbc",
     "d2l-offscreen": "2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "d1b764b90c349a20aa77c63978f960552882b1a5",
@@ -167,15 +166,15 @@
     "s-html": "a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "b71741bfb593ea313d6095f7fc101778ec87202c",
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
+    "Sortable": "a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-08-27T19:22:25.176Z",
+    "lastUpdated": "2018-08-29T13:54:17.980Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.4",
-      "Sortable": "1.6.0-bs1",
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
       "d2l-button": "4.7.5",
@@ -204,7 +203,7 @@
       "d2l-menu": "1.1.0",
       "d2l-more-less": "4.3.1",
       "d2l-my-courses": "5.7.8",
-      "d2l-my-dashboards": "1.0.1",
+      "d2l-my-dashboards": "1.0.3",
       "d2l-navigation": "0.2.0",
       "d2l-offscreen": "3.0.3",
       "d2l-organization-hm-behavior": "2.0.3",
@@ -254,6 +253,7 @@
       "s-html": "1.2.1",
       "shadycss": "1.5.0",
       "siren-parser-import": "7.0.0",
+      "Sortable": "1.6.0-bs1",
       "stickyfill": "2.1.0",
       "susy": "2.2.14",
       "webcomponentsjs": "0.7.24"

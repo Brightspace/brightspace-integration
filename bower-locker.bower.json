@@ -37,7 +37,7 @@
     "jquery-vui-change-tracking": "^0.6.0",
     "polymer": "^1.11.3",
     "susy": "^2.2.12",
-    "d2l-my-dashboards": "^1.0.1"
+    "d2l-my-dashboards": "^1.0.3"
   },
   "private": true,
   "resolutions": {

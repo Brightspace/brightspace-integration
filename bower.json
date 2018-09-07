@@ -2,7 +2,6 @@
   "name": "brightspace-integration",
   "dependencies": {
     "1.x-hybrid-components": "https://github.com/BrightspaceHypermediaComponents/1.x-hybrid-components.git#ad4fc6a90082efa0c37774f4a2692636d68c2a54",
-    "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#8b113cc476fdc1487c1560eae05db0859b8a8609",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#ffe458da6d00092ee7a297dc7e98e5211df55253",
@@ -20,7 +19,7 @@
     "d2l-fetch-simple-cache": "https://github.com/Brightspace/d2l-fetch-simple-cache.git#a7e1b7ae02962639ffcf4af222af540203f35b59",
     "d2l-fetch-siren-entity-behavior": "https://github.com/Brightspace/d2l-fetch-siren-entity-behavior.git#a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "https://github.com/BrightspaceUI/hierarchical-view.git#345e6a50e9f9dd7d4f783908329686a7b35b378c",
-    "d2l-hm-constants-behavior": "git://github.com/Brightspace/d2l-hm-constants-behavior.git#0987b7ffbcb1a25d99f2ca10efd5b8f9d1fc329b",
+    "d2l-hm-constants-behavior": "git://github.com/Brightspace/d2l-hm-constants-behavior.git#582c7cba9cf887cee561c1d1894e16ab98428536",
     "d2l-icons": "https://github.com/BrightspaceUI/icons.git#ce42c1d4ba6db7192af06707330dbf9f4197f38b",
     "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#392c50bfc048aa2181a445f910ad3727420a9a95",
     "d2l-image-selector": "git://github.com/Brightspace/image-selector.git#6278acf1f91811a4eb4b7d39b0c5b872466aaaa9",
@@ -84,6 +83,7 @@
     "s-html": "https://github.com/Brightspace/s-html.git#a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "https://github.com/webcomponents/shadycss.git#b71741bfb593ea313d6095f7fc101778ec87202c",
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
+    "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
@@ -91,7 +91,6 @@
   "private": true,
   "resolutions": {
     "1.x-hybrid-components": "ad4fc6a90082efa0c37774f4a2692636d68c2a54",
-    "Sortable": "a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "app-localize-behavior": "530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "8b113cc476fdc1487c1560eae05db0859b8a8609",
     "d2l-button": "ffe458da6d00092ee7a297dc7e98e5211df55253",
@@ -109,7 +108,7 @@
     "d2l-fetch-simple-cache": "a7e1b7ae02962639ffcf4af222af540203f35b59",
     "d2l-fetch-siren-entity-behavior": "a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "345e6a50e9f9dd7d4f783908329686a7b35b378c",
-    "d2l-hm-constants-behavior": "0987b7ffbcb1a25d99f2ca10efd5b8f9d1fc329b",
+    "d2l-hm-constants-behavior": "582c7cba9cf887cee561c1d1894e16ab98428536",
     "d2l-icons": "ce42c1d4ba6db7192af06707330dbf9f4197f38b",
     "d2l-image-banner-overlay": "392c50bfc048aa2181a445f910ad3727420a9a95",
     "d2l-image-selector": "6278acf1f91811a4eb4b7d39b0c5b872466aaaa9",
@@ -173,15 +172,15 @@
     "s-html": "a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "b71741bfb593ea313d6095f7fc101778ec87202c",
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
+    "Sortable": "a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-09-06T16:06:15.622Z",
+    "lastUpdated": "2018-09-07T15:18:48.097Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.4",
-      "Sortable": "1.6.0-bs1",
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.2.0",
       "d2l-button": "4.8.0",
@@ -199,7 +198,7 @@
       "d2l-fetch-simple-cache": "0.6.0",
       "d2l-fetch-siren-entity-behavior": "5.0.2",
       "d2l-hierarchical-view": "1.0.2",
-      "d2l-hm-constants-behavior": "5.19.2",
+      "d2l-hm-constants-behavior": "5.19.3",
       "d2l-icons": "5.1.0",
       "d2l-image-banner-overlay": "3.2.4",
       "d2l-image-selector": "3.1.0",
@@ -263,6 +262,7 @@
       "s-html": "1.2.1",
       "shadycss": "1.5.0",
       "siren-parser-import": "7.0.0",
+      "Sortable": "1.6.0-bs1",
       "stickyfill": "2.1.0",
       "susy": "2.2.14",
       "webcomponentsjs": "0.7.24"

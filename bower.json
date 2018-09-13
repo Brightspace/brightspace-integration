@@ -3,7 +3,7 @@
   "dependencies": {
     "1.x-hybrid-components": "https://github.com/BrightspaceHypermediaComponents/1.x-hybrid-components.git#ad4fc6a90082efa0c37774f4a2692636d68c2a54",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#530cddb83e7c016d8687cb9d8ef5c200521e988b",
-    "d2l-alert": "https://github.com/BrightspaceUI/alert.git#326ed610fb5ec0ddd9aff7020715d02e5492acd6",
+    "d2l-alert": "https://github.com/BrightspaceUI/alert.git#9cc51ee09fdc78f929616755ce6ff4c43f8b20ac",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#ffe458da6d00092ee7a297dc7e98e5211df55253",
     "d2l-button-group": "https://github.com/BrightspaceUI/button-group.git#6c3aca542acdea98bb2c70a06171fbdbe21812b0",
     "d2l-card": "https://github.com/BrightspaceUI/card.git#14075d5fdde7a103143545f35c5f622148fe7f65",
@@ -92,7 +92,7 @@
   "resolutions": {
     "1.x-hybrid-components": "ad4fc6a90082efa0c37774f4a2692636d68c2a54",
     "app-localize-behavior": "530cddb83e7c016d8687cb9d8ef5c200521e988b",
-    "d2l-alert": "326ed610fb5ec0ddd9aff7020715d02e5492acd6",
+    "d2l-alert": "9cc51ee09fdc78f929616755ce6ff4c43f8b20ac",
     "d2l-button": "ffe458da6d00092ee7a297dc7e98e5211df55253",
     "d2l-button-group": "6c3aca542acdea98bb2c70a06171fbdbe21812b0",
     "d2l-card": "14075d5fdde7a103143545f35c5f622148fe7f65",
@@ -178,11 +178,11 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-09-13T00:50:59.413Z",
+    "lastUpdated": "2018-09-13T16:51:35.893Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.4",
       "app-localize-behavior": "2.0.2",
-      "d2l-alert": "3.2.1",
+      "d2l-alert": "3.2.2",
       "d2l-button": "4.8.0",
       "d2l-button-group": "2.1.0",
       "d2l-card": "4.1.10",
@@ -260,7 +260,7 @@
       "jquery-vui-collapsible-section": "1.2.2",
       "polymer": "1.11.3",
       "s-html": "1.2.1",
-      "shadycss": "1.5.0",
+      "shadycss": "b71741bfb5",
       "siren-parser-import": "7.0.0",
       "Sortable": "1.6.0-bs1",
       "stickyfill": "2.1.0",

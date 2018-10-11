@@ -2,6 +2,7 @@
   "entrypoint": "web-components/index.html",
   "fragments": [
     "web-components/bsi.html",
+    "web-components/d2l-discovery-homepage.html",
     "web-components/d2l-image-banner-overlay.html",
     "web-components/d2l-more-less.html",
     "web-components/d2l-my-courses.html",

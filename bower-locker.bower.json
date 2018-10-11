@@ -1,6 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
+    "d2l-activity-alignments": "Brightspace/d2l-activity-alignments#^0.0.17",
     "d2l-alert": "^3.2.2",
     "d2l-button": "^4.8.0",
     "d2l-button-group": "^2.1.0",

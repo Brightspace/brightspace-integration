@@ -4,6 +4,7 @@
     "1.x-hybrid-components": "https://github.com/BrightspaceHypermediaComponents/1.x-hybrid-components.git#a6173a828de1c2566236a88d6932f2485400b7ac",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "app-route": "https://github.com/PolymerElements/app-route.git#017cd03c3c1fa22f5331d1d516a03aae879ee426",
+    "d2l-activity-alignments": "https://github.com/Brightspace/d2l-activity-alignments.git#d7db7f4e617fddbcff1eab9cdddc1a4f5e1c3563",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#9cc51ee09fdc78f929616755ce6ff4c43f8b20ac",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#ffe458da6d00092ee7a297dc7e98e5211df55253",
     "d2l-button-group": "https://github.com/BrightspaceUI/button-group.git#6c3aca542acdea98bb2c70a06171fbdbe21812b0",
@@ -93,6 +94,7 @@
     "1.x-hybrid-components": "a6173a828de1c2566236a88d6932f2485400b7ac",
     "app-localize-behavior": "530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "app-route": "017cd03c3c1fa22f5331d1d516a03aae879ee426",
+    "d2l-activity-alignments": "d7db7f4e617fddbcff1eab9cdddc1a4f5e1c3563",
     "d2l-alert": "9cc51ee09fdc78f929616755ce6ff4c43f8b20ac",
     "d2l-button": "ffe458da6d00092ee7a297dc7e98e5211df55253",
     "d2l-button-group": "6c3aca542acdea98bb2c70a06171fbdbe21812b0",
@@ -178,11 +180,12 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-10-11T20:25:47.313Z",
+    "lastUpdated": "2018-10-11T20:02:47.556Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.5",
       "app-localize-behavior": "2.0.2",
       "app-route": "2.1.2",
+      "d2l-activity-alignments": "0.0.17",
       "d2l-alert": "3.2.2",
       "d2l-button": "4.8.0",
       "d2l-button-group": "2.1.0",

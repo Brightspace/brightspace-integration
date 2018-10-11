@@ -2,7 +2,6 @@
   "name": "brightspace-integration",
   "dependencies": {
     "1.x-hybrid-components": "https://github.com/BrightspaceHypermediaComponents/1.x-hybrid-components.git#a6173a828de1c2566236a88d6932f2485400b7ac",
-    "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "app-route": "https://github.com/PolymerElements/app-route.git#017cd03c3c1fa22f5331d1d516a03aae879ee426",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#9cc51ee09fdc78f929616755ce6ff4c43f8b20ac",
@@ -84,6 +83,7 @@
     "s-html": "https://github.com/Brightspace/s-html.git#a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "https://github.com/webcomponents/shadycss.git#556978204f17714e195f80bd2dceb2dd40d51ac7",
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
+    "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
@@ -91,7 +91,6 @@
   "private": true,
   "resolutions": {
     "1.x-hybrid-components": "a6173a828de1c2566236a88d6932f2485400b7ac",
-    "Sortable": "a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "app-localize-behavior": "530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "app-route": "017cd03c3c1fa22f5331d1d516a03aae879ee426",
     "d2l-alert": "9cc51ee09fdc78f929616755ce6ff4c43f8b20ac",
@@ -173,6 +172,7 @@
     "s-html": "a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "556978204f17714e195f80bd2dceb2dd40d51ac7",
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
+    "Sortable": "a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
@@ -181,7 +181,6 @@
     "lastUpdated": "2018-10-11T20:25:47.313Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.5",
-      "Sortable": "1.6.0-bs1",
       "app-localize-behavior": "2.0.2",
       "app-route": "2.1.2",
       "d2l-alert": "3.2.2",
@@ -263,6 +262,7 @@
       "s-html": "1.2.1",
       "shadycss": "1.5.2",
       "siren-parser-import": "7.0.0",
+      "Sortable": "1.6.0-bs1",
       "stickyfill": "2.1.0",
       "susy": "2.2.14",
       "webcomponentsjs": "0.7.24"

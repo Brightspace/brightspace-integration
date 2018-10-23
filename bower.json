@@ -1,5 +1,4 @@
 {
-  "name": "brightspace-integration",
   "bowerLocker": {
     "lastUpdated": "2018-10-23T20:54:24.367Z",
     "lockedVersions": {
@@ -177,6 +176,7 @@
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
+  "name": "brightspace-integration",
   "private": true,
   "resolutions": {
     "1.x-hybrid-components": "a6173a828de1c2566236a88d6932f2485400b7ac",

@@ -70,7 +70,7 @@
     "imagemin-optipng": "^5.2.1",
     "lie": "^3.3.0",
     "mocha": "^3.2.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.11.0",
     "polymer-cli": "^1.7.7",
     "postcss-cli": "^6.0.0",
     "rimraf": "^2.5.4",

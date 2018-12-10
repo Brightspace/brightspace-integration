@@ -24,7 +24,7 @@
     "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^5.7.22",
     "d2l-my-dashboards": "^1.0.6",
     "d2l-offscreen": "^3.0.3",
-    "d2l-opt-in-flyout-webcomponent": "git://github.com/Brightspace/d2l-opt-in-flyout-webcomponent.git#^1.0.4",
+    "d2l-opt-in-flyout-webcomponent": "git://github.com/Brightspace/d2l-opt-in-flyout-webcomponent.git#^1.1.1",
     "d2l-organizations": "BrightspaceHypermediaComponents/organizations#^0.1.4-hybrid",
     "d2l-polymer-behaviors": "^1.7.4",
     "d2l-rubric": "Brightspace/d2l-rubric#^0.116.0",

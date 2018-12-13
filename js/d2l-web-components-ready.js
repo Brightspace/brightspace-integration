@@ -30,6 +30,6 @@ module.exports = {
 		window.removeEventListener('DOMContentLoaded', dcl);
 		this.WebComponentsReady = new Promise(function(resolve) {
 			ready = resolve;
-		}.bind(this));
+		});
 	}
 };

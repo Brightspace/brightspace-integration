@@ -37,21 +37,23 @@ describe('d2l-web-components-ready', () => {
 		});
 	});
 
-	it('should execute callbacks in order', (done) => {
+	it('should execute all callbacks', (done) => {
 		let count = 0;
+		function check() {
+			if (count === 3) done();
+		}
 		wcr.WebComponentsReady.then(() => {
 			count++;
-			expect(count).to.equal(1);
+			check();
 		});
 		wcr.init();
 		wcr.WebComponentsReady.then(() => {
 			count++;
-			expect(count).to.equal(2);
+			check();
 		});
 		wcr.WebComponentsReady.then(() => {
 			count++;
-			expect(count).to.equal(3);
-			done();
+			check();
 		});
 	});
 
@@ -84,15 +86,17 @@ describe('d2l-web-components-ready', () => {
 
 			it('should execute callbacks in order', (done) => {
 				let count = 0;
+				function check() {
+					if (count === 2) done();
+				}
 				wcr.WebComponentsReady.then(() => {
 					count++;
-					expect(count).to.equal(1);
+					check();
 				});
 				wcr.init();
 				wcr.WebComponentsReady.then(() => {
 					count++;
-					expect(count).to.equal(2);
-					done();
+					check();
 				});
 				dispatchEventListener();
 			});

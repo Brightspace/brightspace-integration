@@ -34,7 +34,30 @@ describe('d2l-web-components-ready', () => {
 			wcr.WebComponentsReady.then(cb);
 			wcr.WebComponentsReady.then(done);
 			wcr.init();
+			wcr.WebComponentsLoaded();
 		});
+	});
+
+	it('should not execute if no WebComponentsReady', (done) => {
+		wcr.WebComponentsReady.then(() => {
+			done(new Error('should not be called'));
+		});
+		wcr.WebComponentsLoaded();
+		done();
+	});
+
+	it('should not execute if no WebComponentsLoaded', (done) => {
+		wcr.WebComponentsReady.then(() => {
+			done(new Error('should not be called'));
+		});
+		wcr.init();
+		done();
+	});
+
+	it('should execute after WebComponentsReady and WebComponentsLoaded', (done) => {
+		wcr.WebComponentsReady.then(done);
+		wcr.init();
+		wcr.WebComponentsLoaded();
 	});
 
 	it('should execute all callbacks', (done) => {
@@ -51,6 +74,7 @@ describe('d2l-web-components-ready', () => {
 			count++;
 			check();
 		});
+		wcr.WebComponentsLoaded();
 		wcr.WebComponentsReady.then(() => {
 			count++;
 			check();
@@ -81,6 +105,7 @@ describe('d2l-web-components-ready', () => {
 			it('should execute callbacks when "DOMContentLoaded" fires', (done) => {
 				wcr.WebComponentsReady.then(done);
 				wcr.init();
+				wcr.WebComponentsLoaded();
 				dispatchEventListener();
 			});
 
@@ -94,6 +119,7 @@ describe('d2l-web-components-ready', () => {
 					check();
 				});
 				wcr.init();
+				wcr.WebComponentsLoaded();
 				wcr.WebComponentsReady.then(() => {
 					count++;
 					check();
@@ -114,6 +140,7 @@ describe('d2l-web-components-ready', () => {
 						expect(count).to.equal(1);
 					});
 					wcr.init();
+					wcr.WebComponentsLoaded();
 					wcr.WebComponentsReady.then(() => {
 						count++;
 						expect(count).to.equal(2);
@@ -137,6 +164,7 @@ describe('d2l-web-components-ready', () => {
 				done(new Error('should not be called'));
 			});
 			wcr.init();
+			wcr.WebComponentsLoaded();
 			done();
 		});
 
@@ -156,6 +184,7 @@ describe('d2l-web-components-ready', () => {
 		it('should execute callbacks when "WebComponentsReady" fires', (done) => {
 			wcr.WebComponentsReady.then(done);
 			wcr.init();
+			wcr.WebComponentsLoaded();
 			dispatchEventListener();
 		});
 
@@ -164,6 +193,7 @@ describe('d2l-web-components-ready', () => {
 			global.document.readyState = 'interactive';
 			wcr.WebComponentsReady.then(done);
 			wcr.init();
+			wcr.WebComponentsLoaded();
 		});
 
 	});

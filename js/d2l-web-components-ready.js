@@ -1,16 +1,30 @@
 var ready;
+var d2lComponentsLoaded = false;
+var webComponentsReady = false;
+
+function check() {
+	if (d2lComponentsLoaded && webComponentsReady) {
+		ready();
+	}
+}
 
 function dcl() {
 	window.removeEventListener('DOMContentLoaded', dcl);
-	ready();
+	webComponentsReady = true;
+	check();
 }
 
 function wcr() {
 	window.removeEventListener('WebComponentsReady', wcr);
-	ready();
+	webComponentsReady = true;
+	check();
 }
 
 module.exports = {
+	WebComponentsLoaded: function() {
+		d2lComponentsLoaded = true;
+		check();
+	},
 	WebComponentsReady: new Promise(function(resolve) {
 		ready = resolve;
 	}),
@@ -19,7 +33,8 @@ module.exports = {
 			window.addEventListener('WebComponentsReady', wcr);
 		} else {
 			if (document.readyState === 'interactive' || document.readyState === 'complete') {
-				ready();
+				webComponentsReady = true;
+				check();
 			} else {
 				window.addEventListener('DOMContentLoaded', dcl);
 			}
@@ -28,6 +43,8 @@ module.exports = {
 	reset: function() {
 		window.removeEventListener('WebComponentsReady', wcr);
 		window.removeEventListener('DOMContentLoaded', dcl);
+		d2lComponentsLoaded = false;
+		webComponentsReady = false;
 		this.WebComponentsReady = new Promise(function(resolve) {
 			ready = resolve;
 		});

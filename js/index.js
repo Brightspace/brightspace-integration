@@ -15,5 +15,5 @@ window.D2L.FastDom = FastDom;
 
 import './timing-debug.js';
 
-import '../bower_components/jquery-vui-change-tracking/changeTracker.js';
-import '../bower_components/jquery-vui-change-tracking/changeTracking.js';
+import '../node_modules/jquery-vui-change-tracking/changeTracker.js';
+import '../node_modules/jquery-vui-change-tracking/changeTracking.js';

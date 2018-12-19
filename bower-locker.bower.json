@@ -11,7 +11,6 @@
     "d2l-organizations": "BrightspaceHypermediaComponents/organizations#^0.1.14-hybrid",
     "d2l-rubric": "Brightspace/d2l-rubric#^0.153.0",
     "d2l-telemetry-browser-client": "Brightspace/d2l-telemetry-browser-client#^0.4.0",
-    "jquery-vui-change-tracking": "^0.6.0",
     "d2l-users": "^1.1.1"
   },
   "private": true

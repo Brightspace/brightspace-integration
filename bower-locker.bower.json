@@ -22,7 +22,7 @@
     "d2l-menu": "^1.1.0",
     "d2l-more-less": "^4.3.0",
     "d2l-navigation": "^2.1.0",
-    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^6.0.9",
+    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^6.0.10",
     "d2l-my-dashboards": "^1.0.6",
     "d2l-offscreen": "^3.0.3",
     "d2l-opt-in-flyout-webcomponent": "Brightspace/d2l-opt-in-flyout-webcomponent#^1.2.0",

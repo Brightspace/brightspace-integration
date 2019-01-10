@@ -8,7 +8,7 @@ function check() {
 	}
 }
 
-module.exports = {
+export default {
 	WebComponentsLoaded: function() {
 		d2lComponentsLoaded = true;
 		check();

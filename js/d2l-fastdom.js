@@ -1,3 +1,5 @@
+import webComponentsReady from './d2l-web-components-ready.js';
+
 var index = 0;
 var idMap = {};
 var wcrFired = false;
@@ -5,15 +7,12 @@ var wcrFired = false;
 function wcr() {
 
 	wcrFired = true;
-
 	for (var id in idMap) {
 		var item = idMap[id];
 		if (item.id === 'pending') {
 			item.id = window['fastdom'][item.method](item.cb);
 		}
 	}
-
-	window.removeEventListener('WebComponentsReady', wcr);
 
 }
 
@@ -24,18 +23,20 @@ function helper(method, cb) {
 	index++;
 	var fastDomId = 'd2l_fastdom_' + index;
 	idMap[fastDomId] = {method: method, id: 'pending', cb: cb};
-	window.addEventListener('WebComponentsReady', wcr);
+	webComponentsReady.WebComponentsReady.then(wcr);
 	return fastDomId;
 }
 
-module.exports = {
+export default {
 	__getIndex: function() { return index; },
 	__getIdMap: function() { return idMap; },
 	__reset: function() {
 		index = 0;
 		idMap = {};
 		wcrFired = false;
+		webComponentsReady.reset();
 	},
+	__wcr: webComponentsReady,
 	clear: function(id) {
 		var fastDomId = id;
 		if (idMap[id] !== undefined) {

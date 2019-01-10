@@ -1,12 +1,9 @@
-'use strict';
+import {expect, use} from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import d2lFastDom from '../js/d2l-fastdom.js';
 
-const expect = require('chai').expect,
-	sinon = require('sinon'),
-	d2lFastDom = require('../js/d2l-fastdom.js');
-
-require('chai')
-	.use(require('sinon-chai'))
-	.should();
+use(sinonChai).should();
 
 describe('d2l-fastdom', () => {
 
@@ -14,9 +11,7 @@ describe('d2l-fastdom', () => {
 
 	beforeEach(() => {
 		global.window = {
-			addEventListener: sinon.spy(),
-			fastdom: undefined,
-			removeEventListener: sinon.spy()
+			fastdom: undefined
 		};
 		fastdomMock = {
 			clear: sinon.spy(),
@@ -26,8 +21,9 @@ describe('d2l-fastdom', () => {
 	});
 
 	function triggerWebComponentReady() {
-		var wcrCb = global.window.addEventListener.getCall(0).args[1];
-		wcrCb();
+		d2lFastDom.__wcr.WebComponentsLoaded();
+		d2lFastDom.__wcr.WCRDispatched();
+		return d2lFastDom.__wcr.WebComponentsReady;
 	}
 
 	afterEach(() => {
@@ -84,54 +80,37 @@ describe('d2l-fastdom', () => {
 				expect(d2lFastDom.__getIdMap()[id].id).to.equal('pending');
 			});
 
-			it('should add an event listener for "WebComponentsReady" when fastdom not loaded', () => {
-				d2lFastDom[method]();
-				global.window.addEventListener.should.have.been.called;
-			});
-
-			it('should call into fastdom after WCR event', () => {
+			it('should call into fastdom after WCR event', (done) => {
 				var cb = sinon.spy();
 				d2lFastDom[method](cb);
 				global.window['fastdom'] = fastdomMock;
-				triggerWebComponentReady();
-				fastdomMock[method].should.have.been.calledWith(cb);
+				triggerWebComponentReady().then(() => {
+					fastdomMock[method].should.have.been.calledWith(cb);
+					done();
+				});
 			});
 
-			it('should throw if fastdom is not available during and after WCR', () => {
-				var expectedError = `Cannot read property '${method}' of undefined`;
-				d2lFastDom[method]();
-				expect(() => {
-					triggerWebComponentReady();
-				}).to.throw(expectedError);
-				expect(() => {
-					d2lFastDom[method]();
-				}).to.throw(expectedError);
-			});
-
-			it('should replace "pending" map entry with fastdom value after WCR', () => {
+			it('should replace "pending" map entry with fastdom value after WCR', (done) => {
 				fastdomMock[method].returns('1234');
 				var id = d2lFastDom[method]();
 				global.window['fastdom'] = fastdomMock;
-				triggerWebComponentReady();
-				expect(d2lFastDom.__getIdMap()[id].id).to.equal('1234');
+				triggerWebComponentReady().then(() => {
+					expect(d2lFastDom.__getIdMap()[id].id).to.equal('1234');
+					done();
+				});
 			});
 
-			it('should remove WCR event listener', () => {
-				d2lFastDom[method]();
-				global.window['fastdom'] = fastdomMock;
-				triggerWebComponentReady();
-				global.window.removeEventListener.should.have.been.called.once;
-			});
-
-			it('should call into fastdom for each item in the queue', () => {
+			it('should call into fastdom for each item in the queue', (done) => {
 				var cb1 = sinon.spy(),
 					cb2 = sinon.spy();
 				d2lFastDom[method](cb1);
 				d2lFastDom[method](cb2);
 				global.window['fastdom'] = fastdomMock;
-				triggerWebComponentReady();
-				fastdomMock[method].should.have.been.calledWith(cb1);
-				fastdomMock[method].should.have.been.calledWith(cb2);
+				triggerWebComponentReady().then(() => {
+					fastdomMock[method].should.have.been.calledWith(cb1);
+					fastdomMock[method].should.have.been.calledWith(cb2);
+					done();
+				});
 			});
 
 		});

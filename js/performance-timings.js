@@ -1,6 +1,6 @@
-/* eslint strict: "off" */
+import webComponentsReady from './d2l-web-components-ready.js';
+
 (function() {
-	'use strict';
 
 	if (!window.performance
 		|| !window.performance.mark
@@ -58,16 +58,7 @@
 		addEventListener('load', pageLoaded);
 	}
 
-	// polyfill in use
-	if (window.WebComponents) {
-		addEventListener('WebComponentsReady', wcReady);
-	} else {
-		if (document.readyState === 'interactive' || document.readyState === 'complete') {
-			wcReady();
-		} else {
-			addEventListener('DOMContentLoaded', wcReady);
-		}
-	}
+	webComponentsReady.WebComponentsReady.then(wcReady);
 
 	if ('PerformanceObserver' in window) {
 		var observer = new PerformanceObserver(function(observerList) {

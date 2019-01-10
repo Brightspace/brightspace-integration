@@ -1,10 +1,8 @@
-'use strict';
+import wcr from '../js/d2l-web-components-ready.js';
+import {use} from 'chai';
+import sinonChai from 'sinon-chai';
 
-const wcr = require('../js/d2l-web-components-ready.js');
-
-require('chai')
-	.use(require('sinon-chai'))
-	.should();
+use(sinonChai).should();
 
 describe('d2l-web-components-ready', () => {
 

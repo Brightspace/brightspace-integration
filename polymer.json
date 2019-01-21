@@ -12,8 +12,7 @@
     "web-components/d2l-scroll-spy.html",
     "web-components/d2l-table.html",
     "web-components/d2l-rubric.html",
-    "web-components/d2l-rubric-editor.html",
-    "web-components/d2l-rubric-structure-editor.html"
+    "web-components/d2l-rubric-editor.html"
   ],
   "sources": [],
   "extraDependencies": [

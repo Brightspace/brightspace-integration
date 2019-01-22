@@ -13,8 +13,7 @@
     "web-components/d2l-scroll-spy.js",
     "web-components/d2l-table.js",
     "web-components/d2l-rubric.js",
-    "web-components/d2l-rubric-editor.js",
-    "web-components/d2l-rubric-structure-editor.js"
+    "web-components/d2l-rubric-editor.js"
   ],
   "extraDependencies": [
     "node_modules/d2l-rubric/editor/images/**",

@@ -14,7 +14,7 @@
     "web-components/d2l-table.js",
     "web-components/d2l-rubric.js",
     "web-components/d2l-rubric-editor.js",
-    "web-components/d2l-outcomes-level-of-achievement.js"
+    "web-components/d2l-outcomes-level-of-achievements.js"
   ],
   "extraDependencies": [
     "node_modules/d2l-rubric/editor/images/**",

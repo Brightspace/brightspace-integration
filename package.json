@@ -93,6 +93,7 @@
     "d2l-rubric": "Brightspace/d2l-rubric#semver:^3",
     "d2l-save-status": "Brightspace/d2l-save-status#semver:^3",
     "d2l-scroll-spy": "BrightspaceUI/scroll-spy#semver:^1",
+    "d2l-sequence-viewer": "Brightspace/d2l-sequence-viewer#semver:^1",
     "d2l-simple-overlay": "Brightspace/simple-overlay#semver:^3",
     "d2l-table": "BrightspaceUI/table#semver:^2",
     "d2l-typography": "BrightspaceUI/typography#semver:^7",

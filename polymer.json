@@ -11,6 +11,7 @@
     "web-components/d2l-opt-in-flyout-webcomponent.js",
     "web-components/d2l-simple-overlay.js",
     "web-components/d2l-scroll-spy.js",
+    "web-components/d2l-sequence-viewer.js",
     "web-components/d2l-table.js",
     "web-components/d2l-rubric.js",
     "web-components/d2l-rubric-editor.js",

@@ -16,6 +16,7 @@ const owner = 'Brightspace';
 const repo = 'brightspace-integration';
 const versionChecker = /^20\.[0-9]{2}\.(1|2|3|4|5|6|7|8|9|10|11|12)$/;
 const rallyVersionChecker = /^(20\.[0-9]{2}\.)([0-9]{2})$/;
+const skipReleaseFlag = '[skip release]';
 
 async function tryGetActiveDevelopmentRelease() {
 
@@ -140,6 +141,12 @@ async function createRelease(newTag) {
 async function main() {
 
 	console.log('Attempting to automatically tag BSI release...');
+
+	const skipRelease = (process.env.TRAVIS_COMMIT_MESSAGE.toLowerCase().indexOf(skipReleaseFlag) > -1);
+	if (skipRelease) {
+		console.log(`  "${skipReleaseFlag}" present in commit message, aborting auto-tag.`);
+		return;
+	}
 
 	const isTaggedCommit = (process.env.TRAVIS_TAG !== '');
 	if (isTaggedCommit) {

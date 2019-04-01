@@ -81,6 +81,8 @@ For each tag, the project assets (contents of the `build` directory) will be aut
 
 The publish location will be: `https://s.brightspace.com/lib/bsi/{version}/`
 
+To skip automatic tagging and releasing, include the text `[skip release]` in your merge commit message.
+
 ## Updating LP to reference the new version of BSI
 
 Once a new release of BSI has been automatically published to the CDN, you'll need to update LP to reference your version. Create a pull request in LP

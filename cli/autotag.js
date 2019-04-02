@@ -51,6 +51,7 @@ async function tryGetActiveDevelopmentRelease() {
 			type: 'release',
 			limit: 10,
 			fetch: ['Name'],
+			order: 'ReleaseDate ASC',
 			query: rally.util.query.where('ReleaseStartDate', '<=', nowISO).and('ReleaseDate', '>', nowISO).and('Project.Name', '=', 'D2L')
 		});
 	} catch (e) {

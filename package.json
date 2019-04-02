@@ -119,7 +119,7 @@
     "imagemin": "^6.1.0",
     "imagemin-optipng": "^6.0.0",
     "jquery-vui-change-tracking": "Brightspace/jquery-valence-ui-change-tracking#semver:^1",
-    "mocha": "^5.2.0",
+    "mocha": "^6.0.2",
     "node-sass": "^4.11.0",
     "polymer-cli": "^1.8.0",
     "postcss-cli": "^6.0.0",

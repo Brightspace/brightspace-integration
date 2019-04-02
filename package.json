@@ -38,9 +38,9 @@
     "test:package-lock": "node test-package-lock.js",
     "test:unit": "mocha --require @babel/register",
     "uglify:css": "npm run uglify:css:bsi && npm run uglify:css:datagrid && npm run uglify:css:homepages",
-    "uglify:css:bsi": "cleancss -s ./build/bsi.css -o ./build/bsi.min.css -c",
-    "uglify:css:datagrid": "cleancss -s ./build/datagrid.css -o ./build/datagrid.min.css",
-    "uglify:css:homepages": "cleancss -s ./build/homepages.css -o ./build/homepages.min.css",
+    "uglify:css:bsi": "cleancss ./build/bsi.css -o ./build/bsi.min.css",
+    "uglify:css:datagrid": "cleancss ./build/datagrid.css -o ./build/datagrid.min.css",
+    "uglify:css:homepages": "cleancss ./build/homepages.css -o ./build/homepages.min.css",
     "uglify:js": "uglifyjs ./build/bsi.js --compress --mangle --source-map \"content='build/bsi.js.map',url='bsi.min.js.map'\" -o ./build/bsi.min.js"
   },
   "repository": {
@@ -70,7 +70,7 @@
     "babel-eslint": "^10.0.1",
     "chai": "^4.2.0",
     "chalk": "^2.4.2",
-    "clean-css": "^3.4.19",
+    "clean-css-cli": "^4.2.1",
     "cpy-cli": "^1.0.1",
     "cross-env": "^5.2.0",
     "d2l-activities": "BrightspaceHypermediaComponents/activities.git#semver:^2",

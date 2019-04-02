@@ -49,7 +49,7 @@ async function tryGetActiveDevelopmentRelease() {
 	try {
 		releases = await rallyApi.query({
 			type: 'release',
-			limit: 1,
+			limit: 10,
 			fetch: ['Name'],
 			query: rally.util.query.where('ReleaseStartDate', '<=', nowISO).and('ReleaseDate', '>', nowISO).and('Project.Name', '=', 'D2L')
 		});
@@ -58,7 +58,7 @@ async function tryGetActiveDevelopmentRelease() {
 		process.exitCode = 1;
 		return null;
 	}
-	if (releases.TotalResultCount !== 1) {
+	if (releases.TotalResultCount === 0) {
 		console.error(chalk.red('    Error: Unable to query for active development release in Rally.'));
 		process.exitCode = 1;
 		return null;

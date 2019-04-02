@@ -109,7 +109,7 @@
     "d2l-typography": "BrightspaceUI/typography#semver:^7",
     "d2l-users": "BrightspaceHypermediaComponents/users#semver:^2",
     "eslint": "^5.16.0",
-    "eslint-config-brightspace": "0.5.2",
+    "eslint-config-brightspace": "^0.5.2",
     "eslint-plugin-html": "^5.0.3",
     "fastdom": "^1.0.8",
     "frau-publisher": "^2.7.8",

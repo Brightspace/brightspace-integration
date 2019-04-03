@@ -136,11 +136,5 @@
     "svg2png": "^4.1.1",
     "uglify-js": "^3.4.7",
     "whatwg-fetch": "^3.0.0"
-  },
-  "greenkeeper": {
-    "ignore": [
-      "@polymer/polymer",
-      "susy"
-    ]
   }
 }

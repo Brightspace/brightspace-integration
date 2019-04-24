@@ -30,6 +30,8 @@ import 'd2l-button/d2l-floating-buttons.js';
 import 'd2l-button-group/d2l-button-group.js';
 import 'd2l-button-group/d2l-action-button-group.js';
 import 'd2l-dropdown/d2l-dropdown.js';
+import 'd2l-dropdown/d2l-dropdown-button.js';
+import 'd2l-dropdown/d2l-dropdown-button-subtle.js';
 import 'd2l-dropdown/d2l-dropdown-content.js';
 import 'd2l-dropdown/d2l-dropdown-context-menu.js';
 import 'd2l-dropdown/d2l-dropdown-menu.js';

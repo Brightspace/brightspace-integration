@@ -73,7 +73,7 @@
     "clean-css-cli": "^4.2.1",
     "cpy-cli": "^2.0.0",
     "cross-env": "^5.2.0",
-    "d2l-activities": "BrightspaceHypermediaComponents/activities.git#semver:^2",
+    "d2l-activities": "BrightspaceHypermediaComponents/activities.git#release/20.19.5",
     "d2l-activity-alignments": "Brightspace/d2l-activity-alignments.git#semver:^1",
     "d2l-alert": "BrightspaceUI/alert#semver:^4",
     "d2l-button": "BrightspaceUI/button#semver:^5",

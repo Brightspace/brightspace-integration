@@ -12,9 +12,9 @@ $d2l-navigation-bp-mobile-menu-compact: 380px;
 $d2l-navigation-bp-title-compact: 615px;
 $d2l-navigation-bp-title-hidden: 488px;
 
-$d2l-branding-navigation-dark-foreground-color: #565A5C;
+$d2l-branding-navigation-dark-foreground-color: $d2l-color-ferrite;
 $d2l-branding-navigation-light-foreground-color: #FFFFFF;
-$d2l-color-light-galena: rgba(124,134,149,0.18);
+$d2l-color-light-galena: rgba(134,140,143,0.18);
 
 .d2l-navigation-s-centerer { // remove once bottom nav bar is in d2l-navigation
 	margin: 0 auto;

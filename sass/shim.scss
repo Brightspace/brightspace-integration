@@ -1,3 +1,4 @@
+@import '../node_modules/d2l-colors/d2l-colors.scss';
 
 @mixin _dialog-animation_shim-opacity() {
 	animation: {
@@ -13,7 +14,7 @@
 }
 
 .d2l-shim {
-	background-color: #F9FAFB;
+	background-color: $d2l-color-regolith;
 	bottom: 0;
 	opacity: 0;
 	position: fixed;

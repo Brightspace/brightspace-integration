@@ -1,7 +1,6 @@
 @import 'input-helpers.scss';
 @import 'input-checkbox.scss';
 @import 'input-radio.scss';
-@import 'input-search.scss';
 @import 'input-select.scss';
 @import 'input-text.scss';
 @import 'input-textarea.scss';
@@ -31,25 +30,6 @@ select.vui-input {
 
 textarea.vui-input {
 	@include _vui-input-textarea();
-}
-
-.vui-input-checkbox-label {
-	@include _vui-input-checkbox-label();
-}
-
-.vui-input-radio-label {
-	@include _vui-input-radio-label();
-}
-
-/* TODO: remove these when feature flag is removed */
-.vui-input-search-container {
-	@include _vui-input-search-container();
-}
-.vui-input-search-button {
-	@include _vui-input-search-button();
-}
-.vui-input-search-clear-button {
-	@include _vui-input-search-clear-button();
 }
 
 .d2l-checkbox-container {

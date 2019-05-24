@@ -92,7 +92,7 @@
     "d2l-loading-spinner": "BrightspaceUI/loading-spinner#semver:^7",
     "d2l-menu": "BrightspaceUI/menu#semver:^2",
     "d2l-more-less": "BrightspaceUI/more-less#semver:^5",
-    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#semver:9.1.1-certfix-2",
+    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#semver:9.1.1-certfix-3",
     "d2l-my-dashboards": "github:Brightspace/d2l-my-dashboards-ui#semver:^3",
     "d2l-navigation": "BrightspaceUI/navigation#semver:^3",
     "d2l-offscreen": "BrightspaceUI/offscreen#semver:^4",

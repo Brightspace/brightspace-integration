@@ -97,6 +97,7 @@
     "d2l-navigation": "BrightspaceUI/navigation#semver:^3",
     "d2l-offscreen": "BrightspaceUI/offscreen#semver:^4",
     "d2l-opt-in-flyout-webcomponent": "Brightspace/d2l-opt-in-flyout-webcomponent#semver:^2",
+    "d2l-organizations": "github:BrightspaceHypermediaComponents/organizations#semver:5",
     "d2l-outcomes-level-of-achievements": "Brightspace/outcomes-level-of-achievement-ui.git#semver:^2",
     "d2l-outcomes-user-progress": "Brightspace/d2l-outcomes-user-progress.git#semver:^1",
     "d2l-polymer-behaviors": "Brightspace/d2l-polymer-behaviors-ui#semver:^2",
@@ -138,5 +139,6 @@
     "svg2png": "^4.1.1",
     "uglify-js": "^3.4.7",
     "whatwg-fetch": "^3.0.0"
-  }
+  },
+  "dependencies": {}
 }

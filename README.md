@@ -59,7 +59,7 @@ We use a `package-lock.json` file to lock our NPM dependencies. This ensures we 
 
 Any command that would normally add or update `package.json` will also update `package-lock.json` -- `npm install`, `npm update` etc. Just be cognizant of the changes you're making.
 
-### package-lock.json refresh
+### `package-lock.json` Refresh
 
 Current versions of npm (6.8-6.10) do not always flatten package-lock.json with an `npm i`.  You may end up with many test errors like:
 

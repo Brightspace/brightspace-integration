@@ -109,6 +109,7 @@
     "d2l-table": "BrightspaceUI/table#semver:^2",
     "d2l-tabs": "BrightspaceUI/tabs#semver:^1",
     "d2l-users": "BrightspaceHypermediaComponents/users#semver:^2",
+    "d2l-activity-exemptions": "Brightspace/d2l-activity-exemptions#semver:^2",
     "es-dev-server": "^1.17.2",
     "eslint": "^5.16.0",
     "eslint-config-brightspace": "^0.5.2",

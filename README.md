@@ -162,7 +162,7 @@ To skip automatic tagging and releasing, include the text `[skip release]` in yo
 
 ## Updating LP to reference the new version of BSI
 
-A set of [Jenkins jobs](https://prod.build.d2l/job/Dev/job/Core%20LMS/job/Sync%20BSI/) checks for new BSI versions every 10 minutes and automatically updates LP to reference your version. Although it merges the change to LP quickly, it also triggers a CI for easy tracking in case there is a problem with the assets published to the CDN. In case of failures you will receive an email from Jenkins (and a message will be sent to the `#build-triage` Slack channel), so that you can investigate and complete the process manually if needed.
+A set of [Jenkins jobs](https://prod.build.d2l/job/Dev/job/Core%20LMS/job/Sync%20BSI/) checks for new BSI versions every 10 minutes during work hours and automatically updates LP to reference your version. Although it merges the change to LP quickly, it also triggers a CI for easy tracking in case there is a problem with the assets published to the CDN. In case of failures you will receive an email from Jenkins (and a message will be sent to the `#build-triage` Slack channel), so that you can investigate and complete the process manually if needed.
 
 This will ensure that the LP (and new CD builds) are using the latest version of BSI.
 

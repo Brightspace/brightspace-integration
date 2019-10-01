@@ -4,6 +4,7 @@
   "fragments": [
     "web-components/bsi.js",
     "web-components/d2l-activity-alignments.js",
+    "web-components/d2l-activity-collections.js",
     "web-components/d2l-activity-editor.js",
     "web-components/d2l-enrollment-collection-widget.js",
     "web-components/d2l-enrollment-summary-view.js",
@@ -21,7 +22,9 @@
     "web-components/d2l-outcomes-user-progress.js",
     "web-components/d2l-program-outcomes-picker.js",
     "web-components/d2l-tabs.js",
+
     "web-components/d2l-activity-exemptions.js"
+    "web-components/d2l-quick-eval.js"
   ],
   "extraDependencies": [
     "node_modules/d2l-rubric/editor/images/**",

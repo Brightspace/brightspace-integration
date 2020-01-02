@@ -59,7 +59,7 @@ class Unbundler:
 
         self.test = test
 
-        if not self.test:
+        if not self.test and not self.dry_run:
             # Check that the BSI path and the component path are actually node modules
             if not self.back_end_only and (not self.is_node_module(bsi_path) or not self.is_node_module(component_path)):
                 print("[ERROR] The given paths are not valid node modules!", file=sys.stderr)
@@ -131,7 +131,7 @@ class Unbundler:
     def unbundle(self):
         start_time = time.time()
 
-        if os.name == WINDOWS and not self.is_admin():
+        if os.name == WINDOWS and not self.is_admin() and not self.dry_run:
             print("[ERROR] The script must be run with elevated privileges...", file=sys.stderr)
 
             end_time = time.time()

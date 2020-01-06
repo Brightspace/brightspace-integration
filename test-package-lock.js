@@ -12,11 +12,11 @@ const packages = [
 	'd2l-fetch-dedupe',
 	'd2l-fetch-simple-cache',
 	'd2l-hypermedia-constants',
-	'd2l-intl',
 	'd2l-organization-hm-behavior',
 	'd2l-polymer-siren-behaviors',
 	'd2l-telemetry-browser-client',
-	'@brightspace-ui/core'
+	'@brightspace-ui/core',
+	'@brightspace-ui/intl'
 ];
 
 function validate(json, depth, parentKey) {

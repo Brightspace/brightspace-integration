@@ -2,8 +2,14 @@ import 'whatwg-fetch'; // Required for d2l-fetch + IE11
 
 import 'fastdom';
 
-import d2lIntl from 'd2l-intl';
-window.d2lIntl = d2lIntl;
+import {formatNumber, parseNumber} from '@brightspace-ui/intl/lib/number.js';
+import {formatTime, parseTime} from '@brightspace-ui/intl/lib/dateTime.js';
+window.D2L.Intl = {
+	FormatNumber: formatNumber,
+	FormatTime: formatTime,
+	ParseNumber: parseNumber,
+	ParseTime: parseTime
+};
 
 import { d2lfetch } from '../node_modules/d2l-fetch/src/index.js';
 import { fetchAuth } from 'd2l-fetch-auth';

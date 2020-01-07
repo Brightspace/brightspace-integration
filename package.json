@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "autoprefix": "postcss ./build/bsi.css -o ./build/bsi.css -u autoprefixer",
-    "start": "cross-env BROWSERSLIST_CONFIG=./.browserslistrc-es-dev-server es-dev-server --config=./es-dev-server.config.js --compatibility modern --node-resolve --watch",
+    "start": "cross-env BROWSERSLIST_CONFIG=./.browserslistrc-es-dev-server es-dev-server --config=./es-dev-server.config.js --compatibility auto --node-resolve --watch",
     "build": "npm run build:wc && npm run build:common",
     "build-no-es5": "npm run build:wc-no-es5 && npm run build:common",
     "build:common": "npm run build:js && npm run build:sass && npm run build:icons && npm run build:navicons && npm run build:email-icons && npm run build:babelHelpers && npm run build:esm-amd-loader && npm run build:regenerator-runtime",

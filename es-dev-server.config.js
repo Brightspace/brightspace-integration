@@ -14,9 +14,9 @@ const cors = require('@koa/cors');
 module.exports = {
 	hostname: 'localhost',
 	port: 8080,
-	compatibility: 'modern',
+	compatibility: 'auto',
 	preserveSymlinks: true,
-	customMiddlewares: [
+	middlewares: [
 		cors(),
 		function rewrite(context, next) {
 			let url;

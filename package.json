@@ -29,7 +29,7 @@
     "lint": "npm run lint:js",
     "lint:js": "eslint *.js web-components/*.js js/** rollup/** test/** cli/**",
     "publish:autotag": "node ./cli/autotag.js",
-    "publish:cdn": "frau-publisher -m lib -t bsi -f \"./build/**/*\" -k AKIAIZGPQIRSA2WEJEDA --secretvar CDN_SECRET --devTag TRAVIS_COMMIT",
+    "publish:cdn": "frau-publisher -m lib -t bsi -f \"./build/**/*\" -k AKIAIZGPQIRSA2WEJEDA --secretvar CDN_SECRET --devTag \"c6d399e39a3f7ea0dddd5af1693a8f7df641a64f\"",
     "preserve": "npm run build",
     "serve": "http-server build --cors",
     "preserve-no-es5": "npm run build-no-es5",

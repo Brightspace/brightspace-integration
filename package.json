@@ -81,6 +81,7 @@
     "d2l-activity-exemptions": "Brightspace/d2l-activity-exemptions#semver:^2",
     "d2l-alert": "BrightspaceUI/alert#semver:^4",
     "d2l-button-group": "BrightspaceUI/button-group#semver:^3",
+    "d2l-content-store": "Brightspace/d2l-content-store#semver:^0",
     "d2l-dropdown": "BrightspaceUI/dropdown#semver:^7",
     "d2l-fetch": "Brightspace/d2l-fetch.git#semver:^2",
     "d2l-fetch-auth": "^1.5.2",

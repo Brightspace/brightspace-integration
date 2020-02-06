@@ -23,7 +23,8 @@
     "web-components/d2l-program-outcomes-picker.js",
     "web-components/d2l-tabs.js",
     "web-components/d2l-activity-exemptions.js",
-    "web-components/d2l-quick-eval.js"
+    "web-components/d2l-quick-eval.js",
+    "web-components/d2l-content-store.js"
   ],
   "extraDependencies": [
     "node_modules/@d2l/d2l-attachment/locales/*.json",

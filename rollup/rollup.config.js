@@ -1,18 +1,16 @@
-import commonjs from 'rollup-plugin-commonjs';
-import json from 'rollup-plugin-json';
-import resolve from 'rollup-plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
-export default {
+const legacyConfig = {
+	input: './js/bsi.js',
 	plugins: [
-		resolve({
-			browser: true
-		}),
-		commonjs(),
-		json()
+		commonjs()
 	],
 	output: {
+		dir: 'build',
 		format: 'iife',
 		name: 'BSI',
 		sourcemap: true
 	}
 };
+
+export default legacyConfig;

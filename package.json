@@ -10,7 +10,6 @@
     "build-no-es5": "npm run build:wc-no-es5 && npm run build:common",
     "build:common": "npm run build:js && npm run build:sass && npm run build:icons && npm run build:navicons && npm run build:email-icons && npm run build:babelHelpers && npm run build:esm-amd-loader && npm run build:regenerator-runtime",
     "build:js": "rollup -c ./rollup/rollup.config.js",
-    "postbuild:js": "npm run uglify:js",
     "build:babelHelpers": "babel-external-helpers > ./build/babel-helpers.js",
     "build:esm-amd-loader": "cpy --cwd=node_modules/@polymer/esm-amd-loader/lib \"esm-amd-loader.min.js\" ../../../../build",
     "build:regenerator-runtime": "cpy --cwd=node_modules/regenerator-runtime/ \"runtime.js\" ../../build --rename=regenerator-runtime.js",
@@ -41,8 +40,7 @@
     "uglify:css": "npm run uglify:css:bsi && npm run uglify:css:datagrid && npm run uglify:css:homepages",
     "uglify:css:bsi": "cleancss ./build/bsi.css -o ./build/bsi.min.css",
     "uglify:css:datagrid": "cleancss ./build/datagrid.css -o ./build/datagrid.min.css",
-    "uglify:css:homepages": "cleancss ./build/homepages.css -o ./build/homepages.min.css",
-    "uglify:js": "uglifyjs ./build/bsi.js --compress --mangle --source-map \"content='build/bsi.js.map',url='bsi.min.js.map'\" -o ./build/bsi.min.js"
+    "uglify:css:homepages": "cleancss ./build/homepages.css -o ./build/homepages.min.css"
   },
   "repository": {
     "type": "git",
@@ -135,11 +133,11 @@
     "regenerator-runtime": "^0.13.2",
     "rimraf": "^2",
     "rollup": "^1",
+    "rollup-plugin-uglify": "^6",
     "sinon": "^7.2.2",
     "sinon-chai": "^3.3.0",
     "susy": "^2.2.14",
     "svg2png": "^4.1.1",
-    "uglify-js": "^3.4.7",
     "whatwg-fetch": "^3.0.0"
   },
   "dependencies": {},

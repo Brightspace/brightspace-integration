@@ -1,4 +1,5 @@
 import commonjs from '@rollup/plugin-commonjs';
+import copy from 'rollup-plugin-copy';
 import postcss from 'rollup-plugin-postcss';
 import { uglify } from 'rollup-plugin-uglify';
 import autoprefixer from 'autoprefixer';
@@ -6,7 +7,15 @@ import autoprefixer from 'autoprefixer';
 const jsConfig = {
 	input: './js/bsi.js',
 	plugins: [
-		commonjs()
+		commonjs(),
+		copy({
+			targets: [
+				{src: 'node_modules/@brightspace-ui/core/components/icons/images', dest: './build'},
+				{src: 'nav-icons', dest: './build/images'},
+				{src: 'node_modules/@polymer/esm-amd-loader/lib/esm-amd-loader.min.js', dest: './build'},
+				{src: 'node_modules/regenerator-runtime/runtime.js', dest: './build', rename: 'regenerator-runtime.js'}
+			]
+		})
 	],
 	output: {
 		file: './build/bsi.js',

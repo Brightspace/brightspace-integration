@@ -8,19 +8,12 @@ const jsConfig = {
 	plugins: [
 		commonjs()
 	],
-	output: [
-		{
-			file: './build/bsi.js',
-			format: 'iife',
-			name: 'BSI'
-		},
-		{
-			file: './build/bsi.min.js',
-			format: 'iife',
-			name: 'BSI',
-			plugins: [uglify()]
-		}
-	]
+	output: {
+		file: './build/bsi.js',
+		format: 'iife',
+		name: 'BSI',
+		plugins: [uglify()]
+	}
 };
 
 const cssConfigs = [

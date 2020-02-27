@@ -10,9 +10,7 @@ script:
     npm run publish:autotag;
   fi
 - |
-  if [ "$TRAVIS_TEST_RESULT" == "0" ] && [ "$TRAVIS_SECURE_ENV_VARS" == "true" ] && [ "x$TRAVIS_TAG" != "x" ]; then
-    npm run publish:cdn;
-  fi
+  npm run publish:cdn;
 env:
   global:
   # CDN_SECRET

@@ -52,7 +52,6 @@
     "@polymer/esm-amd-loader": "^1.0.3",
     "@polymer/lit-element": "^0.6.1",
     "@polymer/polymer": "^3.2.0",
-    "@polymer/iron-collapse": "^3.0.1",
     "@rollup/plugin-commonjs": "^11",
     "@webcomponents/webcomponentsjs": "^2.0.4",
     "autoprefixer": "^9",

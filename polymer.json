@@ -28,7 +28,8 @@
     "web-components/d2l-content-store.js",
     "web-components/d2l-consistent-evaluation.js",
     "web-components/d2l-user-feedback.js",
-    "web-components/d2l-cpd-report.js"
+    "web-components/d2l-cpd-report.js",
+    "web-components/mobx.js"
   ],
   "extraDependencies": [
     "node_modules/@brightspace-ui-labs/edit-in-place/lang/*.js",

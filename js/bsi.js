@@ -4,8 +4,6 @@ import FastDom from './d2l-fastdom.js';
 import FastDomPromised from '../node_modules/fastdom/extensions/fastdom-promised.js';
 import './timing-debug.js';
 import './performance-timings.js';
-import '../node_modules/jquery-vui-change-tracking/changeTracker.js';
-import '../node_modules/jquery-vui-change-tracking/changeTracking.js';
 
 window.D2L = window.D2L || {};
 

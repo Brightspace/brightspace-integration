@@ -1,0 +1,109 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs').promises;
+const path = require('path');
+
+const Lang = require('./Lang');
+const LangPackage = require('./LangPackage');
+const Serge = require('./Serge');
+
+const Languages = [
+	new Lang('ar-sa', 'ar', 'ar-SA'),
+	new Lang('da-dk', 'da', 'da-DK'),
+	new Lang('de-de', 'de', 'de-DE'),
+	new Lang('es-mx', 'es', 'es-MX'),
+	new Lang('fr-ca', 'fr', 'fr-CA'),
+	new Lang('ja-jp', 'ja', 'ja-JP'),
+	new Lang('ko-kr', 'ko', 'ko-KR'),
+	new Lang('nl-nl', 'nl', 'nl-NL'),
+	new Lang('pt-br', 'pt', 'pt-BR'),
+	new Lang('sv-se', 'sv', 'sv-SE'),
+	new Lang('tr-tr', 'tr', 'tr-TR'),
+	new Lang('zh-cn', 'zh', 'zh-CN'),
+	new Lang('zh-tw', 'zh-TW', 'zh-TW'),
+];
+const PackageName = 'WebComponents';
+const TranslationReplacement = '%CULTURE:LC%';
+
+const DefinitionsPath = path.join(__dirname, '../build/langterms/definitions/', PackageName + '.xml');
+const ConfigPath = path.join(__dirname, '../build/langterms/D2L.LP.Oslo.config.json');
+const MappingPath = path.join(__dirname, '../.serge-mapping.json');
+const ModulesRoot = path.join(__dirname, '../node_modules');
+const TranslationPath = path.join(__dirname, '../build/langterms/translations/', TranslationReplacement, PackageName + '.xml');
+
+async function main() {
+
+	const mappingText = await fs.readFile(MappingPath, 'utf-8');
+	const mappingObject = JSON.parse(mappingText);
+	const mapping = Object.entries(mappingObject);
+
+	const definitions = new LangPackage(PackageName);
+	const manifest = [];
+	const translations = new Map();
+
+	for (const language of Languages) {
+		translations.set(language.code, new LangPackage(PackageName));
+	}
+
+	for (const [moduleName, sergeFile] of mapping) {
+
+		const modulePath = path.join(ModulesRoot, moduleName);
+		const sergePath = path.join(ModulesRoot, sergeFile);
+		const sergeText = await fs.readFile(sergePath, 'utf-8');
+		let sergeConfigs = JSON.parse(sergeText);
+
+		if (!Array.isArray(sergeConfigs)) {
+			sergeConfigs = [sergeConfigs];
+		}
+
+		for (const sergeConfig of sergeConfigs) {
+
+			const serge = new Serge(ModulesRoot, moduleName, modulePath, sergeConfig);
+
+			const collection = await serge.getSource();
+			if (!collection) {
+				throw new Error(`Could not load definitions for "${serge.name}".`);
+			}
+
+			definitions.addCollection(collection);
+
+			for (const language of Languages) {
+
+				const translation = translations.get(language.code);
+				const collection = await serge.getTranslation(language);
+				if (collection) {
+					translation.addCollection(collection);
+				}
+			}
+
+			manifest.push(serge.toManifest());
+		}
+	}
+
+	await fs.mkdir(path.dirname(DefinitionsPath), { recursive: true });
+	await fs.writeFile(DefinitionsPath, definitions.toXML());
+
+	for (const [language, translation] of translations) {
+
+		const translationPath = TranslationPath.replace(TranslationReplacement, language);
+
+		await fs.mkdir(path.dirname(translationPath), { recursive: true });
+		await fs.writeFile(translationPath, translation.toXML());
+	}
+
+	const configObject = {
+		packageName: PackageName,
+		manifest
+	};
+	const configText = JSON.stringify(configObject, null, 2);
+	await fs.mkdir(path.dirname(ConfigPath), { recursive: true });
+	await fs.writeFile(ConfigPath, configText);
+}
+
+main().catch(err => {
+
+	console.log(err);
+	process.exit(1);
+});

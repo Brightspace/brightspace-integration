@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-- "11"
+- "12"
 sudo: false
 script:
+# npm > 6.8.0 doesn't support our github semver references, so downgrade
+- npm install --global npm@6.8.0
 - npm run test:ci
 - npm run build
 - |

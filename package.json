@@ -17,7 +17,7 @@
     "build:serge-mapping": "node ./oslo/generate-serge-mapping",
     "postbuild": "npm run build:rename-define",
     "lint": "npm run lint:js",
-    "lint:js": "eslint *.js web-components/*.js js/** rollup/** test/** cli/** oslo/**",
+    "lint:js": "eslint *.js web-components/*.js js/** rollup/** test/** cli/** oslo/**.js",
     "publish:autotag": "node ./cli/autotag.js",
     "publish:cdn": "frau-publisher -m lib -t bsi -f \"./build/**/*\" --versionvar TRAVIS_TAG",
     "preserve": "npm run build",

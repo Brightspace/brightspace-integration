@@ -17,6 +17,8 @@ const SourceMatch = 'en\\.json$';
 const MacroRegExp = new RegExp('(' + MacroCulture + '|' + MacroLang + ')');
 const ParseJsRegExp = /^([^\S\r\n]*((['"]).+?\3|[\w\d]+)([^\S\r\n]*:[^\S\r\n]*))(?:(")((?:\\\\|\\"|[^"])+?)"|(')((?:\\\\|\\'|[^'])+?)')([^\S\r\n]*(?:,[^\S\r\n]*)?(?:\/\/[^\S\r\n]*(.*)[^\S\r\n]*)?)/mgi;
 const ParseJsNameRegExp = /["']/g;
+const ParseJsEscapeRegExp = /\\(['"])/g;
+const ParseJsEscapeReplacer = (_, ch) => ch;
 
 class Rewrite {
 
@@ -214,9 +216,15 @@ class Serge {
 
 		for (const match of matches) {
 
-			const name = match[2].replace(ParseJsNameRegExp, '');
-			const defaultValue = match[6] || match[8];
+			let name = match[2];
+			let defaultValue = match[6] || match[8];
 			const description = match[10] || EmptyString;
+
+			name = name.replace(ParseJsNameRegExp, '');
+			defaultValue = defaultValue.replace(
+				ParseJsEscapeRegExp,
+				ParseJsEscapeReplacer
+			);
 
 			const object = new LangObject(name, defaultValue, description);
 			collection.addObject(object);

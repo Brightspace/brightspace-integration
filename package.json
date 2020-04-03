@@ -17,7 +17,7 @@
     "build:serge-mapping": "node ./oslo/generate-serge-mapping",
     "postbuild": "npm run build:rename-define",
     "lint": "npm run lint:js",
-    "lint:js": "eslint *.js web-components/*.js js/** rollup/** test/** cli/**",
+    "lint:js": "eslint *.js web-components/*.js js/** rollup/** test/** cli/** oslo/**",
     "publish:autotag": "node ./cli/autotag.js",
     "publish:cdn": "frau-publisher -m lib -t bsi -f \"./build/**/*\" --versionvar TRAVIS_TAG",
     "preserve": "npm run build",
@@ -27,7 +27,7 @@
     "test": "npm run lint && npm run test:unit",
     "test:ci": "npm run test && npm run test:package-lock",
     "test:package-lock": "node test-package-lock.js",
-    "test:unit": "mocha --require @babel/register"
+    "test:unit": "mocha --require @babel/register --require regenerator-runtime/runtime"
   },
   "repository": {
     "type": "git",

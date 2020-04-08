@@ -1,0 +1,17 @@
+{
+  "d2l-activities": "d2l-activities/activities.serge.json",
+  "d2l-activity-alignments": "d2l-activity-alignments/d2l-activity-alignments.serge.json",
+  "d2l-activity-exemptions": "d2l-activity-exemptions/d2l-activity-exemptions.serge.json",
+  "d2l-cpd": "d2l-cpd/continuous-professional-development.serge.json",
+  "d2l-enrollments": "d2l-enrollments/enrollments.serge.json",
+  "d2l-image-banner-overlay": "d2l-image-banner-overlay/imageBanner.serge.json",
+  "d2l-my-courses": "d2l-my-courses/d2l-my-courses.serge.json",
+  "d2l-navigation": "d2l-navigation/navigation.serge.json",
+  "d2l-organizations": "d2l-organizations/organizations.serge.json",
+  "d2l-outcomes-level-of-achievements": "d2l-outcomes-level-of-achievements/d2l-outcomes-level-of-achievements.serge.json",
+  "d2l-outcomes-user-progress": "d2l-outcomes-user-progress/d2l-outcomes-user-progress.serge.json",
+  "d2l-program-outcomes-picker": "d2l-program-outcomes-picker/program-outcomes-picker.serge.json",
+  "d2l-rubric": "d2l-rubric/d2l-rubric.serge.json",
+  "d2l-sequence-viewer": "d2l-sequence-viewer/d2l-sequence-viewer.serge.json",
+  "d2l-sequences": "d2l-sequences/d2l-sequences.serge.json"
+}

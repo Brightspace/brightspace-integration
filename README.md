@@ -9,9 +9,18 @@ The goal of this project is to bring together many other external libraries and 
 
 ## Building
 
-The first time you build, install dependencies:
+The first time you build, install the correct version of node and npm first, then install dependencies:
 
 ```shell
+nvm install
+npm i -g npm@6.8.0
+npm install
+```
+
+Otherwise, just use the specified version of node and install dependencies:
+
+```shell
+nvm use
 npm install
 ```
 
@@ -213,6 +222,7 @@ To integrate a new web component into BSI, perform the following steps:
 1. Reference your component as an NPM dependency using the path to the repository plus a semver tag (e.g. `"d2l-navigation": "BrightspaceUI/navigation#semver:^3"`). **Do not include minor or patch versions.**
 2. Add a JavaScript file (i.e. `d2l-my-component.js`) to the `web-components` directory that imports the new web component. (i.e. `../node_modules/my-component/my-component.js`)
 3. Reference the new JavaScript file from the fragments list in `polymer.json`
+4. (optional) If your component has langterms, add an entry to the `.serge-mapping.json` (e.g. `"my-component": "my-component/my-component.serge.json"`)
 
 ## Tagging & Publishing
 

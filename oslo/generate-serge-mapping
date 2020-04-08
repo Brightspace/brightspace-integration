@@ -1,0 +1,93 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs').promises;
+const path = require('path');
+
+const Util = require('./Util');
+
+const ModulesRoot = path.join(__dirname, '../node_modules');
+const OutputPath = path.join(__dirname, '../.serge-mapping.json');
+const ScopePrefix = '@';
+const SergeSuffix = '.serge.json';
+
+async function main() {
+
+	const entries = [];
+	const candidates = [];
+	const nodeModules = await fs.readdir(ModulesRoot, { withFileTypes: true });
+
+	for (const nodeModule of nodeModules) {
+
+		if (nodeModule.isSymbolicLink()) {
+
+			const linkedPath = path.join(ModulesRoot, nodeModule.name);
+			const linkedModule = await fs.stat(linkedPath);
+			if (!linkedModule.isDirectory()) {
+				continue;
+			}
+
+		} else if (!nodeModule.isDirectory()) {
+
+			continue;
+		}
+
+		const moduleName = nodeModule.name;
+		const modulePath = path.join(ModulesRoot, moduleName);
+
+		if (moduleName.startsWith(ScopePrefix)) {
+
+			const subModules = await fs.readdir(modulePath, { withFileTypes: true });
+
+			for (const subModule of subModules) {
+
+				if (!subModule.isDirectory()) {
+					continue;
+				}
+
+				const subModuleName = path.join(moduleName, subModule.name);
+				const subModulePath = path.join(modulePath, subModule.name);
+				candidates.push([subModuleName, subModulePath]);
+			}
+
+		} else {
+
+			candidates.push([moduleName, modulePath]);
+		}
+	}
+
+	for (const [moduleName, modulePath] of candidates) {
+
+		const files = await fs.readdir(modulePath, { withFileTypes: true });
+
+		for (const file of files) {
+
+			if (!file.isFile()) {
+				continue;
+			}
+
+			const fileName = file.name;
+			if (!fileName.endsWith(SergeSuffix)) {
+				continue;
+			}
+
+			const filePath = path.join(modulePath, fileName);
+			const sergePath = path.relative(ModulesRoot, filePath);
+
+			entries.push([
+				Util.forwardSlash(moduleName),
+				Util.forwardSlash(sergePath)
+			]);
+		}
+	}
+
+	entries.sort(Util.byFirstArrayItem);
+
+	const mapping = Object.fromEntries(entries);
+	const mappingText = JSON.stringify(mapping, null, 2) + '\n';
+
+	await fs.writeFile(OutputPath, mappingText);
+}
+
+main();

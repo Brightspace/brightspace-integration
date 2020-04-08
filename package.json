@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "cross-env BROWSERSLIST_CONFIG=./.browserslistrc-es-dev-server es-dev-server --config=./es-dev-server.config.js --compatibility auto --watch",
-    "build": "npm run build:wc && npm run build:common",
+    "build": "npm run build:wc && npm run build:common && npm run build:lang",
     "build-no-es5": "npm run build:wc-no-es5 && npm run build:common",
     "build:common": "rollup -c ./rollup/rollup.config.js && npm run build:babelHelpers",
     "build:babelHelpers": "babel-external-helpers > ./build/babel-helpers.js",
@@ -13,9 +13,11 @@
     "build:email-icons": "node ./cli/build-email-icons.js",
     "build:wc": "cross-env NODE_OPTIONS=--max_old_space_size=4096 polymer build",
     "build:wc-no-es5": "cross-env NODE_OPTIONS=--max_old_space_size=4096 polymer build --name \"es6-bundled\"",
+    "build:lang": "node ./oslo/generate-monolith-xml",
+    "build:serge-mapping": "node ./oslo/generate-serge-mapping",
     "postbuild": "npm run build:rename-define",
     "lint": "npm run lint:js",
-    "lint:js": "eslint *.js web-components/*.js js/** rollup/** test/** cli/**",
+    "lint:js": "eslint *.js web-components/*.js js/** rollup/** test/** cli/** oslo/**.js",
     "publish:autotag": "node ./cli/autotag.js",
     "publish:cdn": "frau-publisher -m lib -t bsi -f \"./build/**/*\" --versionvar TRAVIS_TAG",
     "preserve": "npm run build",
@@ -25,7 +27,7 @@
     "test": "npm run lint && npm run test:unit",
     "test:ci": "npm run test && npm run test:package-lock",
     "test:package-lock": "node test-package-lock.js",
-    "test:unit": "mocha --require @babel/register"
+    "test:unit": "mocha --require @babel/register --require regenerator-runtime/runtime"
   },
   "repository": {
     "type": "git",

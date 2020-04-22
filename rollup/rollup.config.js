@@ -12,8 +12,7 @@ const jsConfig = {
 			targets: [
 				{src: 'node_modules/@brightspace-ui/core/components/icons/images', dest: './build'},
 				{src: 'email-icons', dest: './build/images'},
-				{src: 'node_modules/@polymer/esm-amd-loader/lib/esm-amd-loader.min.js', dest: './build'},
-				{src: 'node_modules/regenerator-runtime/runtime.js', dest: './build', rename: 'regenerator-runtime.js'}
+				{src: 'node_modules/@polymer/esm-amd-loader/lib/esm-amd-loader.min.js', dest: './build'}
 			]
 		})
 	],

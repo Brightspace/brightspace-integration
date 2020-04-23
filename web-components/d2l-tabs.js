@@ -1,2 +1,2 @@
-import 'd2l-tabs/d2l-tabs.js';
-import 'd2l-tabs/d2l-tab-panel.js';
+import '@brightspace-ui/core/components/tabs/tabs.js';
+import '@brightspace-ui/core/components/tabs/tab-panel.js';

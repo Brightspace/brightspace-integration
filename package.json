@@ -4,7 +4,6 @@
   "private": true,
   "main": "src/index.js",
   "scripts": {
-    "start": "cross-env BROWSERSLIST_CONFIG=./.browserslistrc-es-dev-server-legacy es-dev-server --config=./es-dev-server-legacy.config.js --compatibility auto --watch",
     "build": "npm run build:wc && npm run build:common && npm run build:lang",
     "build-no-es5": "npm run build:wc-no-es5 && npm run build:common",
     "build:common": "rollup -c ./rollup/rollup.config.js && npm run build:babelHelpers",
@@ -24,6 +23,8 @@
     "serve": "http-server build --cors",
     "preserve-no-es5": "npm run build-no-es5",
     "serve-no-es5": "http-server build --cors",
+    "start": "npm run start:legacy",
+    "start:legacy": "cross-env BROWSERSLIST_CONFIG=./.browserslistrc-es-dev-server-legacy es-dev-server --config=./es-dev-server-legacy.config.js --compatibility auto --watch",
     "test": "npm run lint && npm run test:unit",
     "test:ci": "npm run test && npm run test:package-lock",
     "test:package-lock": "node test-package-lock.js",

@@ -4,7 +4,7 @@
   "private": true,
   "main": "src/index.js",
   "scripts": {
-    "start": "cross-env BROWSERSLIST_CONFIG=./.browserslistrc-es-dev-server es-dev-server --config=./es-dev-server.config.js --compatibility auto --watch",
+    "start": "cross-env BROWSERSLIST_CONFIG=./.browserslistrc-es-dev-server-legacy es-dev-server --config=./es-dev-server-legacy.config.js --compatibility auto --watch",
     "build": "npm run build:wc && npm run build:common && npm run build:lang",
     "build-no-es5": "npm run build:wc-no-es5 && npm run build:common",
     "build:common": "rollup -c ./rollup/rollup.config.js && npm run build:babelHelpers",

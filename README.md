@@ -185,10 +185,6 @@ If the unbundled build proves to be useful we may put more effort into adding su
 
 The unbundled build also uses a customized `.browserslistrc-es-dev-server` because the standard BSI `.browserslistrc` file includes IE11 which causes `es-dev-server` to throw an error as it assumes you will use it's legacy compatibility support for IE11.
 
-## Want a slightly faster build?
-
-When we bundle our web components, we produce an ES6 bundle for browsers who support it, and an ES5 transpiled bundle for IE11. If you don't care about IE11, you can exclude that part of the build by running `npm run build-no-es5` or `npm run serve-no-es5`.
-
 ## NPM Dependency Locking
 
 We use a `package-lock.json` file to lock our NPM dependencies. This ensures we only pick up changes to dependencies when we explicitly ask for them and are prepared to test them.

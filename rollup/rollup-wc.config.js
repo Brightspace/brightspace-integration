@@ -32,7 +32,6 @@ const appFiles = [
 	'./web-components/d2l-content-store.js',
 	'./web-components/d2l-consistent-evaluation.js',
 	'./web-components/d2l-user-feedback.js',
-	'./web-components/mobx.js',
 ];
 
 const config = createBasicConfig({

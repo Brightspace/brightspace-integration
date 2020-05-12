@@ -3,7 +3,7 @@
 'use strict';
 
 const chalk = require('chalk'),
-	Octokit = require('@octokit/rest'),
+	{ Octokit } = require('@octokit/rest'),
 	rally = require('rally'),
 	moment = require('moment-timezone');
 

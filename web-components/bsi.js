@@ -1,47 +1,5 @@
 import 'whatwg-fetch'; // Required for d2l-fetch + IE11
-
-import 'fastdom';
-
-import {formatNumber, parseNumber} from '@brightspace-ui/intl/lib/number.js';
-import {formatTime, parseTime} from '@brightspace-ui/intl/lib/dateTime.js';
-window.D2L.Intl = {
-	FormatNumber: formatNumber,
-	FormatTime: formatTime,
-	ParseNumber: parseNumber,
-	ParseTime: parseTime
-};
-
-import { d2lfetch } from '../node_modules/d2l-fetch/src/index.js';
-import { fetchAuth } from 'd2l-fetch-auth';
-import { fetchDedupe } from 'd2l-fetch-dedupe';
-import { fetchSimpleCache } from 'd2l-fetch-simple-cache';
-
-d2lfetch.use({
-	name: 'auth',
-	fn: fetchAuth,
-	options: {
-		enableTokenCache: true
-	}
-});
-d2lfetch.use({name: 'dedupe', fn: fetchDedupe});
-d2lfetch.use({name: 'simple-cache', fn: fetchSimpleCache});
-window.d2lfetch = d2lfetch;
-
-window.D2L.Telemetry = {
-	Load: async function() {
-		const telemetry = await import('../node_modules/d2l-telemetry-browser-client/src/index.js');
-		return telemetry.default;
-	},
-	CreateClient: async function() {
-		const telemetry = await D2L.Telemetry.Load();
-		const endpoint = document.documentElement.getAttribute('data-telemetry-endpoint');
-		if (endpoint === null) {
-			throw new Error('Unable to create telemetry client, missing endpoint.');
-		}
-		const client = new telemetry.Client({endpoint: endpoint});
-		return client;
-	}
-};
+import './bsi-unbundled.js';
 
 import '@brightspace-ui/core/components/backdrop/backdrop.js';
 import '@brightspace-ui/core/components/button/button-icon.js';
@@ -92,31 +50,6 @@ import 'd2l-save-status/d2l-save-status.js';
 import 'd2l-simple-overlay/d2l-simple-overlay.js';
 import 'd2l-tooltip/d2l-tooltip.js';
 import 'd2l-users/components/d2l-profile-image.js';
-
-/*
- * DE35087 - This was added by Polymer to handle ghost clicks in mobile browsers, but it has negative effects when using VoiceOver on iOS.
- * Events were being incorrectly canceled, mostly affecting selecting radio buttons but other user actions as well.
- * This line turns off this functionality.  See https://github.com/Polymer/polymer/issues/5289 for more info.
- */
-import { setCancelSyntheticClickEvents  } from '@polymer/polymer/lib/utils/settings.js';
-setCancelSyntheticClickEvents(false);
-
-import {announce} from '../node_modules/@brightspace-ui/core/helpers/announce.js';
-window.D2L.Announce = announce;
-
-import {registerGestureSwipe} from '../node_modules/@brightspace-ui/core/helpers/gestures.js';
-window.D2L.Gestures = window.D2L.Gestures || {};
-window.D2L.Gestures.Swipe = {register: registerGestureSwipe};
-
-import {clearDismissible, setDismissible} from '../node_modules/@brightspace-ui/core/helpers/dismissible.js';
-window.D2L.Dismissible = {
-	Clear: function(id) {
-		clearDismissible(id);
-	},
-	Set: function(cb) {
-		return setDismissible(cb);
-	}
-};
 
 window.d2lWCLoaded = true;
 if (window.D2L.WebComponentsLoaded !== undefined) {

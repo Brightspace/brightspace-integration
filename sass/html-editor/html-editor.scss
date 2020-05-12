@@ -5,6 +5,7 @@
 @import 'color-button.scss';
 @import 'group.scss';
 @import 'menu.scss';
+@import 'text.scss';
 
 .d2l-htmleditor {
 	border: 1px solid $d2l-color-galena;
@@ -35,7 +36,8 @@
 
 .d2l-htmleditor-toolbar-item {
 
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	position: relative;
 	float: left;
 	min-height: $vui-htmleditor-toolbar-height;
@@ -55,7 +57,7 @@
 	border: 1px solid transparent;
 	border-radius: 3px;
 	line-height: 1em;
-	padding: 0.15rem 0.7rem;
+	padding: 0.15rem 0.7rem .15rem .5rem;
 
 	.d2l-htmleditor-toolbar-item {
 		border: 0;
@@ -93,6 +95,14 @@
 	float: right;
 	[dir="rtl"] & {
 		float: left;
+	}
+}
+
+.d2l-htmleditor-footer-innerleft {
+	float: left;
+
+	[dir="rtl"] & {
+		float: right;
 	}
 }
 

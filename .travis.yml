@@ -7,6 +7,7 @@ before_install: if [[ `npm -v` != 6.8.0 ]]; then npm i -g npm@6.8.0; fi
 script:
 - npm run test:ci
 - travis_wait npm run build
+- npm run build:unbundled
 - |
   if [ "$TRAVIS_TEST_RESULT" == "0" ]; then
     npm run publish:autotag;

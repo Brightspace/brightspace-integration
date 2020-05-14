@@ -1,6 +1,8 @@
 import 'whatwg-fetch'; // Required for d2l-fetch + IE11
 import './bsi-unbundled.js';
 
+import '@brightspace-ui/core/components/alert/alert.js';
+import '@brightspace-ui/core/components/alert/alert-toast.js';
 import '@brightspace-ui/core/components/backdrop/backdrop.js';
 import '@brightspace-ui/core/components/button/button-icon.js';
 import '@brightspace-ui/core/components/button/button-subtle.js';
@@ -26,8 +28,6 @@ import '@brightspace-ui/core/components/more-less/more-less.js';
 
 import 'd2l-activities/components/d2l-subtitle/d2l-subtitle.js';
 import '@d2l/switch/d2l-switch.js';
-import 'd2l-alert/d2l-alert-toast.js';
-import 'd2l-alert/d2l-alert.js';
 import 'd2l-button-group/d2l-action-button-group.js';
 import 'd2l-button-group/d2l-button-group.js';
 import 'd2l-navigation/d2l-navigation-band.js';

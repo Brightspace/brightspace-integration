@@ -63,7 +63,6 @@
     "d2l-activities": "BrightspaceHypermediaComponents/activities.git#semver:^3",
     "d2l-activity-alignments": "Brightspace/d2l-activity-alignments.git#semver:^2",
     "d2l-activity-exemptions": "Brightspace/d2l-activity-exemptions#semver:^2",
-    "d2l-alert": "BrightspaceUI/alert#semver:^4",
     "d2l-awards-leaderboard-ui": "Brightspace/awards-leaderboard-ui#semver:^1",
     "d2l-button-group": "BrightspaceUI/button-group#semver:^3",
     "d2l-consistent-evaluation": "BrightspaceHypermediaComponents/consistent-evaluation#semver:^0",

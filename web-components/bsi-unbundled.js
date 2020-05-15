@@ -10,6 +10,12 @@ import { announce } from '@brightspace-ui/core/helpers/announce';
 import { registerGestureSwipe } from '@brightspace-ui/core/helpers/gestures.js';
 import { clearDismissible, setDismissible } from '@brightspace-ui/core/helpers/dismissible';
 
+// Toast alerts are not a separate import for 3 reasons:
+// 1. Legacy toasts are created in JavaScript, so it would need to be loaded on every page anyway
+// 2. MVC toasts happen via RpcPiggyback, which can render before new BSI assets are loaded
+// 3. Quizzing is manually rendering a toast in JavaScript for offline/online notifications
+import '@brightspace-ui/core/components/alert/alert-toast.js';
+
 window.D2L = window.D2L || {};
 
 window.D2L.Intl = {

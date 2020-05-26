@@ -16,6 +16,75 @@ import { clearDismissible, setDismissible } from '@brightspace-ui/core/helpers/d
 // 3. Quizzing is manually rendering a toast in JavaScript for offline/online notifications
 import '@brightspace-ui/core/components/alert/alert-toast.js';
 
+// TODO: these still need to be unbundled and loaded individually whenever they're used
+// AppLoader
+import '@brightspace-ui/core/components/backdrop/backdrop.js';
+// PageActionsMenu, ContextMenuPlaceholder, ButtonIcon, RubricBox, MenuFlyout, Quizzing (misc JS),
+// legacy PageActions, legacy Grid actions, legacy ContextMenu placeholder, legacy Actions, Rubrics (misc JS)
+import '@brightspace-ui/core/components/button/button-icon.js';
+// ButtonSubtle, MenuFlyout, MenuFlyoutCustom, legacy Actions, legacy Grid actions,
+// legacy ContextMenu placeholder, legacy Actions
+import '@brightspace-ui/core/components/button/button-subtle.js';
+// PageButtonsView (MVC), ActionButtons (legacy), ButtonArea (legacy)
+import '@brightspace-ui/core/components/button/floating-buttons.js';
+// ActionButtonMenu (legacy), MediaPlayer
+import '@brightspace-ui/core/components/dropdown/dropdown-button.js';
+// Navbar, Flyout (MVC), LayoutBuilder
+import '@brightspace-ui/core/components/dropdown/dropdown-content.js';
+// ContextMenu (MVC), PageActions, EditNavbar, NavbarItem, ContextMenu (legacy), ActionButtonMenu (legacy)
+// ButtonMenu (MVC), MediaPlayer
+import '@brightspace-ui/core/components/dropdown/dropdown-menu.js';
+// EditNavbar, Homepages
+import '@brightspace-ui/core/components/dropdown/dropdown-more.js';
+// ContextMenuPlaceholder, PageActionsMenu, Navigation, MenuFlyout, MenuFlyoutCustom, ButtonMenu,
+// ContextMenu placeholder (legacy), LayoutBuilder
+import '@brightspace-ui/core/components/dropdown/dropdown.js';
+// MenuFlyout, Divider, TreeBrowserItemIcon, Icon, CollapsibleSection, Navigation (misc), RubricLink
+// FeedbackAttachment, ButtonMenu, IteratorButton, RubricBox, ImageLink, PersonalMenuHandle, LabyoutBuilder
+// Competencies (misc JS), Image (legacy), Grades (misc JS), Placeholder (legacy), PartialRendering,
+// Custom selector (legacy)
+import '@brightspace-ui/core/components/icons/icon.js';
+// SearchSimple (MVC)
+import '@brightspace-ui/core/components/inputs/input-search.js';
+// RubricBox
+import '@brightspace-ui/core/components/link/link.js';
+// Loading (MVC), PartialRendering, Dialog (MVC), Dialog (legacy)
+import '@brightspace-ui/core/components/loading-spinner/loading-spinner.js';
+// MenuItemCheckbox
+import '@brightspace-ui/core/components/menu/menu-item-checkbox.js';
+// EditNavbar, NavbarItem, MenuItemLink, PageActionsMenuItem, HomepageManageMenu, ContextMenu
+import '@brightspace-ui/core/components/menu/menu-item-link.js';
+// MenuItemRadio
+import '@brightspace-ui/core/components/menu/menu-item-radio.js';
+// ConextMenu.Separator, MenuItemSeparator, MobileLinksArea, contextMenu (legacy)
+import '@brightspace-ui/core/components/menu/menu-item-separator.js';
+// EditNavbar, MobileLinksArea, PageActionsMenuItem, Menu (MVC), HomepageManageMenu, ContextMenu,
+// MediaPlayer, contextMenu (legacy)
+import '@brightspace-ui/core/components/menu/menu-item.js';
+// EditNavbar, MobileLinksArea, HomepageManageMenu, PageActionsMenu, Menu (MVC), ContextMenu (MVC),
+// MediaPlayer, contextMenu (legacy), ActionButtons (legacy)
+import '@brightspace-ui/core/components/menu/menu.js';
+// MoreLess
+import '@brightspace-ui/core/components/more-less/more-less.js';
+// Tooltip, image (legacy)
+import '@brightspace-ui/core/components/tooltip/tooltip.js';
+// ImmersiveNav
+import 'd2l-activities/components/d2l-subtitle/d2l-subtitle.js';
+// LE ItemVisibility
+import '@d2l/switch/d2l-switch.js';
+// Grid (legacy)
+import 'd2l-button-group/d2l-action-button-group.js';
+// ActionButtons (legacy), GridActionContainer (MVC)
+import 'd2l-button-group/d2l-button-group.js';
+// OrganizationConsortiumTabs
+import 'd2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js';
+// CollapsibleSection (MVC), Homepages
+import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
+// SaveStatus (MVC)
+import 'd2l-save-status/d2l-save-status.js';
+// PersonalMenuHandle
+import 'd2l-users/components/d2l-profile-image.js';
+
 window.D2L = window.D2L || {};
 
 window.D2L.Intl = {

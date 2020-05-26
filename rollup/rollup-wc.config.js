@@ -1,4 +1,6 @@
 import { createBasicConfig } from '@open-wc/building-rollup';
+import copy from 'rollup-plugin-copy';
+import merge from 'deepmerge';
 
 const componentFiles = [
 	'./web-components/bsi-unbundled.js',
@@ -45,6 +47,26 @@ const appFiles = [
 	'./web-components/d2l-consistent-evaluation.js',
 	'./web-components/d2l-user-feedback.js',
 ];
+// NOTE: Ideally these should all be dynamically imported by apps.
+//       Please don't add new entries to this list.
+const staticFiles = [
+	'node_modules/@brightspace-ui-labs/edit-in-place/lang/*.js',
+	'node_modules/@d2l/d2l-attachment/locales/*.json',
+	'node_modules/@d2l/d2l-attachment/icons/*.svg',
+	'node_modules/d2l-activities/components/d2l-activity-collection-editor/lang/*.js',
+	'node_modules/d2l-activities/components/d2l-activity-editor/**/lang/*.js',
+	'node_modules/d2l-awards-leaderboard-ui/images/**',
+	'node_modules/d2l-awards-leaderboard-ui/lang/*.json',
+	'node_modules/d2l-enrollments/components/d2l-enrollment-collection-view/lang/*.js',
+	'node_modules/d2l-organizations/components/d2l-organization-admin-list/lang/*.js',
+	'node_modules/d2l-organizations/components/d2l-organization-availability-set/lang/*.js',
+	'node_modules/d2l-rubric/editor/images/**',
+	'node_modules/d2l-html-editor/skin-4.3.7/**',
+	'node_modules/d2l-html-editor/langs/**',
+	'node_modules/d2l-html-editor/d2l_lang_plugin/**',
+	'node_modules/d2l-html-editor/**/*.css',
+	'node_modules/d2l-cpd/locales/**.json'
+];
 
 const config = createBasicConfig({
 	developmentMode: false, /* forces tree-shaking, minify ON */
@@ -57,4 +79,13 @@ config.output[0].chunkFileNames = '[name].js';
 config.output[1].entryFileNames = 'nomodule-[name].js';
 config.output[1].chunkFileNames = 'nomodule-[name].js';
 
-export default config;
+export default merge(config, {
+	plugins: [
+		copy({
+			targets: staticFiles.map((f) => {
+				return {src: f, dest: 'build/unbundled/node_modules'};
+			}),
+			flatten: false
+		})
+	]
+});

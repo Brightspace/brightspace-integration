@@ -37,7 +37,8 @@ class TestUnbundler(unittest.TestCase):
         
         expected_data = {
             POLYMER: "",
-            IMPORT_STYLE: IMPORT_STYLE_ESM
+            IMPORT_STYLE: IMPORT_STYLE_ESM,
+            "env": "dev"
         }
 
         actual_data = {}

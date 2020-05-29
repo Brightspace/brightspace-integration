@@ -83,6 +83,7 @@ class Unbundler:
 
                 data[POLYMER] = self.web_server_path
                 data[IMPORT_STYLE] = IMPORT_STYLE_ESM
+                data["env"] = "dev"
 
                 json.dump(data, data_file)
 

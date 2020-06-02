@@ -48,7 +48,7 @@
     "@octokit/rest": "^16.19.0",
     "@open-wc/building-rollup": "^1",
     "@polymer/esm-amd-loader": "^1.0.3",
-    "@polymer/lit-element": "^0.6.1",
+    "@polymer/lit-element": "^0.7.1",
     "@polymer/polymer": "^3.2.0",
     "@rollup/plugin-commonjs": "^11",
     "@webcomponents/webcomponentsjs": "^2.0.4",

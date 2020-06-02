@@ -96,7 +96,7 @@
     "fastdom": "^1.0.8",
     "frau-publisher": "^2.7.11",
     "glob": "^7.1.1",
-    "mocha": "^6.0.2",
+    "mocha": "^7.2.0",
     "moment-timezone": "^0.5.25",
     "node-sass": "^4",
     "polymer-cli": "^1.9.8",

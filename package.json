@@ -101,7 +101,7 @@
     "node-sass": "^4",
     "polymer-cli": "^1.9.8",
     "rally": "^2.1.3",
-    "rimraf": "^2",
+    "rimraf": "^3",
     "rollup": "^1",
     "rollup-plugin-copy": "^3",
     "rollup-plugin-postcss": "^2",

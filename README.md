@@ -96,7 +96,7 @@ If this happens, you'll see this error in the browser console:
 
 BSI's CI attempts to detect this error by searching through the `package-lock` file for nested copies of the same thing. If it detects a duplicate, you'll get this CI failure:
 
-> Polymer sub-dependency detected "d2l-dependency" in "d2l-some-other-dependency". All Polymer dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.
+> Duplicate sub-dependency detected "d2l-dependency" in "d2l-some-other-dependency". All front-end dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.
 
 The most common cause of these errors is multiple projects referencing the same dependency via GitHub using different semver ranges in their `package.json` files. You can search the `package-lock.json` to find them. To solve the problem, ensure that all GitHub dependency references are identical.
 

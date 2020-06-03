@@ -7,6 +7,9 @@ const path = require('path');
 
 const packageLockPath = path.join(__dirname, 'package-lock.json');
 const packages = [
+	'@adobe/lit-mobx',
+	'@brightspace-ui/core',
+	'@brightspace-ui/intl',
 	'd2l-fetch',
 	'd2l-fetch-auth',
 	'd2l-fetch-dedupe',
@@ -15,8 +18,7 @@ const packages = [
 	'd2l-organization-hm-behavior',
 	'd2l-polymer-siren-behaviors',
 	'd2l-telemetry-browser-client',
-	'@brightspace-ui/core',
-	'@brightspace-ui/intl'
+	'mobx'
 ];
 
 function validate(json, depth, parentKey) {
@@ -24,8 +26,9 @@ function validate(json, depth, parentKey) {
 	for (const key in json) {
 		if (depth > 1) {
 			const isPolymer = json[key].requires !== undefined && json[key].requires['@polymer/polymer'] !== undefined;
-			if (isPolymer || packages.indexOf(key) > -1) {
-				console.error(`Polymer sub-dependency detected "${key}" in "${parentKey}". All Polymer dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.`);
+			const isLit = json[key].requires !== undefined && (json[key].requires['lit-element'] !== undefined || json[key].requires['lit-html']);
+			if (isPolymer || isLit || packages.indexOf(key) > -1) {
+				console.error(`Duplicate dependency detected "${key}" in "${parentKey}". All front-end dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.`);
 				process.exitCode = 1;
 			}
 		}

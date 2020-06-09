@@ -67,12 +67,6 @@ Then, set the `env` to match the environment of the BSI build that's running -- 
 
 Finally, restart IIS.
 
-### Experimental: Automatically Using the Perl Script
-
-This method attempts to automate the above steps using a script.
-
-Learn More: [Automatic BSI Configuration](docs/automatic-config.md).
-
 ## Web Components and Component-Based Applications
 
 A typical use-case for running a local BSI is to work on a local web component or web component-based application alongside a Brightspace instance.

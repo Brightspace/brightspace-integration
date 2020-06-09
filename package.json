@@ -41,7 +41,7 @@
     "@babel/preset-env": "^7",
     "@babel/register": "^7",
     "@brightspace-ui-labs/user-feedback": "^1",
-    "@brightspace-ui/core": "^1",
+    "@brightspace-ui/core": "^1.49.0",
     "@brightspace-ui/intl": "^3",
     "@d2l/switch": "Brightspace/d2l-switch.git#semver:^3",
     "@koa/cors": "^3",

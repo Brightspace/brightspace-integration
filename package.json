@@ -111,8 +111,5 @@
     "susy": "^2",
     "whatwg-fetch": "^3"
   },
-  "dependencies": {},
-  "engines": {
-    "npm": "<=6.8.0"
-  }
+  "dependencies": {}
 }

@@ -9,18 +9,9 @@ The goal of this project is to bring together many other external libraries and 
 
 ## Building
 
-The first time you build, install the correct version of node and npm first, then install dependencies:
+To install dependencies:
 
 ```shell
-nvm install
-npm i -g npm@6.8.0
-npm install
-```
-
-Otherwise, just use the specified version of node and install dependencies:
-
-```shell
-nvm use
 npm install
 ```
 

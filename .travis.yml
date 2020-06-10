@@ -6,8 +6,6 @@ branches:
   only:
   - master
   - /20.*/
-# npm > 6.8.0 doesn't support our github semver references, so downgrade
-before_install: if [[ `npm -v` != 6.8.0 ]]; then npm i -g npm@6.8.0; fi
 script:
 - npm run test:ci
 - travis_wait 30 npm run build

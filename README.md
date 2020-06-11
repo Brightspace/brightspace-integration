@@ -44,12 +44,6 @@ npm run start:prod
 
 Once you have a local BSI built and running, you need to tell the Brightspace instance that you'd like to use it. There are a couple ways to do this:
 
-### Using Configuration Variables
-
-In the Config Variable Browser of the Brightspace instance, set the value of the `d2l.System.BsiEndpointOverride` variable to the hostname & port where your local BSI is running. Typically this is `http://localhost:8080/`, but could vary if BSI is running on a different machine. Don't forget the trailing slash!
-
-Then, set the `d2l.System.BsiEnvironmentOverride` config variable to match the environment of the BSI build that's running -- either "Development" or "Production".
-
 ### Using the Configuration File
 
 Go to the `{instance}/config/Infrastructure` directory and edit `D2L.LP.Web.UI.Html.Bsi.config.json`:
@@ -67,56 +61,67 @@ Then, set the `env` to match the environment of the BSI build that's running -- 
 
 Finally, restart IIS.
 
+### Using Configuration Variables
+
+In the Config Variable Browser of the Brightspace instance, set the value of the `d2l.System.BsiEndpointOverride` variable to the hostname & port where your local BSI is running. Typically this is `http://localhost:8080/`, but could vary if BSI is running on a different machine. Don't forget the trailing slash!
+
+Then, set the `d2l.System.BsiEnvironmentOverride` config variable to match the environment of the BSI build that's running -- either "Development" or "Production".
+
 ## Web Components and Component-Based Applications
 
 A typical use-case for running a local BSI is to work on a local web component or web component-based application alongside a Brightspace instance.
 
-Learn More: [Web Components and Component-Based Applications in BSI](docs/web-components.md)
+**Learn More:** [Web Components and Component-Based Applications in BSI](docs/web-components.md)
 
 ## NPM Dependency Locking
 
 We use a `package-lock.json` file to lock our NPM dependencies. This ensures we only pick up changes to dependencies when we explicitly ask for them and are prepared to test them.
 
+### Refreshing `package-lock.json`
+
 Any command that would normally add or update `package.json` will also update `package-lock.json` -- `npm install`, `npm update` etc. Just be cognizant of the changes you're making.
 
-### `package-lock.json` Refresh
-
-Current versions of npm (6.8-6.10) do not always flatten package-lock.json with an `npm i`.  You may end up with many CI errors like:
-
-```
-Polymer sub-dependency detected "d2l-organizations" in "d2l-activities". All Polymer dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.
-```
-
-If you've ensured that you aren't importing multiple versions, try the following:
+To fully refresh the lock file:
 1) Windows: `ri ./node_modules -Recurse -Force` or *nix: `rm -rf ./node_modules`
 2) `rm package-lock.json`
 3) `npm i`
 
-This sequence will fully refresh your package-lock.json.
+Again, be aware of the new changes you've picked up (which may not be related to your project) when updating BSI.
 
-Learn More: [`package-lock` NPM documentation](https://docs.npmjs.com/files/package-locks)
+**Learn More:** [`package-lock` NPM documentation](https://docs.npmjs.com/files/package-locks)
+
+### Subdependency Conflicts
+
+We never want to include multiple versions of the same dependency in our BSI builds. This would mean our users would end up downloading different versions of the same dependency, which for web components would result in the same custom element being registered multiple times, which isn't allowed.
+
+If this happens, you'll see this error in the browser console:
+
+> Uncaught DOMException: Failed to execute 'define' on 'CustomElementRegistry': the name "d2l-dependency" has already been used with this registry
+
+BSI's CI attempts to detect this error by searching through `node_modules` for multiple copies of the same thing. If it detects a duplicate, you'll get this CI failure:
+
+> Polymer sub-dependency detected "d2l-dependency" in "d2l-some-other-dependency". All Polymer dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.
+
+The most common cause of these errors is multiple projects referencing the same dependency via GitHub using different semver ranges in their `package.json` files. You can search the `package-lock.json` to find them. To solve the problem, ensure that all GitHub dependency references are identical.
 
 ## Tagging & Publishing
 
-When a pull request is merged to `master`, a version tag corresponding with the current active development release of Brightspace will be automatically applied by CI. A build number will be incremented for each build.
+### Automatic Tagging
 
-When a pull request is merged to a branch whose name matches our versioning scheme (e.g. `20.19.5`), a version tag for that release will be automatically applied.
+When a pull request is merged to `master`, a unique version tag corresponding with the current active development release of Brightspace will be automatically applied.
 
-For each tag, the project assets (contents of the `build` directory) will be automatically published to the Brightspace CDN by its [Travis CI job](https://travis-ci.com/github/Brightspace/brightspace-integration).
+When a pull request is merged to a branch whose name matches our versioning scheme (e.g. `20.20.8`), a version tag for that release will be automatically applied.
+
+To skip automatic tagging, include the text `[skip release]` in your merge commit message.
+
+### Publishing to the CDN
+
+For each tag, all BSI assets (contents of the `build` directory) will be published to the Brightspace CDN by its [Travis CI job](https://travis-ci.com/github/Brightspace/brightspace-integration).
 
 The publish location will be: `https://s.brightspace.com/lib/bsi/{version}/`
 
-To skip automatic tagging and releasing, include the text `[skip release]` in your merge commit message.
+### Updating Brightspace to reference new versions of BSI
 
-### Updating Brightspace to reference the new version of BSI
+For non-hotfix releases, an automated process exists to automatically update Brightspace to point at the latest release of BSI.
 
-A set of [Jenkins jobs](https://prod.build.d2l/job/Dev/job/Core%20LMS/job/Sync%20BSI/) checks for new BSI versions every 10 minutes during work hours and automatically updates the configuration file to reference new versions. Although it merges the change quickly, CI is also triggerd for easy tracking in case there is a problem. In case of failures, you will receive an email from Jenkins (and a message will be sent to the `#build-triage` Slack channel), so that you can investigate and complete the process manually if needed.
-
-This will ensure that the LP (and new CD builds) are using the latest version of BSI.
-
-Note that this is only done on LMS `master`. For hotfixes or updates to branches you'll need to update manually by creating a pull request on the appropriate branch in LP
-that updates the `endpoint` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lms/browse/lp/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
-
-*If you have other dependent Core Lms changes, please make sure you merge those lms changes before bumping BSI.*
-
-Note that for testing purposes you can use the `d2l.System.BsiEndpointOverride` config variable to override the BSI endpoint on a test instance, so you don't need to wait for a quad site with the above LP updates to test your BSI changes, assuming they are not dependent on other LMS changes as well.
+**Learn More:** [Brightspace BSI Sync Jobs](docs/sync-jobs.md)

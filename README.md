@@ -98,7 +98,7 @@ If this happens, you'll see this error in the browser console:
 
 > Uncaught DOMException: Failed to execute 'define' on 'CustomElementRegistry': the name "d2l-dependency" has already been used with this registry
 
-BSI's CI attempts to detect this error by searching through `node_modules` for multiple copies of the same thing. If it detects a duplicate, you'll get this CI failure:
+BSI's CI attempts to detect this error by searching through the `package-lock` fille for nested copies of the same thing. If it detects a duplicate, you'll get this CI failure:
 
 > Polymer sub-dependency detected "d2l-dependency" in "d2l-some-other-dependency". All Polymer dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.
 

@@ -1,7 +1,7 @@
 # brightspace-integration
 
-[![Build status][https://travis-ci.com/Brightspace/brightspace-integration.svg?branch=master]][https://travis-ci.com/Brightspace/brightspace-integration]
-[![Dependency Status][https://img.shields.io/david/Brightspace/brightspace-integration.svg]][https://david-dm.org/Brightspace/brightspace-integration]
+[![Build status](https://travis-ci.com/Brightspace/brightspace-integration.svg?branch=master)](https://travis-ci.com/Brightspace/brightspace-integration)
+[![Dependency Status](https://img.shields.io/david/Brightspace/brightspace-integration.svg)](https://david-dm.org/Brightspace/brightspace-integration)
 
 This project brings together many off-stack components, libraries and modules for inclusion into a particular build of Brightspace.
 

@@ -1,0 +1,7 @@
+name: Are we cursed?
+on: push
+jobs:
+  cursedornot:
+    runs-on: self-hosted
+    steps:
+      - run: echo 'not cursed'

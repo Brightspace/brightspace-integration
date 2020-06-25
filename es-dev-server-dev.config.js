@@ -17,7 +17,17 @@ module.exports = {
 		}
 	],
 	nodeResolve: true,
+	plugins: [
+		{
+			transform(context) {
+				// removing detection of "define" to avoid UMD time bomb with UMD FRAs
+				if (context.path === '/node_modules/fastdom/fastdom.js') {
+					const transformedBody = context.body.replace(/\bdefine\b/g, 'defineNoYouDont');
+					return { body: transformedBody };
+				}
+			}
+		}
+	],
 	port: 8080,
-	preserveSymlinks: true,
-	watch: true
+	preserveSymlinks: true
 };

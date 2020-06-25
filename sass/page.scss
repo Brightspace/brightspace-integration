@@ -2,11 +2,12 @@
 @import 'common.scss';
 
 /* Hide page while web components are loading. This is redundant with
-   the WC polyfill code, but is present sooner so helps avoid FOUC. */
+   the WC polyfill code, but is present sooner so helps avoid FOUC
+   and in the case where the WC polyfill isn't needed. */
 body {
 	transition: opacity ease-in 0.2s;
 }
-body[unresolved] {
+body.d2l-body-unresolved {
 	opacity: 0;
 	display: block;
 	overflow: hidden;

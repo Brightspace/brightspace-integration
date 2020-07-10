@@ -16,6 +16,7 @@ describe('d2l-web-components-ready', () => {
 			wcr.WebComponentsReady.then(done);
 			wcr.WebComponentsLoaded();
 			wcr.WCRDispatched();
+			wcr.FontsLoaded();
 		});
 	});
 
@@ -24,6 +25,7 @@ describe('d2l-web-components-ready', () => {
 			done(new Error('should not be called'));
 		});
 		wcr.WebComponentsLoaded();
+		wcr.FontsLoaded();
 		done();
 	});
 
@@ -32,13 +34,24 @@ describe('d2l-web-components-ready', () => {
 			done(new Error('should not be called'));
 		});
 		wcr.WCRDispatched();
+		wcr.FontsLoaded();
 		done();
 	});
 
-	it('should execute after WebComponentsReady and WebComponentsLoaded', (done) => {
+	it('should not execute if no FontsLoaded', (done) => {
+		wcr.WebComponentsReady.then(() => {
+			done(new Error('should not be called'));
+		});
+		wcr.WebComponentsLoaded();
+		wcr.WCRDispatched();
+		done();
+	});
+
+	it('should execute after WebComponentsReady, WebComponentsLoaded and FontsLoaded', (done) => {
 		wcr.WebComponentsReady.then(done);
 		wcr.WCRDispatched();
 		wcr.WebComponentsLoaded();
+		wcr.FontsLoaded();
 	});
 
 	it('should execute all callbacks', (done) => {
@@ -60,6 +73,7 @@ describe('d2l-web-components-ready', () => {
 			count++;
 			check();
 		});
+		wcr.FontsLoaded();
 	});
 
 });

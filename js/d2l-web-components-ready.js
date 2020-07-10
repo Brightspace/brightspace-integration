@@ -27,6 +27,7 @@ export default {
 	}),
 	reset: function() {
 		d2lComponentsLoaded = false;
+		fontsLoaded = false;
 		webComponentsReady = false;
 		this.WebComponentsReady = new Promise(function(resolve) {
 			ready = resolve;

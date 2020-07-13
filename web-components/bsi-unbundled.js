@@ -16,8 +16,6 @@ import { clearDismissible, setDismissible } from '@brightspace-ui/core/helpers/d
 import '@brightspace-ui/core/components/alert/alert-toast.js';
 
 // TODO: these still need to be unbundled and loaded individually whenever they're used
-// AppLoader
-import '@brightspace-ui/core/components/backdrop/backdrop.js';
 // PageActionsMenu, ContextMenuPlaceholder, ButtonIcon, RubricBox, MenuFlyout, Quizzing (misc JS),
 // legacy PageActions, legacy Grid actions, legacy ContextMenu placeholder, legacy Actions, Rubrics (misc JS)
 import '@brightspace-ui/core/components/button/button-icon.js';

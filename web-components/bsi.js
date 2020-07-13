@@ -5,7 +5,7 @@ import './bsi-unbundled.js';
 // but as they are each unbundled they'll need to return to
 // being imported here
 import '@brightspace-ui/core/components/alert/alert.js';
-//import '@brightspace-ui/core/components/backdrop/backdrop.js';
+import '@brightspace-ui/core/components/backdrop/backdrop.js';
 import '@brightspace-ui/core/components/breadcrumbs/breadcrumb.js';
 import '@brightspace-ui/core/components/breadcrumbs/breadcrumb-current-page.js';
 import '@brightspace-ui/core/components/breadcrumbs/breadcrumbs.js';

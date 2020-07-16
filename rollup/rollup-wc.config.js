@@ -67,6 +67,7 @@ const appFiles = [
 	'./web-components/d2l-content-store.js',
 	'./web-components/d2l-consistent-evaluation.js',
 	'./web-components/d2l-user-feedback.js',
+	'./node_modules/d2l-teacher-course-creation/custom-teacher-course-creation.js'
 ];
 // NOTE: Ideally these should all be dynamically imported by apps.
 //       Please don't add new entries to this list.

@@ -16,6 +16,7 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/inputs/input-search.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-text.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-time.js',
+	'./node_modules/@brightspace-ui/core/components/loading-spinner/loading-spinner.js',
 	'./node_modules/@brightspace-ui/core/components/more-less/more-less.js',
 	'./node_modules/@brightspace-ui/core/components/switch/switch.js',
 	'./node_modules/@brightspace-ui/core/components/switch/switch-visibility.js',

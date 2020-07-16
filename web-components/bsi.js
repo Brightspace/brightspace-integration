@@ -21,7 +21,7 @@ import '@brightspace-ui/core/components/button/floating-buttons.js';
 //import '@brightspace-ui/core/components/icons/icon.js';
 import '@brightspace-ui/core/components/inputs/input-search.js';
 //import '@brightspace-ui/core/components/link/link.js';
-//import '@brightspace-ui/core/components/loading-spinner/loading-spinner.js';
+import '@brightspace-ui/core/components/loading-spinner/loading-spinner.js';
 //import '@brightspace-ui/core/components/menu/menu-item-checkbox.js';
 //import '@brightspace-ui/core/components/menu/menu-item-link.js';
 //import '@brightspace-ui/core/components/menu/menu-item-radio.js';

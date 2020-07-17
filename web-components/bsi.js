@@ -15,6 +15,7 @@ import '@brightspace-ui/core/components/button/floating-buttons.js';
 //import '@brightspace-ui/core/components/dropdown/dropdown-button-subtle.js';
 //import '@brightspace-ui/core/components/dropdown/dropdown-button.js';
 //import '@brightspace-ui/core/components/dropdown/dropdown-content.js';
+import '@brightspace-ui/core/components/dropdown/dropdown-context-menu.js';
 //import '@brightspace-ui/core/components/dropdown/dropdown-menu.js';
 //import '@brightspace-ui/core/components/dropdown/dropdown-more.js';
 //import '@brightspace-ui/core/components/dropdown/dropdown.js';

@@ -73,7 +73,6 @@ const appFiles = [
 // NOTE: Ideally these should all be dynamically imported by apps.
 //       Please don't add new entries to this list.
 const staticFiles = [
-	'node_modules/@brightspace-ui-labs/edit-in-place/lang/*.js',
 	'node_modules/@d2l/d2l-attachment/locales/*.json',
 	'node_modules/@d2l/d2l-attachment/icons/*.svg',
 	'node_modules/d2l-activities/components/d2l-activity-collection-editor/lang/*.js',

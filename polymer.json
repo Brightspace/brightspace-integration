@@ -30,7 +30,8 @@
     "web-components/d2l-user-feedback.js",
     "web-components/d2l-cpd-report.js",
     "web-components/mobx.js",
-    "node_modules/d2l-teacher-course-creation/custom-teacher-course-creation.js"
+    "node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation.js",
+    "node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation-admin.js"
   ],
   "extraDependencies": [
     "node_modules/@brightspace-ui-labs/edit-in-place/lang/*.js",

@@ -50,18 +50,6 @@ const appFiles = [
 ]
 ```
 
-Until the legacy Polymer build is retired, also add an entry to the `fragments` collection in `polymer.json`:
-
-```json
-{
-  "fragments": [
-    ...
-    "./node_modules/<your-app>/app.js",
-    ...
-  ]
-}
-```
-
 ### Lang Terms
 
 Optionally, if your component has lang terms managed by Serge.io, add an entry to the `.serge-mapping.json` file:

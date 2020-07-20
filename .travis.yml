@@ -8,8 +8,8 @@ branches:
   - /20.*/
 script:
 - npm run test
-- npm run build:lang
 - npm run build
+- npm run build:lang
 - |
   if [ "$TRAVIS_TEST_RESULT" == "0" ]; then
     npm run publish:autotag;

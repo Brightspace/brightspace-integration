@@ -18,6 +18,7 @@ const packages = [
 	'd2l-organization-hm-behavior',
 	'd2l-polymer-siren-behaviors',
 	'd2l-telemetry-browser-client',
+	'highcharts',
 	'mobx'
 ];
 

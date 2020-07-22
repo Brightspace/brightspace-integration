@@ -98,8 +98,7 @@
     "rollup-plugin-uglify": "^6",
     "sinon": "^7",
     "sinon-chai": "^3",
-    "susy": "^2",
-    "whatwg-fetch": "^3"
+    "susy": "^2"
   },
   "dependencies": {}
 }

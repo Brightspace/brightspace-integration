@@ -39,8 +39,6 @@ import '@brightspace-ui/core/components/dropdown/dropdown.js';
 // Competencies (misc JS), Image (legacy), Grades (misc JS), Placeholder (legacy), PartialRendering,
 // Custom selector (legacy)
 import '@brightspace-ui/core/components/icons/icon.js';
-// RubricBox
-import '@brightspace-ui/core/components/link/link.js';
 // MenuItemCheckbox
 import '@brightspace-ui/core/components/menu/menu-item-checkbox.js';
 // EditNavbar, NavbarItem, MenuItemLink, PageActionsMenuItem, HomepageManageMenu, ContextMenu

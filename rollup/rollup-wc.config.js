@@ -13,6 +13,7 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/button/button-icon.js',
 	'./node_modules/@brightspace-ui/core/components/button/button-subtle.js',
 	'./node_modules/@brightspace-ui/core/components/button/floating-buttons.js',
+	'./node_modules/@brightspace-ui/core/components/dialog/dialog-fullscreen.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-context-menu.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-checkbox.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-search.js',

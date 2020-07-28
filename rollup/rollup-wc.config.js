@@ -6,6 +6,7 @@ import merge from 'deepmerge';
 const componentFiles = [
 	'./web-components/bsi-unbundled.js',
 	'./node_modules/@brightspace-ui/core/components/alert/alert.js',
+	'./node_modules/@brightspace-ui/core/components/alert/alert-toast.js',
 	'./node_modules/@brightspace-ui/core/components/backdrop/backdrop.js',
 	'./node_modules/@brightspace-ui/core/components/breadcrumbs/breadcrumb.js',
 	'./node_modules/@brightspace-ui/core/components/breadcrumbs/breadcrumb-current-page.js',

@@ -45,7 +45,8 @@ class LangPackage {
 
 		serializer.writeTagBegin('package');
 		serializer.writeAttribute('name', this._name);
-		serializer.writeAttribute('type', 'Language'); // Could be IcuLanguage?
+		serializer.writeAttribute('type', 'Language');
+		serializer.writeAttribute('langtype', 'ICU');
 		serializer.writeAttribute('toolid', '0');
 		serializer.writeAttribute('version', '0.0.0.0');
 		serializer.writeTagBeginRightChar();

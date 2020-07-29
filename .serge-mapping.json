@@ -12,5 +12,6 @@
   "d2l-outcomes-user-progress": "d2l-outcomes-user-progress/d2l-outcomes-user-progress.serge.json",
   "d2l-program-outcomes-picker": "d2l-program-outcomes-picker/program-outcomes-picker.serge.json",
   "d2l-rubric": "d2l-rubric/d2l-rubric.serge.json",
-  "d2l-sequences": "d2l-sequences/d2l-sequences.serge.json"
+  "d2l-sequences": "d2l-sequences/d2l-sequences.serge.json",
+  "d2l-teacher-course-creation": "d2l-teacher-course-creation/d2l-teacher-course-creation.serge.json"
 }

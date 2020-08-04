@@ -59,62 +59,59 @@ $viewport-width-sm: 768px;
 	}
 }
 
-.daylight-widget-demarcation {
+.d2l-homepage-pageheader {
+	margin: 0;
+}
 
-	.d2l-homepage-pageheader {
-		margin: 0;
-	}
+.d2l-widget {
+	border-style: none;
+	margin-top: 30px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
 
-	.d2l-widget {
-		border-style: none;
-		margin-top: 30px;
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
+.d2l-widget-header {
+	padding: 0;
+}
 
-	.d2l-widget-header {
-		padding: 0;
-	}
+.d2l-widget-content-padding {
+	padding-top: 11px;
+}
 
-	.d2l-widget-content-padding {
-		padding-top: 11px;
-	}
+.d2l-widget-header.d2l-offscreen + .d2l-widget-content > .d2l-widget-content-padding {
+	padding-top: 0;
+}
 
-	.d2l-widget-header.d2l-offscreen + .d2l-widget-content > .d2l-widget-content-padding {
-		padding-top: 0;
-	}
+.d2l-widget-header .d2l-heading {
+	line-height: 1.2rem;
+}
 
-	.d2l-widget-header .d2l-heading {
-		line-height: 1.2rem;
-	}
+.d2l-homepage-header-menu-wrapper {
+	margin-top: -2px;
+}
 
-	.d2l-homepage-header-menu-wrapper {
-		margin-top: -2px;
-	}
+.homepage-container div:last-of-type .d2l-widget:last-child {
+	border-bottom: 0;
+}
 
-	.homepage-container div:last-of-type .d2l-widget:last-child {
-		border-bottom: 0;
-	}
+.homepage-container div:last-of-type .d2l-tile.d2l-widget:last-child {
+	padding-bottom: 20px;
+}
 
-	.homepage-container div:last-of-type .d2l-tile.d2l-widget:last-child {
-		padding-bottom: 20px;
-	}
+.homepage-container div:last-of-type .d2l-tile.d2l-widget.d2l-widget-collapsed:last-child {
+	padding-bottom: 11px;
+}
 
-	.homepage-container div:last-of-type .d2l-tile.d2l-widget.d2l-widget-collapsed:last-child {
-		padding-bottom: 11px;
-	}
+.d2l-custom-widget .d2l-widget-content .d2l-htmlblock > p:last-child {
+	margin-bottom: 0;
+}
 
-	.d2l-custom-widget .d2l-widget-content .d2l-htmlblock > p:last-child {
-		margin-bottom: 0;
-	}
+.d2l-widget-iframe-wrapper > iframe {
+	display: block;
+}
 
-	.d2l-widget-iframe-wrapper > iframe {
-		display: block;
-	}
-
-	.d2l-fra-iframe > iframe {
-		display: block;
-	}
+.d2l-fra-iframe > iframe {
+	display: block;
 }
 
 .d2l-tile.d2l-widget {

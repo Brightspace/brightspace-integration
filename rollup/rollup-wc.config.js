@@ -19,6 +19,7 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-context-menu.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-button.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-button-subtle.js',
+	'./node_modules/@brightspace-ui/core/components/expand-collapse/expand-collapse-content.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-checkbox.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-search.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-text.js',

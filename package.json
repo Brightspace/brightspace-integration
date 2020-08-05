@@ -69,7 +69,6 @@
     "d2l-organizations": "BrightspaceHypermediaComponents/organizations#semver:^5",
     "d2l-outcomes-level-of-achievements": "Brightspace/outcomes-level-of-achievement-ui.git#semver:^2",
     "d2l-outcomes-user-progress": "Brightspace/d2l-outcomes-user-progress.git#semver:^1",
-    "d2l-polymer-behaviors": "Brightspace/d2l-polymer-behaviors-ui#semver:^2",
     "d2l-program-outcomes-picker": "Brightspace/program-outcomes-picker#semver:^3",
     "d2l-resize-aware": "BrightspaceUI/resize-aware.git#semver:^1",
     "d2l-rubric": "Brightspace/d2l-rubric#semver:^3",

@@ -47,8 +47,6 @@ import '@brightspace-ui/core/components/menu/menu-item.js';
 // EditNavbar, MobileLinksArea, HomepageManageMenu, PageActionsMenu, Menu (MVC), ContextMenu (MVC),
 // MediaPlayer, contextMenu (legacy), ActionButtons (legacy)
 import '@brightspace-ui/core/components/menu/menu.js';
-// CollapsibleSection (MVC), Homepages
-import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
 
 window.D2L = window.D2L || {};
 

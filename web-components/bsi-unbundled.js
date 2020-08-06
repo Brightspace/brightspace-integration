@@ -9,13 +9,6 @@ import { announce } from '@brightspace-ui/core/helpers/announce';
 import { registerGestureSwipe } from '@brightspace-ui/core/helpers/gestures.js';
 import { clearDismissible, setDismissible } from '@brightspace-ui/core/helpers/dismissible';
 
-// TODO: these still need to be unbundled and loaded individually whenever they're used
-// PageActionsMenu, ContextMenuPlaceholder, ButtonIcon, RubricBox, MenuFlyout, Quizzing (misc JS),
-// legacy PageActions, legacy Grid actions, legacy ContextMenu placeholder, legacy Actions, Rubrics (misc JS)
-import '@brightspace-ui/core/components/button/button-icon.js';
-// ButtonSubtle, MenuFlyout, MenuFlyoutCustom, legacy Actions, legacy Grid actions,
-// legacy ContextMenu placeholder, legacy Actions
-import '@brightspace-ui/core/components/button/button-subtle.js';
 // ActionButtonMenu (legacy), MediaPlayer
 import '@brightspace-ui/core/components/dropdown/dropdown-button.js';
 // Navbar, Flyout (MVC), LayoutBuilder

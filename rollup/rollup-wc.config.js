@@ -25,6 +25,7 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/inputs/input-text.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-time.js',
 	'./node_modules/@brightspace-ui/core/components/loading-spinner/loading-spinner.js',
+	'./node_modules/@brightspace-ui/core/components/menu/menu.js',
 	'./node_modules/@brightspace-ui/core/components/menu/menu-item.js',
 	'./node_modules/@brightspace-ui/core/components/menu/menu-item-checkbox.js',
 	'./node_modules/@brightspace-ui/core/components/menu/menu-item-link.js',

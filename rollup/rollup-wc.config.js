@@ -59,6 +59,7 @@ const componentFiles = [
 	'./web-components/d2l-simple-overlay.js',
 	'./web-components/d2l-table.js',
 	'./web-components/d2l-tabs.js',
+	'./web-components/intl-messageformat-parser.js'
 ];
 const appFiles = [
 	'./node_modules/d2l-engagement-dashboard/engagement-dashboard.js',

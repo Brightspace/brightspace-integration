@@ -97,7 +97,8 @@
     "rollup-plugin-uglify": "^6",
     "sinon": "^7",
     "sinon-chai": "^3",
-    "susy": "^2"
+    "susy": "^2",
+    "intl-messageformat-parser": "^3"
   },
   "dependencies": {}
 }

@@ -34,6 +34,7 @@
     "@babel/preset-env": "^7",
     "@babel/register": "^7",
     "@brightspace-ui-labs/user-feedback": "^1",
+    "@brightspace-ui-labs/pagination": "^0",
     "@brightspace-ui/core": "^1",
     "@brightspace-ui/intl": "^3",
     "@koa/cors": "^3",
@@ -52,6 +53,7 @@
     "d2l-activity-exemptions": "Brightspace/d2l-activity-exemptions#semver:^2",
     "d2l-awards-leaderboard-ui": "Brightspace/awards-leaderboard-ui#semver:^1",
     "d2l-button-group": "BrightspaceUI/button-group#semver:^3",
+    "d2l-capture-central": "Brightspace/capture-central#semver:^0",
     "d2l-consistent-evaluation": "BrightspaceHypermediaComponents/consistent-evaluation#semver:^0",
     "d2l-content-store": "Brightspace/d2l-content-store#semver:^0",
     "d2l-cpd": "Brightspace/continuous-professional-development#semver:^1",
@@ -99,6 +101,5 @@
     "sinon-chai": "^3",
     "susy": "^2",
     "intl-messageformat-parser": "^3"
-  },
-  "dependencies": {}
+  }
 }

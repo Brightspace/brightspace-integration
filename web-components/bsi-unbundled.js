@@ -77,6 +77,57 @@ window.D2L.Telemetry = {
 	}
 };
 
+window.D2L.Logging.CreateClient = function() {
+	const batchSize = 500;
+	const batchTime = 5000;
+	const client = {
+		Log: function(messages) {
+			clearTimeout(this._batchTimeout);
+			this._loggerPromise = this._loggerPromise || D2L.Logging.GetLogger(false);
+			this._messages = [...this._messages, ...messages];
+			while (this._messages.length >= batchSize) {
+				const batch = this._messages.slice(0, batchSize);
+				this._logWithFetch(batch);
+			}
+			if (this._messages.length > 0) {
+				this._batchTimeout = setTimeout(() => {
+					this._logWithFetch(this._messages);
+					this._messages = [];
+				}, batchTime);
+			}
+		},
+		_logWithFetch: async function(messages) {
+			const options = {
+				method: 'POST',
+				mode: 'cors',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(messages)
+			};
+			let logger = await this._loggerPromise;
+			const resp = await window.fetch(logger.Endpoint, options);
+			if (resp.status === 410) {
+				this._loggerPromise = D2L.Logging.GetLogger(true);
+				logger = await this._loggerPromise;
+				options.mode = 'no-cors';
+				window.fetch(logger.Endpoint, options);
+			}
+		},
+		_logWithBeacon() {
+			clearTimeout(this._batchTimeout);
+			this._loggerPromise && this._loggerPromise.then(logger => {
+				if (this._messages.length > 0) {
+					var data = JSON.stringify(this._messages);
+					navigator.sendBeacon(logger.Endpoint, data);
+				}
+			});
+		},
+		_messages: []
+	};
+	window.addEventListener('unload', () => client._logWithBeacon());
+	return client;
+};
+window.D2L.Logging._ready();
+
 /*
  * DE35087 - This was added by Polymer to handle ghost clicks in mobile browsers, but it has negative effects when using VoiceOver on iOS.
  * Events were being incorrectly canceled, mostly affecting selecting radio buttons but other user actions as well.

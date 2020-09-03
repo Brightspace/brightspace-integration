@@ -27,8 +27,6 @@ import '@brightspace-ui/core/components/dropdown/dropdown.js';
 // Competencies (misc JS), Image (legacy), Grades (misc JS), Placeholder (legacy), PartialRendering,
 // Custom selector (legacy)
 import '@brightspace-ui/core/components/icons/icon.js';
-// StatusIndicator (both legacy and MVC)
-import '@brightspace-ui/core/components/status-indicator/status-indicator.js';
 
 window.D2L = window.D2L || {};
 

@@ -26,20 +26,6 @@ import '@brightspace-ui/core/components/dropdown/dropdown.js';
 // Competencies (misc JS), Image (legacy), Grades (misc JS), Placeholder (legacy), PartialRendering,
 // Custom selector (legacy)
 import '@brightspace-ui/core/components/icons/icon.js';
-// MenuItemCheckbox
-import '@brightspace-ui/core/components/menu/menu-item-checkbox.js';
-// EditNavbar, NavbarItem, MenuItemLink, PageActionsMenuItem, HomepageManageMenu, ContextMenu
-import '@brightspace-ui/core/components/menu/menu-item-link.js';
-// MenuItemRadio
-import '@brightspace-ui/core/components/menu/menu-item-radio.js';
-// ConextMenu.Separator, MenuItemSeparator, MobileLinksArea, contextMenu (legacy)
-import '@brightspace-ui/core/components/menu/menu-item-separator.js';
-// EditNavbar, MobileLinksArea, PageActionsMenuItem, Menu (MVC), HomepageManageMenu, ContextMenu,
-// MediaPlayer, contextMenu (legacy)
-import '@brightspace-ui/core/components/menu/menu-item.js';
-// EditNavbar, MobileLinksArea, HomepageManageMenu, PageActionsMenu, Menu (MVC), ContextMenu (MVC),
-// MediaPlayer, contextMenu (legacy), ActionButtons (legacy)
-import '@brightspace-ui/core/components/menu/menu.js';
 // StatusIndicator (both legacy and MVC)
 import '@brightspace-ui/core/components/status-indicator/status-indicator.js';
 

@@ -58,7 +58,7 @@
     "d2l-consistent-evaluation": "BrightspaceHypermediaComponents/consistent-evaluation#semver:^0",
     "d2l-content-store": "Brightspace/d2l-content-store#semver:^0",
     "d2l-cpd": "Brightspace/continuous-professional-development#semver:^1",
-    "d2l-engagement-dashboard": "Brightspace/insights-engagement-dashboard#semver:^0",
+    "d2l-engagement-dashboard": "Brightspace/insights-engagement-dashboard#487936c",
     "d2l-fetch": "Brightspace/d2l-fetch.git#semver:^2",
     "d2l-fetch-auth": "^1",
     "d2l-fetch-dedupe": "^1",

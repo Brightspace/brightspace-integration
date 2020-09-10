@@ -33,9 +33,9 @@
     "@babel/core": "^7",
     "@babel/preset-env": "^7",
     "@babel/register": "^7",
-    "@brightspace-ui-labs/user-feedback": "^1",
     "@brightspace-ui-labs/pagination": "^0",
-    "@brightspace-ui/core": "^1",
+    "@brightspace-ui-labs/user-feedback": "^1",
+    "@brightspace-ui/core": "^1.78.0",
     "@brightspace-ui/intl": "^3",
     "@brightspace-ui/logging": "^1.1.0",
     "@koa/cors": "^3",
@@ -89,6 +89,7 @@
     "eslint-plugin-sort-class-members": "^1",
     "frau-publisher": "^2",
     "glob": "^7",
+    "intl-messageformat-parser": "^3",
     "mocha": "^6",
     "moment-timezone": "^0.5",
     "node-sass": "^4",
@@ -100,7 +101,6 @@
     "rollup-plugin-uglify": "^6",
     "sinon": "^7",
     "sinon-chai": "^3",
-    "susy": "^2",
-    "intl-messageformat-parser": "^3"
+    "susy": "^2"
   }
 }

@@ -77,3 +77,7 @@ body.d2l-body-unresolved {
 	position: fixed;
 	top: 10px;
 }
+
+.d2l-disable-overflow {
+	overflow-y: unset;
+}

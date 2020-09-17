@@ -17,6 +17,8 @@ Produces LMS definition/translation XMLs and an Oslo manifest file for the Serge
 configuration files specified in ".serge-mapping.json". Should be run every
 build, as output is synced to the monolith with the BSI version bump.
 
+Note: The LMS `LANG_OBJECTS` table is not able to store certain special characters like `@`. It will do a conversion to a unicode representation like `\u0040`. For this reason if there is a special character in the package/collection/term name support needs to be added to the OSLO controller in the LMS to parse that character.
+
 **Output:**
 
 	build/

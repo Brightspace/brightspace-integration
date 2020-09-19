@@ -24,12 +24,9 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-more.js',
 	'./node_modules/@brightspace-ui/core/components/expand-collapse/expand-collapse-content.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-checkbox.js',
-<<<<<<< Updated upstream
 	'./node_modules/@brightspace-ui/core/components/inputs/input-date.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-date-time.js',
-=======
 	'./node_modules/@brightspace-ui/core/components/inputs/input-number.js',
->>>>>>> Stashed changes
 	'./node_modules/@brightspace-ui/core/components/inputs/input-search.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-text.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-time.js',

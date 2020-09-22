@@ -1,4 +1,4 @@
-# Off-Stack Langerm Overridest (OSLO)
+# Off-Stack Langerm Overrides (OSLO)
 
 The enclosed scripts build the integration files needed to support overriding
 web component langterms in the LMS.

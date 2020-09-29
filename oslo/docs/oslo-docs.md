@@ -51,6 +51,76 @@ Specifically your component must do the following step:
 > }
 > ```
 
+## Create a mixin to expose the `localize()` method
+
+For existing web components the `localize()` method would have been exposed when following the [`localize-mixin`](https://github.com/BrightspaceUI/core/blob/master/mixins/localize-mixin.md) documentation from `@Brightspace-UI/core`. In this case a few things will need to be changed.
+
+This will need to be done for each unique collection name you wish to have. (Each serge object will result in a new collection name)
+
+```javascript
+import { LocalizeMixin } from '@brightspace-ui/core/mixins/localize-mixin.js';
+import { getLocalizeOverrideResources } from '@brightspace-ui/core/helpers/getLocalizeResources.js';    // NEWLY ADDED FOR OSLO
+
+export const ComponentLocalizeMixin = superclass => class extends LocalizeMixin(superclass) {
+
+    static async getLocalizeResources(langs) {
+
+
+        function resolveOverridesFunc() {                                                               // NEWLY ADDED FOR OSLO
+			return 'your-npm-package-name\\your-object-serge-name'; // Collection Name                  // NEWLY ADDED FOR OSLO     
+		}                                                                                               // NEWLY ADDED FOR OSLO
+        
+        let translations;
+        for await (const lang of langs) {
+            switch (lang) {
+                case 'en':
+                    translations = await import('./locales/en.js');
+                        break;
+                case 'fr':
+                    translations = await import('./locales/fr.js');
+                    break;
+                }
+            if (translations && translations.default) {
+                return await getLocalizeOverrideResources(                                              // NEWLY ADDED FOR OSLO                              
+                    lang,                                                                               // NEWLY ADDED FOR OSLO
+                    translations.default,                                                               // NEWLY ADDED FOR OSLO
+                    resolveOverridesFunc                                                                // NEWLY ADDED FOR OSLO
+                );                                                                                      // NEWLY ADDED FOR OSLO
+            }
+        }
+		translations = await import('../lang/en.js');
+
+        // NEWLY ADDED FOR OSLO
+		return await getLocalizeOverrideResources(                                                      // NEWLY ADDED FOR OSLO
+			'en',                                                                                       // NEWLY ADDED FOR OSLO
+			translations.default,                                                                       // NEWLY ADDED FOR OSLO
+			resolveOverridesFunc                                                                        // NEWLY ADDED FOR OSLO
+		);                                                                                              // NEWLY ADDED FOR OSLO
+    }
+}
+```
+
+Your component would then use this mixin and have access to the `localize()` method
+
+```javascript
+class MyComponent extends ComponentLocalizeMixin(LitElement) {
+    render() {
+        return html`<p>${this.localize('hello', {firstName: 'Mary'})}</p>`;
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
 # How to use OSLO and language overrides
 
 ## Using @Brightspace-UI/Core to retrieve the langterm

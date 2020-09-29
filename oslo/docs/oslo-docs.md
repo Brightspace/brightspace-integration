@@ -97,7 +97,7 @@ export const ComponentLocalizeMixin = superclass => class extends LocalizeMixin(
             'en',                                                                                    // NEWLY ADDED FOR OSLO
             translations.default,                                                                    // NEWLY ADDED FOR OSLO
             resolveOverridesFunc                                                                     // NEWLY ADDED FOR OSLO
-    );                                                                                               // NEWLY ADDED FOR OSLO
+        );                                                                                           // NEWLY ADDED FOR OSLO
     }
 }
 ```

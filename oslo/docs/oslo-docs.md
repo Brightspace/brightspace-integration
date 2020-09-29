@@ -54,6 +54,9 @@ Specifically your component must do the following step:
 ## Create a mixin to expose the `localize()` method
 
 For existing web components the `localize()` method would have been exposed when following the [`localize-mixin`](https://github.com/BrightspaceUI/core/blob/master/mixins/localize-mixin.md) documentation from `@Brightspace-UI/core`. In this case a few things will need to be changed.
+- Add `resolveOverridesFunc()` to `getLocalizeResources`
+- return `getLocalizeOverrideResources()` inside `if` block
+- return `getLocalizeOverrideResources()` inside at end of function
 
 This will need to be done for each unique collection name you wish to have. (Each serge object will result in a new collection name)
 

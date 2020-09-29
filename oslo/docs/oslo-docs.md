@@ -90,7 +90,6 @@ export const ComponentLocalizeMixin = superclass => class extends LocalizeMixin(
         }
 		translations = await import('../lang/en.js');
 
-        // NEWLY ADDED FOR OSLO
         return await getLocalizeOverrideResources(                                                   // NEWLY ADDED FOR OSLO
             'en',                                                                                    // NEWLY ADDED FOR OSLO
             translations.default,                                                                    // NEWLY ADDED FOR OSLO

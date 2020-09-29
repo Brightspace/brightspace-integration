@@ -59,16 +59,16 @@ This will need to be done for each unique collection name you wish to have. (Eac
 
 ```javascript
 import { LocalizeMixin } from '@brightspace-ui/core/mixins/localize-mixin.js';
-import { getLocalizeOverrideResources } from '@brightspace-ui/core/helpers/getLocalizeResources.js';    // NEWLY ADDED FOR OSLO
+import { getLocalizeOverrideResources } from '@brightspace-ui/core/helpers/getLocalizeResources.js'; // NEWLY ADDED FOR OSLO
 
 export const ComponentLocalizeMixin = superclass => class extends LocalizeMixin(superclass) {
 
     static async getLocalizeResources(langs) {
 
 
-        function resolveOverridesFunc() {                                                               // NEWLY ADDED FOR OSLO
-			return 'your-npm-package-name\\your-object-serge-name'; // Collection Name                  // NEWLY ADDED FOR OSLO     
-		}                                                                                               // NEWLY ADDED FOR OSLO
+        function resolveOverridesFunc() {                                                            // NEWLY ADDED FOR OSLO
+            return 'your-npm-package-name\\your-object-serge-name'; // Collection Name               // NEWLY ADDED FOR OSLO     
+        }                                                                                            // NEWLY ADDED FOR OSLO
         
         let translations;
         for await (const lang of langs) {
@@ -81,21 +81,21 @@ export const ComponentLocalizeMixin = superclass => class extends LocalizeMixin(
                     break;
                 }
             if (translations && translations.default) {
-                return await getLocalizeOverrideResources(                                              // NEWLY ADDED FOR OSLO                              
-                    lang,                                                                               // NEWLY ADDED FOR OSLO
-                    translations.default,                                                               // NEWLY ADDED FOR OSLO
-                    resolveOverridesFunc                                                                // NEWLY ADDED FOR OSLO
-                );                                                                                      // NEWLY ADDED FOR OSLO
+                return await getLocalizeOverrideResources(                                           // NEWLY ADDED FOR OSLO                              
+                    lang,                                                                            // NEWLY ADDED FOR OSLO
+                    translations.default,                                                            // NEWLY ADDED FOR OSLO
+                    resolveOverridesFunc                                                             // NEWLY ADDED FOR OSLO
+                );                                                                                   // NEWLY ADDED FOR OSLO
             }
         }
 		translations = await import('../lang/en.js');
 
         // NEWLY ADDED FOR OSLO
-		return await getLocalizeOverrideResources(                                                      // NEWLY ADDED FOR OSLO
-			'en',                                                                                       // NEWLY ADDED FOR OSLO
-			translations.default,                                                                       // NEWLY ADDED FOR OSLO
-			resolveOverridesFunc                                                                        // NEWLY ADDED FOR OSLO
-		);                                                                                              // NEWLY ADDED FOR OSLO
+        return await getLocalizeOverrideResources(                                                   // NEWLY ADDED FOR OSLO
+            'en',                                                                                    // NEWLY ADDED FOR OSLO
+            translations.default,                                                                    // NEWLY ADDED FOR OSLO
+            resolveOverridesFunc                                                                     // NEWLY ADDED FOR OSLO
+    );                                                                                               // NEWLY ADDED FOR OSLO
     }
 }
 ```

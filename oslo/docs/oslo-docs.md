@@ -32,7 +32,7 @@ To mitigate these problems, the following format is recommended:
 {grandparent}:{parent}:camelCaseTermName
 ```
 
-**Validation**
+**Validation**  
 If you would like to test if your term name is valid visit https://regexr.com/ and use the following regex:
 ```
 ^[a-zA-Z0-9\\:_-@]*$

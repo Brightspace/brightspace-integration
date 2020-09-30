@@ -20,8 +20,6 @@ const ParseJsNameRegExp = /["']/g;
 const ParseJsEscapeRegExp = /\\(['"])/g;
 const ParseJsEscapeReplacer = (_, ch) => ch;
 
-let InvalidTermFound = false;
-
 class Rewrite {
 
 	constructor(rewrite) {
@@ -181,6 +179,7 @@ class Serge {
 		const source = JSON.parse(text);
 		const entries = Object.entries(source);
 		const collection = new LangCollection(this._name);
+		let InvalidTermFound = false;
 
 		for (const [name, defaultValue] of entries) {
 
@@ -206,6 +205,7 @@ class Serge {
 		const source = JSON.parse(text);
 		const entries = Object.entries(source);
 		const collection = new LangCollection(this._name);
+		let InvalidTermFound = false;
 
 		for (const entry of entries) {
 
@@ -235,6 +235,7 @@ class Serge {
 
 		const matches = text.matchAll(ParseJsRegExp);
 		const collection = new LangCollection(this._name);
+		let InvalidTermFound = false;
 
 		for (const match of matches) {
 

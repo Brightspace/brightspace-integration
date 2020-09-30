@@ -32,7 +32,7 @@ To mitigate these problems, the following format is recommended:
 {grandparent}:{parent}:camelCaseTermName
 ```
 
-**Validation**  
+**Validation:**  
 If you would like to test if your term name is valid visit https://regexr.com/ and use the following regex:
 ```
 ^[a-zA-Z0-9\\:_-@]*$
@@ -58,14 +58,14 @@ For existing web components the `localize()` method would have been exposed when
 - Add `resolveOverridesFunc()` to `getLocalizeResources`
 - return `getLocalizeOverrideResources()` inside `if` block
 - return `getLocalizeOverrideResources()` inside at end of function
+**Important:** This will need to be done for each unique collection name you wish to have. (Each serge object will result in a new collection name)
 
-This will need to be done for each unique collection name you wish to have. (Each serge object will result in a new collection name)
-
+### Example modifications to create an OSLO mixin
 ```javascript
 import { LocalizeMixin } from '@brightspace-ui/core/mixins/localize-mixin.js';
 import { getLocalizeOverrideResources } from '@brightspace-ui/core/helpers/getLocalizeResources.js'; // NEWLY ADDED FOR OSLO
 
-export const ComponentLocalizeMixin = superclass => class extends LocalizeMixin(superclass) {
+export const MyComponentLocalizeMixin = superclass => class extends LocalizeMixin(superclass) {
 
     static async getLocalizeResources(langs) {
 
@@ -102,8 +102,59 @@ export const ComponentLocalizeMixin = superclass => class extends LocalizeMixin(
     }
 }
 ```
+#### Resolve Override Function
+This function must return the collection name for the collection the mixin is being used for.
+Your collection name is determined by npm package named combined with the serge object name.
 
+**Example:**
+`npm` package name
+```json
+//package.json
+{
+    "name": "d2l-activities"
+    //...
+}
+```
+
+`serge` object name
+```json
+//repo.serge.json 
+{
+    "name": "activityEditor",
+    "parser_plugin": {
+      "plugin": "parse_js"
+    },
+    "source_match": "en\\.js$",
+    "source_dir": "components/d2l-activity-editor/lang",
+    "output_file_path": "components/d2l-activity-editor/lang/%LANG%.js",
+    "output_lang_rewrite": [
+      "ar-sa ar",
+      //...
+      "zh-tw zh-tw"
+    ]
+  }
+```
+with the two above objects, the resulting collection name will be:
+`d2l-activities\activityEditor`
+
+
+```javascript
+function resolveOverridesFunc() {
+    return 'd2l-activities\\activityEditor'; // Collection Name     
+} 
+```
+> **Note:** Make sure to escape the backslash `\`
+
+#### Using your mixin
 Your component would then use this mixin and have access to the `localize()` method
+
+
+```javascript
+// en.js
+export const val = {
+  'hello': 'Hello {firstName}!'
+};
+```
 
 ```javascript
 class MyComponent extends ComponentLocalizeMixin(LitElement) {

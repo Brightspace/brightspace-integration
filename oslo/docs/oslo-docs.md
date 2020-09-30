@@ -22,23 +22,17 @@ To mitigate these problems, the following format is recommended:
 ```
 `\` can be used to provide hierarchy to term names and allow a grouping of related terms
 
-Valid characters include:
-- `\`
-- `-`
-- `_`
-- `:`
-- `@`
-- `A-Z`
-- `a-z`
-- `0-9`
+**Valid characters include:**
+`\` `-` `_` `:` `@` `A-Z` `a-z` `0-9`
 
-Alternative valid formats:
+**Alternative valid formats:**
 ```
 {grandparent}\{parent}\snake_case_term_name
 {grandparent}\{parent}\kebab-case-term-name
 {grandparent}:{parent}:camelCaseTermName
 ```
 
+**Validation**
 If you would like to test if your term name is valid visit https://regexr.com/ and use the following regex:
 ```
 ^[a-zA-Z0-9\\:_-@]*$

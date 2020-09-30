@@ -20,6 +20,8 @@ const ParseJsNameRegExp = /["']/g;
 const ParseJsEscapeRegExp = /\\(['"])/g;
 const ParseJsEscapeReplacer = (_, ch) => ch;
 
+let InvalidTermFound = false;
+
 class Rewrite {
 
 	constructor(rewrite) {
@@ -182,8 +184,18 @@ class Serge {
 
 		for (const [name, defaultValue] of entries) {
 
-			const object = new LangObject(name, defaultValue, EmptyString);
-			collection.addObject(object);
+			const validName = Util.validLangObjectName(name, this._name);
+
+			if (validName) {
+				const object = new LangObject(name, defaultValue, EmptyString);
+				collection.addObject(object);
+			} else {
+				InvalidTermFound = true;
+			}
+		}
+
+		if (InvalidTermFound) {
+			throw 'OSLO error: Forbidden characters used in LangObject name';
 		}
 
 		return collection;
@@ -202,8 +214,18 @@ class Serge {
 				translation: defaultValue
 			}] = entry;
 
-			const object = new LangObject(name, defaultValue, description);
-			collection.addObject(object);
+			const validName = Util.validLangObjectName(name, this._name);
+
+			if(validName) {
+				const object = new LangObject(name, defaultValue, description);
+				collection.addObject(object);
+			} else {
+				InvalidTermFound = true;
+			}
+		}
+
+		if (InvalidTermFound) {
+			throw 'OSLO error: Forbidden characters used in LangObject name';
 		}
 
 		return collection;
@@ -226,8 +248,18 @@ class Serge {
 				ParseJsEscapeReplacer
 			);
 
-			const object = new LangObject(name, defaultValue, description);
-			collection.addObject(object);
+			const validName = Util.validLangObjectName(name, this._name);
+
+			if (validName) {
+				const object = new LangObject(name, defaultValue, description);
+				collection.addObject(object);
+			} else {
+				InvalidTermFound = true;
+			}
+		}
+
+		if (InvalidTermFound) {
+			throw 'OSLO error: Forbidden characters used in LangObject name';
 		}
 
 		return collection;

@@ -11,9 +11,10 @@
 ## Use Serge for translations
 For more information on how to implement serge within your web component please read [Serge-Localize](https://docs.dev.d2l/index.php/Serge-Localize)
 ## Follow the OSLO langterm naming convention
-The LAIM tool used in the LMS can only accept a set of valid characters. Currently any character can be used when naming a langterm, however, if an invalid character is used, the OSLO build step will convert those characters into their equiavalent unicode representation `\uXXXX"`.
+The LAIM tool used in the LMS can only accept a set of valid characters. Currently OSLO will accept any character and convert characters not supported by the LAIM tool into their equivalent Unicode representation `\uXXXX"`.
 
-Using invalid LAIM tool characters is not advised because it causes problems when searching for the langterm using the language management tool. Searching will not return a result when using the original character that was parsed.
+
+> :warning: Using invalid LAIM tool characters is not advised because it causes problems when searching for the langterm using the language management tool. Searching will not return a result when using the original character that was parsed.
 
 To mitigate these problems, the following format is recommended:
 ```

@@ -173,7 +173,7 @@ class MyComponent extends ComponentLocalizeMixin(LitElement) {
 }
 ```
 
-# How to use OSLO and language overrides
+# How to work with language overrides
 
 ## Background - The Language Management Tool
 

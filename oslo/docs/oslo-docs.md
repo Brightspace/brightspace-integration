@@ -184,12 +184,12 @@ Get to the tool by navigating in Brightspace:
 
 ![LangManagementTool](langmanagementtool.PNG)
 
-Selecting web compontents and hitting search will yield the above table. The table has 6 columns:
+Selecting "Web Components" from the Tool Package dropdown and hitting search will yield the above table. The table has 6 columns:
 - Package
 - Collection
 - Term Name
 - Term Type Default Value
-- Custome Value
+- Custom Value
 
 **Package**  
 This is the tool package. When using OSLO with webcomponents your tool package will always be "WebComponents"

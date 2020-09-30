@@ -190,10 +190,8 @@ class MyComponent extends ComponentLocalizeMixin(LitElement) {
 TODO
 
 ## Hiding a collection
-
-TODO
-
 In some cases, you may want to temporarily hide collections from appearing in the language management UI without deleting the terms or collection from the database. In this scenario you can add these collections to [this blocked collections list](https://github.com/Brightspace/lms/blob/master/lp/framework/core/D2L/lang/Provider/BlockedCollections.cs) and they will be hidden from the users in the Language Management UI.
+
 
 
 ## Deleting a collection

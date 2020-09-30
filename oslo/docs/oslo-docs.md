@@ -26,6 +26,7 @@ Valid characters include:
 - `-`
 - `_`
 - `:`
+- `@`
 - `A-Z`
 - `a-z`
 - `0-9`
@@ -39,7 +40,7 @@ Alternative valid formats:
 
 If you would like to test if your term name is valid visit https://regexr.com/ and use the following regex:
 ```
-^[a-zA-Z0-9\\:_-]*$
+^[a-zA-Z0-9\\:_-@]*$
 ```
 
 ## Include your web component within the BSI project

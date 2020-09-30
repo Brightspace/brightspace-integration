@@ -132,11 +132,6 @@ class MyComponent extends ComponentLocalizeMixin(LitElement) {
 
 # How to use OSLO and language overrides
 
-## Using @Brightspace-UI/Core to retrieve the langterm
-TODO
-- [`getLocalizeOverrideResources`](https://github.com/BrightspaceUI/core/blob/master/helpers/getLocalizeResources.js#L334)
-- Create a mixin using above function similar to [this](https://github.com/BrightspaceHypermediaComponents/activities/blob/master/components/d2l-activity-editor/mixins/d2l-activity-editor-lang-mixin.js)
-
 ## Creating a new collection
 TODO
 

@@ -216,7 +216,7 @@ class Serge {
 
 			const validName = Util.validLangObjectName(name, this._name);
 
-			if(validName) {
+			if (validName) {
 				const object = new LangObject(name, defaultValue, description);
 				collection.addObject(object);
 			} else {

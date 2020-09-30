@@ -198,7 +198,7 @@ This is the tool package. When using OSLO with webcomponents your tool package w
 The collection is a grouping of related Term Names. This grouping is up to the discretion of the group creating the terms. A new collection will be automatically created for every object in your [`serge.json`](#use-serge-for-translations) file.
 
 Each collection will have the following naming convention:
-> {npm-package-name}\{serge-object-name}
+`{npm-package-name}\{serge-object-name}`
 
 **Term Name**  
 The term name listed in the created language files. This is the object referenced throughout the web component that will be replaced with translations or custom values by the language management tool.

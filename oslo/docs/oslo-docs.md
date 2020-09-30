@@ -2,12 +2,15 @@
 *Offstack Language Overrides*, or **OSLO** provides a way for offstack web components to be able to integrate with language overrides in the LMS. Language overrides allow a customer to change the the displayed text of almost any term on the platform. For example, if you want to change all the locations that say "Assignments" to read "Dropbox" you can do that in the language management tool using language overrides.
 
 # Seting up OSLO for your Webcomponent
-## Pre-requisites
-Before you can use OSLO you need to do the following:
-### 1. Use Serge for translations
+  1. [Use Serge for translations](#use-serge-for-translations)
+  2. [Follow the OSLO langterm naming convention](#follow-the-oslo-langterm-naming-convention)
+  3. [Include your web component within the BSI project](#include-your-web-component-within-the-bsi-project)
+  4. [Create a mixin to expose the `localize()` method](#create-a-mixin-to-expose-the-localize-method)
+## Use Serge for translations
 For more information on how to implement serge within your web component please read [Serge-Localize](https://docs.dev.d2l/index.php/Serge-Localize)
-### 2. Follow the OSLO langterm naming convention
+## Follow the OSLO langterm naming convention
 The LAIM tool used in the LMS can only accept a set of valid characters. Currently any character can be used when naming a langterm, however, if an invalid character is used, the OSLO build step will convert those characters into their equiavalent unicode representation `\uXXXX"`.
+
 Using invalid LAIM tool characters is not advised because it causes problems when searching for the langterm using the language management tool. Searching will not return a result when using the original character that was parsed.
 
 To mitigate these problems, the following format is recommended:

@@ -85,12 +85,12 @@ For existing web components the `localize()` method would have been exposed when
                       break;
                   }
 
--  		   	  if (translations && translations.default) {
--  		          return {
--  		     		  language: lang,
--  		     		  resources: translations.default
--  		     	  };
--			  }
+-             if (translations && translations.default) {
+-                 return {
+-                     language: lang,
+-                     resources: translations.default
+-                 };
+-             }
 +             if (translations && translations.default) {
 +                 return await getLocalizeOverrideResources(                                           // NEWLY ADDED FOR  OSLO                              
 +                     lang,                                                                            // NEWLY ADDED FOR OSLO

@@ -173,18 +173,45 @@ class MyComponent extends ComponentLocalizeMixin(LitElement) {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
 # How to use OSLO and language overrides
+
+## Background - The Language Management Tool
+
+The language management tool is where Brightspace admins can search langterms and change their default values.
+
+Get to the tool by navigating in Brightspace:  
+> Gear(Settings) > Language Management > en-CA - English (Canada)
+
+![LangManagementTool](langmanagementtool.PNG)
+
+Selecting web compontents and hitting search will yield the above table. The table has 6 columns:
+- Package
+- Collection
+- Term Name
+- Term Type Default Value
+- Custome Value
+
+**Package**
+This is the tool package. When using OSLO with webcomponents your tool package will always be "WebComponents"
+
+**Collection**
+The collection is a grouping of related Term Names. This grouping is up to the discretion of the group creating the terms. A new collection will be automatically created for every object in your [`serge.json`](#use-serge-for-translations) file.
+
+Each collection will have the following naming convention:
+> {npm-package-name}\{serge-object-name}
+
+**Term Name**
+The term name listed in the created language files. This is the object referenced throughout the web component that will be replaced with translations or custom values by the language management tool.
+
+Example terms can be seen in the activities [repository](https://github.com/BrightspaceHypermediaComponents/activities/blob/46f1ff98586f4d6c09c5bf23b717d31c99c5115a/components/d2l-activity-editor/lang/en.js)
+
+**Term Type Default Value**
+This is the default text that will appear throughout the application if left unmodified.
+
+**Custome Value**
+An overridden value to replace the default value. This will be used by Brightspace customer admins.
+
+
 
 ## Creating a new collection
 TODO

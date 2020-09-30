@@ -61,63 +61,73 @@ For existing web components the `localize()` method would have been exposed when
 **Important:** This will need to be done for each unique collection name you wish to have. (Each serge object will result in a new collection name)
 
 ### Example modifications to create an OSLO mixin
-```javascript
-import { LocalizeMixin } from '@brightspace-ui/core/mixins/localize-mixin.js';
-import { getLocalizeOverrideResources } from '@brightspace-ui/core/helpers/getLocalizeResources.js'; // NEWLY ADDED FOR OSLO
+```diff
+  import { LocalizeMixin } from '@brightspace-ui/core/mixins/localize-mixin.js';
++ import { getLocalizeOverrideResources } from '@brightspace-ui/core/helpers/getLocalizeResources.js'; // NEWLY ADDED FOR OSLO
+  
+  export const MyComponentLocalizeMixin = superclass => class extends LocalizeMixin(superclass) {
+  
+      static async getLocalizeResources(langs) {
+      
+      
++         function resolveOverridesFunc() {                                                            // NEWLY ADDED FOR OSLO
++             return 'your-npm-package-name\\your-object-serge-name'; // Collection Name               // NEWLY ADDED FOR OSLO     
++         }                                                                                            // NEWLY ADDED FOR OSLO
+          
+          let translations;
+          for await (const lang of langs) {
+              switch (lang) {
+                  case 'en':
+                      translations = await import('./locales/en.js');
+                          break;
+                  case 'fr':
+                      translations = await import('./locales/fr.js');
+                      break;
+                  }
 
-export const MyComponentLocalizeMixin = superclass => class extends LocalizeMixin(superclass) {
+-  		   	  if (translations && translations.default) {
+-  		          return {
+-  		     		  language: lang,
+-  		     		  resources: translations.default
+-  		     	  };
+-			  }
++             if (translations && translations.default) {
++                 return await getLocalizeOverrideResources(                                           // NEWLY ADDED FOR  OSLO                              
++                     lang,                                                                            // NEWLY ADDED FOR OSLO
++                     translations.default,                                                            // NEWLY ADDED FOR OSLO
++                     resolveOverridesFunc                                                             // NEWLY ADDED FOR OSLO
++                 );                                                                                   // NEWLY ADDED FOR OSLO
++             }
+          }
+          translations = await import('../lang/en.js');
 
-    static async getLocalizeResources(langs) {
-
-
-        function resolveOverridesFunc() {                                                            // NEWLY ADDED FOR OSLO
-            return 'your-npm-package-name\\your-object-serge-name'; // Collection Name               // NEWLY ADDED FOR OSLO     
-        }                                                                                            // NEWLY ADDED FOR OSLO
-        
-        let translations;
-        for await (const lang of langs) {
-            switch (lang) {
-                case 'en':
-                    translations = await import('./locales/en.js');
-                        break;
-                case 'fr':
-                    translations = await import('./locales/fr.js');
-                    break;
-                }
-            if (translations && translations.default) {
-                return await getLocalizeOverrideResources(                                           // NEWLY ADDED FOR OSLO                              
-                    lang,                                                                            // NEWLY ADDED FOR OSLO
-                    translations.default,                                                            // NEWLY ADDED FOR OSLO
-                    resolveOverridesFunc                                                             // NEWLY ADDED FOR OSLO
-                );                                                                                   // NEWLY ADDED FOR OSLO
-            }
-        }
-		translations = await import('../lang/en.js');
-
-        return await getLocalizeOverrideResources(                                                   // NEWLY ADDED FOR OSLO
-            'en',                                                                                    // NEWLY ADDED FOR OSLO
-            translations.default,                                                                    // NEWLY ADDED FOR OSLO
-            resolveOverridesFunc                                                                     // NEWLY ADDED FOR OSLO
-        );                                                                                           // NEWLY ADDED FOR OSLO
-    }
-}
+-         return {
+-             language: 'en',
+-             resources: translations.default
+-         };  
++         return await getLocalizeOverrideResources(                                                   // NEWLY ADDED FOR OSLO
++             'en',                                                                                    // NEWLY ADDED FOR OSLO
++             translations.default,                                                                    // NEWLY ADDED FOR OSLO
++             resolveOverridesFunc                                                                     // NEWLY ADDED FOR OSLO
++         );                                                                                           // NEWLY ADDED FOR OSLO
+      }
+  }
 ```
 #### Resolve Override Function
-This function must return the collection name for the collection the mixin is being used for.
-Your collection name is determined by npm package named combined with the serge object name.
+This function must return the collection name for the collection the mixin is being used for.  
+Your collection name is determined by npm package name combined with the serge object name.
 
 **Example:**
 `npm` package name
-```json
+```javascript
 //package.json
 {
     "name": "d2l-activities"
-    //...
 }
 ```
 
 `serge` object name
-```json
+```javascript
 //repo.serge.json 
 {
     "name": "activityEditor",
@@ -129,7 +139,6 @@ Your collection name is determined by npm package named combined with the serge 
     "output_file_path": "components/d2l-activity-editor/lang/%LANG%.js",
     "output_lang_rewrite": [
       "ar-sa ar",
-      //...
       "zh-tw zh-tw"
     ]
   }
@@ -145,7 +154,7 @@ function resolveOverridesFunc() {
 ```
 > **Note:** Make sure to escape the backslash `\`
 
-#### Using your mixin
+### Using your mixin
 Your component would then use this mixin and have access to the `localize()` method
 
 

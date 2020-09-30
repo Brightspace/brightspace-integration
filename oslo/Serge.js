@@ -179,7 +179,7 @@ class Serge {
 		const source = JSON.parse(text);
 		const entries = Object.entries(source);
 		const collection = new LangCollection(this._name);
-		let InvalidTermFound = false;
+		let invalidTermFound = false;
 
 		for (const [name, defaultValue] of entries) {
 
@@ -189,11 +189,11 @@ class Serge {
 				const object = new LangObject(name, defaultValue, EmptyString);
 				collection.addObject(object);
 			} else {
-				InvalidTermFound = true;
+				invalidTermFound = true;
 			}
 		}
 
-		if (InvalidTermFound) {
+		if (invalidTermFound) {
 			throw 'OSLO error: Forbidden characters used in LangObject name';
 		}
 
@@ -205,7 +205,7 @@ class Serge {
 		const source = JSON.parse(text);
 		const entries = Object.entries(source);
 		const collection = new LangCollection(this._name);
-		let InvalidTermFound = false;
+		let invalidTermFound = false;
 
 		for (const entry of entries) {
 
@@ -220,11 +220,11 @@ class Serge {
 				const object = new LangObject(name, defaultValue, description);
 				collection.addObject(object);
 			} else {
-				InvalidTermFound = true;
+				invalidTermFound = true;
 			}
 		}
 
-		if (InvalidTermFound) {
+		if (invalidTermFound) {
 			throw 'OSLO error: Forbidden characters used in LangObject name';
 		}
 
@@ -235,7 +235,7 @@ class Serge {
 
 		const matches = text.matchAll(ParseJsRegExp);
 		const collection = new LangCollection(this._name);
-		let InvalidTermFound = false;
+		let invalidTermFound = false;
 
 		for (const match of matches) {
 
@@ -255,11 +255,11 @@ class Serge {
 				const object = new LangObject(name, defaultValue, description);
 				collection.addObject(object);
 			} else {
-				InvalidTermFound = true;
+				invalidTermFound = true;
 			}
 		}
 
-		if (InvalidTermFound) {
+		if (invalidTermFound) {
 			throw 'OSLO error: Forbidden characters used in LangObject name';
 		}
 

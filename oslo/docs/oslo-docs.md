@@ -1,6 +1,7 @@
 # What is OSLO?
 *Offstack Language Overrides*, or **OSLO** provides a way for offstack web components to be able to integrate with language overrides in the LMS. Overrides allow changing the displayed text of almost any term on the platform. For example, if you want to change all occurrences of "Assignments" to "Dropbox" you can do that in the language management tool using language overrides.
 
+*This documentation is intended for developers who would like to simply use language overrides in their web components. If you would like to see detailed documentation regarding architecture and implementation details, please visit this page [TODO - ADD LINK TO MAINTAINER DOCS]()*
 
 # Setting up OSLO for your Webcomponent
 
@@ -192,7 +193,7 @@ Selecting "Web Components" from the Tool Package dropdown and hitting search wil
 - Custom Value
 
 **Package**  
-This is the tool package. When using OSLO with webcomponents your tool package will always be "WebComponents"
+This is the tool package. When using OSLO with webcomponents your tool package will always be "WebComponents".
 
 **Collection**  
 The collection is a grouping of related Term Names. This grouping is up to the discretion of the group creating the terms. A new collection will be automatically created for every object in your [`serge.json`](#use-serge-for-translations) file.

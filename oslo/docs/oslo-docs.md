@@ -191,24 +191,24 @@ Selecting web compontents and hitting search will yield the above table. The tab
 - Term Type Default Value
 - Custome Value
 
-**Package**
+**Package**  
 This is the tool package. When using OSLO with webcomponents your tool package will always be "WebComponents"
 
-**Collection**
+**Collection**  
 The collection is a grouping of related Term Names. This grouping is up to the discretion of the group creating the terms. A new collection will be automatically created for every object in your [`serge.json`](#use-serge-for-translations) file.
 
 Each collection will have the following naming convention:
 > {npm-package-name}\{serge-object-name}
 
-**Term Name**
+**Term Name**  
 The term name listed in the created language files. This is the object referenced throughout the web component that will be replaced with translations or custom values by the language management tool.
 
 Example terms can be seen in the activities [repository](https://github.com/BrightspaceHypermediaComponents/activities/blob/46f1ff98586f4d6c09c5bf23b717d31c99c5115a/components/d2l-activity-editor/lang/en.js)
 
-**Term Type Default Value**
+**Term Type Default Value**  
 This is the default text that will appear throughout the application if left unmodified.
 
-**Custome Value**
+**Custome Value**  
 An overridden value to replace the default value. This will be used by Brightspace customer admins.
 
 

@@ -265,12 +265,12 @@ The lang files are javascript files that export an object containing all lang te
 ```javascript
 // en.js (in activities)
 export default {
-	"editor\\btnEditReleaseConditions": "Edit Release Conditions", // edit release conditions button
-	"editor\\btnAddReleaseCondition": "Add Release Condition", // add release condition button
-	"editor\\btnCreateNew": "Create New", // create new button
-  // ...
-	"content\\description": "Description", // Text label for description input field
-	"content\\availabilityHeader": "Availability Dates", // availability header
+  	"editor\\btnEditReleaseConditions": "Edit Release Conditions", // edit release conditions button
+  	"editor\\btnAddReleaseCondition": "Add Release Condition", // add release condition button
+  	"editor\\btnCreateNew": "Create New", // create new button
+    // ...
+    "content\\description": "Description", // Text label for description input field
+    "content\\availabilityHeader": "Availability Dates", // availability header
 }
 ```
 

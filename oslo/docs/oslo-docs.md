@@ -215,7 +215,7 @@ An overridden value to replace the default value. This will be used by Brightspa
 
 
 ## Creating a new collection
-To create a new collection you can create a new project using [Serge-Localize](https://docs.dev.d2l/index.php/Serge-Localize). When OSLO builds it will automatically add your collection to the LMS. The new collection name will be a combination of npm package name and serge project name
+A new collection can be created by making a new project using [Serge](https://docs.dev.d2l/index.php/Serge-Localize). When OSLO builds it will automatically add your collection to the LMS. The new collection name will be a combination of npm package name and serge project name
 ```
 "{npm-package-name\serge-object-name}"
 ```

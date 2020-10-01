@@ -404,8 +404,8 @@ The OSLO rally feature:
 > [F16181](https://rally1.rallydev.com/#/detail/portfolioitem/feature/359556229076?fdp=true): (Team USA) Off-Stack Langterm Overrides (OSLO)
 
 ## System Overview
-- Block diagram
-TODO
+
+![block-diagram](oslo-blockdiagram.png)
 
 ## Links to areas of code
 

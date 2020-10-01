@@ -285,6 +285,10 @@ To create a new term name, simply add a new item to the object in the form:
 ## Deleting a term
 TODO
 
+## Usage in a web component
+1. Use the mixin created in the [Create a mixin](#create-a-mixin-to-expose-the-localize-method) section
+2. call `this.localize("your-desired-term-name")` in your `render()` method
+
 # API documentation
 
 TODO

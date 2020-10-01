@@ -75,6 +75,9 @@ If you would like to test if your term name is valid visit https://regexr.com/ a
 ```
 
 
+**Illegal Characters:**
+The Full Stop character `.`  cannot be used and will cause the build to fail.
+
 ## Include your web component within the BSI project
 
 This can be done following the [docs](https://github.com/Brightspace/brightspace-integration/blob/master/docs/web-components.md) on the BSI repo.

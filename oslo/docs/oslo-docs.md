@@ -197,8 +197,7 @@ class MyComponent extends ComponentLocalizeMixin(LitElement) {
 3. [Hiding a collection](#hiding-a-collection)
 4. [Creating a new term](#creating-a-new-term)
 5. [Usage in a web component](#usage-in-a-web-component)
-6. [Deleting a collection](#deleting-a-collection)
-7. [Deleting a term](#deleting-a-term)
+6. [Deleting a term or collection](#deleting-a-term-or-collection)
 
 
 ## Background - The Language Management Tool

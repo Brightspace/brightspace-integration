@@ -21,7 +21,7 @@
     - [BSI](#bsi)
     - [LMS](#lms)
     - [Core](#core)
-  - [Caching](#caching)
+  - [Oslo LMS controller route and fetching from the lang cache](#oslo-lms-controller-route-and-fetching-from-the-lang-cache)
 
 # What is OSLO?
 
@@ -411,11 +411,35 @@ The OSLO rally feature:
 *Source: [TeamUSA OneNote Project Notes](https://d2lmail-my.sharepoint.com/:o:/g/personal/jwalkoski_desire2learn_com/Ers4Tv7glFxAoO2jwTGabnoBVlnjn7D4GerFiNDfGqexcw?e=jSKXgg)*
 
 ## Links to areas of code
+This section presents a collection of links to implementation code for OSLO
 
 ### BSI
+[Oslo Folder in brightSpace-integration](https://github.com/Brightspace/brightspace-integration/tree/master/oslo) 
+
+  - For each web component listed in the `.serge-mapping.json` in the BSI, the OSLO build step will fetch the languages files described in the `serge.json` from each web component. Then an XML language file matching the ones used by the LAIM tool is created to be used by the LMS. This is what generates `webcomponents.xml`
+
 
 ### LMS
+[LMS OSLO build script](https://github.com/Brightspace/lms/blob/master/lp/build/Install-Oslo.ps1)
+[LMS `oslo.build.include`](https://github.com/Brightspace/lms/blob/master/lp/build/oslo.build.include)
+[OSLO controller, parsers and manifest](https://github.com/Brightspace/lms/tree/master/lp/framework/web/D2L.LP.Web/UI/Globalization/Oslo)
+
+- During the build, definitions, translations and OSLO config are pulled into the build and will show up in `\lp\_lang_readonly\WebComponents` and `\lp\_config\Infrastructure`. The lang files are bundled with the other LMS lang files, and the config file is used to match use the correct parser when returning the overrides out of the LMS.
+
+[OsloHtmlElementAttributeProvider](https://github.com/Brightspace/lms/blob/master/lp/framework/web/D2L.LP.Web/UI/JavaScript/Globalization/Locale/OsloHtmlElementAttributeProvider.cs)
+
+
+```xml
+<html data-oslo="{"batch":"/d2l/lp/oslo/1/batch","collection":"/d2l/lp/oslo/1/collection","version":"W/\"20.20.11.24785.0\""}" />
+```
+
 
 ### Core
+[OSLO helper in core](https://github.com/BrightspaceUI/core/blob/master/helpers/getLocalizeResources.js)
+  - implements `getLocalizeResources`
+  - The lang helper will determine if OSLO is available and which of the two available ways to fetch the overrides. If `CacheStorage` is available then a batch request method will be used, this will fetch the terms in the background, storing the requests in `CacheStorage` under `"d2l-oslo"`. If it's not available the collection route will be used to fetch a single override file at a time. So we aren't fetching overrides when nothing has changed, the `eTag` on the `OsloController` responses uses a combination of `LMS version`+`LangModified RowVersion`. The lang helper compares against the version on the html element and only fetches when there are possibly new terms to be used.
 
-## Caching
+
+## Oslo LMS controller route and fetching from the lang cache
+[OSLO controller in the LMS](https://github.com/Brightspace/lms/blob/master/lp/framework/web/D2L.LP.Web/UI/Globalization/Oslo/Controllers/OsloController.cs)
+  - The OsloController will use the OSLO config file brought in from the build step to match the passed in Collection. The config file is also used to know which parser to use, defined in the `serge.json` of the respective web component. Then using existing `LanguageSource` framework we fetch the collection and return it, with the `etag` on the response.

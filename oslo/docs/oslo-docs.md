@@ -403,9 +403,12 @@ This section is intended for maintainers or anyone requiring deeper knowledge an
 The OSLO rally feature:
 > [F16181](https://rally1.rallydev.com/#/detail/portfolioitem/feature/359556229076?fdp=true): (Team USA) Off-Stack Langterm Overrides (OSLO)
 
+ For information on origin and long term planning read the [Architecture Proposal](https://github.com/Brightspace/architecture/blob/master/proposals/support-langterm-overrides-in-web-components.md)
+
 ## System Overview
 
 ![block-diagram](oslo-blockdiagram.png)
+*Source: [TeamUSA OneNote Project Notes](https://d2lmail-my.sharepoint.com/:o:/g/personal/jwalkoski_desire2learn_com/Ers4Tv7glFxAoO2jwTGabnoBVlnjn7D4GerFiNDfGqexcw?e=jSKXgg)*
 
 ## Links to areas of code
 

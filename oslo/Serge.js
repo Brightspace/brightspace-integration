@@ -20,6 +20,8 @@ const ParseJsNameRegExp = /["']/g;
 const ParseJsEscapeRegExp = /\\(['"])/g;
 const ParseJsEscapeReplacer = (_, ch) => ch;
 
+let invalidTermFound = false;
+
 class Rewrite {
 
 	constructor(rewrite) {
@@ -158,20 +160,27 @@ class Serge {
 
 	_parse(text) {
 
+		let result;
 		switch (this._parserPlugin) {
 
 			case 'parse_json':
-				return this._parseJson(text);
-
+				result = this._parseJson(text);
+				break;
 			case 'parse_d2l_fra':
-				return this._parseFra(text);
-
+				result = this._parseFra(text);
+				break;
 			case 'parse_js':
-				return this._parseJs(text);
-
+				result = this._parseJs(text);
+				break;
 			default:
 				throw new Error(`Unsupported parser plugin for "${this._name}" ("${this._parserPlugin}")`);
 		}
+
+		if (invalidTermFound) {
+			throw 'OSLO error: Forbidden characters used in LangObject name';
+		}
+
+		return result;
 	}
 
 	_parseJson(text) {
@@ -179,7 +188,6 @@ class Serge {
 		const source = JSON.parse(text);
 		const entries = Object.entries(source);
 		const collection = new LangCollection(this._name);
-		let invalidTermFound = false;
 
 		for (const [name, defaultValue] of entries) {
 
@@ -193,10 +201,6 @@ class Serge {
 			}
 		}
 
-		if (invalidTermFound) {
-			throw 'OSLO error: Forbidden characters used in LangObject name';
-		}
-
 		return collection;
 	}
 
@@ -205,7 +209,6 @@ class Serge {
 		const source = JSON.parse(text);
 		const entries = Object.entries(source);
 		const collection = new LangCollection(this._name);
-		let invalidTermFound = false;
 
 		for (const entry of entries) {
 
@@ -224,10 +227,6 @@ class Serge {
 			}
 		}
 
-		if (invalidTermFound) {
-			throw 'OSLO error: Forbidden characters used in LangObject name';
-		}
-
 		return collection;
 	}
 
@@ -235,7 +234,6 @@ class Serge {
 
 		const matches = text.matchAll(ParseJsRegExp);
 		const collection = new LangCollection(this._name);
-		let invalidTermFound = false;
 
 		for (const match of matches) {
 
@@ -257,10 +255,6 @@ class Serge {
 			} else {
 				invalidTermFound = true;
 			}
-		}
-
-		if (invalidTermFound) {
-			throw 'OSLO error: Forbidden characters used in LangObject name';
 		}
 
 		return collection;

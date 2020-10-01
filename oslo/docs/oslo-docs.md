@@ -205,7 +205,7 @@ Each collection will have the following naming convention:
 **Term Name**  
 The term name listed in the created language files. This is the object referenced throughout the web component that will be replaced with translations or custom values by the language management tool.
 
-Example terms can be seen in the [activities repository](https://github.com/BrightspaceHypermediaComponents/activities/blob/46f1ff98586f4d6c09c5bf23b717d31c99c5115a/components/d2l-activity-editor/lang/en.js)
+Example terms can be seen in the [activities repository](https://github.com/BrightspaceHypermediaComponents/activities/blob/master/components/d2l-activity-editor/lang/en.js)
 
 **Term Type Default Value**  
 This is the default text that will appear throughout the application if left unmodified.
@@ -258,7 +258,26 @@ In some cases, you may want to temporarily hide collections from appearing in th
 TODO
 
 ## Creating a new term
-TODO
+Term Names are created in the lang files referenced by the serge project. Please be aware of the [OSLO naming convention](#follow-the-oslo-langterm-naming-convention)
+
+The lang files are javascript files that export an object containing all lang terms in the collection.
+
+```javascript
+// en.js (in activities)
+export default {
+	"editor\\btnEditReleaseConditions": "Edit Release Conditions", // edit release conditions button
+	"editor\\btnAddReleaseCondition": "Add Release Condition", // add release condition button
+	"editor\\btnCreateNew": "Create New", // create new button
+  // ...
+	"content\\description": "Description", // Text label for description input field
+	"content\\availabilityHeader": "Availability Dates", // availability header
+}
+```
+
+To create a new term name, simply add a new item to the object in the form:
+```javascript
+"{termNameFollowingNamingConvention}": "Default Value"}
+```
 
 ## Deleting a term
 TODO

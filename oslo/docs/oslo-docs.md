@@ -450,7 +450,11 @@ Example here:
 ### Core
 [OSLO helper in core](https://github.com/BrightspaceUI/core/blob/master/helpers/getLocalizeResources.js)
   - implements `getLocalizeResources`
-  - The lang helper will determine if OSLO is available and which of the two available ways to fetch the overrides. If `CacheStorage` is available then a batch request method will be used, this will fetch the terms in the background, storing the requests in `CacheStorage` under `"d2l-oslo"`. If it's not available the collection route will be used to fetch a single override file at a time. So we aren't fetching overrides when nothing has changed, the `eTag` on the `OsloController` responses uses a combination of `LMS version`+`LangModified RowVersion`. The lang helper compares against the version on the html element and only fetches when there are possibly new terms to be used.
+  - The lang helper will determine if OSLO is available and which of the two available ways to fetch the overrides:
+    - If `CacheStorage` is available then a batch request method will be used
+      - Will fetch the terms in the background, storing the requests in `CacheStorage` under `"d2l-oslo"`
+      - The `eTag` on the `OsloController` responses is compared against the version on the html element and only fetches when the version changes.
+    - If it's not available the collection route will be used to fetch a single override file at a time.
 
 
 ## Oslo LMS controller route and fetching from the lang cache

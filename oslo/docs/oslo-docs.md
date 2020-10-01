@@ -220,7 +220,7 @@ A new collection can be created by making a new project using [Serge](https://do
 "{npm-package-name\serge-object-name}"
 ```
 
-**Example**
+**Example**  
 The following example will result in a collection name of `"d2l-activities\activityEditor"`
 
 `npm` package name

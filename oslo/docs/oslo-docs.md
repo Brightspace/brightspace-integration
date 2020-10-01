@@ -418,7 +418,9 @@ This section presents a collection of links to implementation code for OSLO
 
 For each web component listed in the `.serge-mapping.json` in the BSI, the OSLO build step will fetch the languages files described in the `serge.json` from each web component. Then an XML language file matching the ones used by the LAIM tool is created to be used by the LMS. This is what generates `webcomponents.xml`
 
-A collection is created for each entry in the web components `serge.json`, named as `{PackageName}\{sergeEntry}` Example here:
+A collection is created for each entry in the web components `serge.json`, named as `{PackageName}\{sergeEntry}`  
+Example here:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <package name="WebComponents" type="Language" langtype="ICU" toolid="0" version="0.0.0.0">

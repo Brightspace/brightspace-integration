@@ -279,7 +279,7 @@ The following example will result in a collection name of `"d2l-activities\activ
 
 Collections can be hidden from the language managment tool UI without deleting the terms or collection from the database.
 
-> ⚠ This should be used only sparingly and temporarily when needed, but there are some situations where you need to hide certain collections from the Language Management tool.
+> <div style="display: flex; justify-content: space-between;"><div style="font-size: 40px; margin-right: 20px; display: flex; align-items: center;">⚠</div><div>This should be used only sparingly and temporarily when needed, but there are some situations where you need to hide certain collections from the Language Management tool.</div></div>
 
 Scenarios you may want to hide a term or collection:
 - TODO Scenario 1

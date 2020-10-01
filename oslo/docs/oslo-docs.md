@@ -181,7 +181,8 @@ class MyComponent extends ComponentLocalizeMixin(LitElement) {
 The language management tool is where Brightspace admins can search langterms and change their default values.
 
 Get to the tool by navigating in Brightspace:  
-> Gear(Settings) > Language Management > en-CA - English (Canada)
+> Gear(Settings) > Language Management > en-US - English (US)
+
 
 ![LangManagementTool](langmanagementtool.PNG)
 

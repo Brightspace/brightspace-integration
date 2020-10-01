@@ -335,7 +335,7 @@ To create a new term name, simply add a new item to the object in the form:
 After deleting or renaming a term inside a language file, it must also be removed from the LMS Database. Without these steps, an obsolete term or collection would remain in the Language Management UI which could be confusing for end users. Another consequence of this is that old terms that have not been populated with the `LangTypeId` in the `LANG_OBJECTS` table will have the type set to `NULL`. This will cause the Term Type column to be left empty for those terms on the Language Management UI.
 
 **Steps:**
-1. There are migration script helper sprocs that can easily be used to delete langterms. Create a migration script to delete the old langterm by using a script extension like [this](https://docs.dev.d2l/index.php/Migration_Script_Extensions#Delete_Lang_Terms)
+1. There are migration script helper sprocs that can easily be used to delete langterms. Create a migration script to delete the old langterm by using a [script extension](https://docs.dev.d2l/index.php/Migration_Script_Extensions#Delete_Lang_Terms)
 2. To get the required `PackageName`, `CollectionName`, and `TermName` parameters for the sproc you can run a query like this:
 ```sql
 SELECT
@@ -366,7 +366,7 @@ JOIN LANG_PACKAGES P
 WHERE C.Name = 'd2l-rubric\d2l-rubric'
 ```
 
-An example of where this is done, can be found [here](https://search.d2l.dev/xref/lms/src/db/dbchange/20.20.10.0/main/pre/DE40300_Delete_Non_Activity_Collections.sql?r=8c99fd5a)
+An example of where this is done, can be found in this [migration script](https://search.d2l.dev/xref/lms/src/db/dbchange/20.20.10.0/main/pre/DE40300_Delete_Non_Activity_Collections.sql?r=8c99fd5a)
 
 5. The migration script can be tested locally by directly running it in SQL server, then querying the DB to see those terms have been deleted from the `LANG_OBJECTS` table.
 6. Create a pull request and after it's approved, merge the script into master. The updated DB with the terms removed should appear in the next build.

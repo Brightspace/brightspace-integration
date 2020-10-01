@@ -1,6 +1,9 @@
 'use strict';
 
-const ForbiddenCharacterAllowedList = ['d2l-activities\\activityEditor'];
+const ForbiddenCharacterAllowedList = [
+	'd2l-activities\\activityEditor',
+	'@d2l\\d2l-attachment\\d2l-attachment'
+];
 const ForbiddenCharacters = ['.'];
 const EscapeRegExp = /([^a-zA-Z0-9\\:_-])/g;
 const EscapeMap = new Map();

@@ -250,12 +250,31 @@ The following example will result in a collection name of `"d2l-activities\activ
 ```
 
 ## Hiding a collection
-This should be used only sparingly and temporarily when needed, but there are some situations where you need to hide certain collections from the Language Management tool.
 
-In these cases you can hide collections from appearing in the language management UI without deleting the terms or collection from the database. In this scenario you can add these collections to [this blocked collections list](https://github.com/Brightspace/lms/blob/master/lp/framework/core/D2L/lang/Provider/BlockedCollections.cs) and they will be hidden from the users in the Language Management UI.
+Collections can be hidden from the language managment tool UI without deleting the terms or collection from the database.
 
+> ⚠ This should be used only sparingly and temporarily when needed, but there are some situations where you need to hide certain collections from the Language Management tool.
 
+Scenarios you may want to hide a term or collection:
+- TODO Scenario 1
+- TODO Scenario 2
+- TODO Scenario 3
 
+To hide a collection, add your collection name to [this blocked collections list](https://github.com/Brightspace/lms/blob/master/lp/framework/core/D2L/lang/Provider/BlockedCollections.cs)
+
+```diff
+public static HashSet<string> BlockedCollectionsHash {
+    get {
+        return new HashSet<string>() {
+          //Temporarily blocking these collections from language management
+          //until we are using OSLO in these repos and can override
+          @"d2l-activities\quickEval",
+          @"d2l-activities\quickEval_EXPERIMENTAL",
++         @"{collection-name-you-want-to-block}",
+    };
+  }
+}
+```
 
 ## Deleting a collection
 TODO

@@ -215,6 +215,40 @@ An overridden value to replace the default value. This will be used by Brightspa
 
 
 ## Creating a new collection
+To create a new collection you can create a new project using [Serge-Localize](https://docs.dev.d2l/index.php/Serge-Localize). When OSLO builds it will automatically add your collection to the LMS. The new collection name will be a combination of npm package name and serge project name
+```
+"{npm-package-name\serge-object-name}"
+```
+
+**Example**
+The following example will result in a collection name of `"d2l-activities\activityEditor"`
+
+`npm` package name
+```javascript
+//package.json
+{
+    "name": "d2l-activities"
+}
+```
+
+`serge` object name
+```javascript
+//repo.serge.json 
+{
+    "name": "activityEditor",
+    "parser_plugin": {
+      "plugin": "parse_js"
+    },
+    "source_match": "en\\.js$",
+    "source_dir": "components/d2l-activity-editor/lang",
+    "output_file_path": "components/d2l-activity-editor/lang/%LANG%.js",
+    "output_lang_rewrite": [
+      "ar-sa ar",
+      "zh-tw zh-tw"
+    ]
+  }
+```
+
 TODO
 
 ## Hiding a collection

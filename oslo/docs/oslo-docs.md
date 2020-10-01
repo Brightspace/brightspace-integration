@@ -17,7 +17,7 @@
     - [Langterms outside of web components](#langterms-outside-of-web-components)
 - [Maintainer Documentation](#maintainer-documentation)
   - [System Overview](#system-overview)
-  - [Links to areas of code](#links-to-areas-of-code)
+  - [The code.](#the-code)
     - [BSI](#bsi)
     - [LMS](#lms)
     - [Core](#core)
@@ -410,7 +410,7 @@ The OSLO rally feature:
 ![block-diagram](oslo-blockdiagram.png)
 *Source: [TeamUSA OneNote Project Notes](https://d2lmail-my.sharepoint.com/:o:/g/personal/jwalkoski_desire2learn_com/Ers4Tv7glFxAoO2jwTGabnoBVlnjn7D4GerFiNDfGqexcw?e=jSKXgg)*
 
-## Links to areas of code
+## The code.
 This section presents a collection of links to implementation code for OSLO
 
 ### BSI
@@ -420,14 +420,12 @@ This section presents a collection of links to implementation code for OSLO
 
 
 ### LMS
-[LMS OSLO build script](https://github.com/Brightspace/lms/blob/master/lp/build/Install-Oslo.ps1)
-[LMS `oslo.build.include`](https://github.com/Brightspace/lms/blob/master/lp/build/oslo.build.include)
+[LMS OSLO build script](https://github.com/Brightspace/lms/blob/master/lp/build/Install-Oslo.ps1)  
+[LMS `oslo.build.include`](https://github.com/Brightspace/lms/blob/master/lp/build/oslo.build.include)  
 [OSLO controller, parsers and manifest](https://github.com/Brightspace/lms/tree/master/lp/framework/web/D2L.LP.Web/UI/Globalization/Oslo)
+  - During the build, definitions, translations and OSLO config are pulled into the build and will show up in `\lp\_lang_readonly\WebComponents` and `\lp\_config\Infrastructure`. The lang files are bundled with the other LMS lang files, and the config file is used to match use the correct parser when returning the overrides out of the LMS.
 
-- During the build, definitions, translations and OSLO config are pulled into the build and will show up in `\lp\_lang_readonly\WebComponents` and `\lp\_config\Infrastructure`. The lang files are bundled with the other LMS lang files, and the config file is used to match use the correct parser when returning the overrides out of the LMS.
-
-[OsloHtmlElementAttributeProvider](https://github.com/Brightspace/lms/blob/master/lp/framework/web/D2L.LP.Web/UI/JavaScript/Globalization/Locale/OsloHtmlElementAttributeProvider.cs)
-
+[OsloHtmlElementAttributeProvider](https://github.com/Brightspace/lms/blob/master/lp/framework/web/D2L.LP.Web/UI/JavaScript/Globalization/Locale/OsloHtmlElementAttributeProvider.cs)  
 
 ```xml
 <html data-oslo="{"batch":"/d2l/lp/oslo/1/batch","collection":"/d2l/lp/oslo/1/collection","version":"W/\"20.20.11.24785.0\""}" />
@@ -441,5 +439,6 @@ This section presents a collection of links to implementation code for OSLO
 
 
 ## Oslo LMS controller route and fetching from the lang cache
+
 [OSLO controller in the LMS](https://github.com/Brightspace/lms/blob/master/lp/framework/web/D2L.LP.Web/UI/Globalization/Oslo/Controllers/OsloController.cs)
   - The OsloController will use the OSLO config file brought in from the build step to match the passed in Collection. The config file is also used to know which parser to use, defined in the `serge.json` of the respective web component. Then using existing `LanguageSource` framework we fetch the collection and return it, with the `etag` on the response.

@@ -15,7 +15,13 @@
   - [Usage in a web component](#usage-in-a-web-component)
   - [Deleting a term or collection](#deleting-a-term-or-collection)
     - [Langterms outside of web components](#langterms-outside-of-web-components)
-- [API documentation](#api-documentation)
+- [Maintainer Documentation](#maintainer-documentation)
+  - [System Overview](#system-overview)
+  - [Links to areas of code](#links-to-areas-of-code)
+    - [BSI](#bsi)
+    - [LMS](#lms)
+    - [Core](#core)
+  - [Caching](#caching)
 
 # What is OSLO?
 
@@ -390,8 +396,23 @@ An example of where this is done, can be found in this [migration script](https:
 These steps mentioned above should be followed for any LangTerms (not just WebComponents) that are deleted or renamed with the LAIM tool but not cleaned up from the database.
 
 
-# API documentation
+# Maintainer Documentation
 
+This section is intended for maintainers or anyone requiring deeper knowledge and links to resources related to the project.
+
+The OSLO rally feature:
+> [F16181](https://rally1.rallydev.com/#/detail/portfolioitem/feature/359556229076?fdp=true): (Team USA) Off-Stack Langterm Overrides (OSLO)
+
+## System Overview
+- Block diagram
 TODO
 
-[create-a-link-to-api-documentation]()
+## Links to areas of code
+
+### BSI
+
+### LMS
+
+### Core
+
+## Caching

@@ -1,3 +1,22 @@
+- [What is OSLO?](#what-is-oslo)
+- [Setting up OSLO for your Webcomponent](#setting-up-oslo-for-your-webcomponent)
+  - [Use Serge for translations](#use-serge-for-translations)
+  - [Follow the OSLO langterm naming convention](#follow-the-oslo-langterm-naming-convention)
+  - [Include your web component within the BSI project](#include-your-web-component-within-the-bsi-project)
+  - [Create a mixin to expose the `localize()` method](#create-a-mixin-to-expose-the-localize-method)
+    - [Example modifications to create an OSLO mixin](#example-modifications-to-create-an-oslo-mixin)
+      - [Resolve Override Function](#resolve-override-function)
+    - [Using your mixin](#using-your-mixin)
+- [How to work with language overrides](#how-to-work-with-language-overrides)
+  - [Background - The Language Management Tool](#background---the-language-management-tool)
+  - [Creating a new collection](#creating-a-new-collection)
+  - [Hiding a collection](#hiding-a-collection)
+  - [Creating a new term](#creating-a-new-term)
+  - [Usage in a web component](#usage-in-a-web-component)
+  - [Deleting a term or collection](#deleting-a-term-or-collection)
+    - [Langterms outside of web components](#langterms-outside-of-web-components)
+- [API documentation](#api-documentation)
+
 # What is OSLO?
 
 *Offstack Language Overrides*, or **OSLO** provides a way for offstack web components to be able to integrate with language overrides in the LMS. Overrides allow changing the displayed text of almost any term on the platform. For example, if you want to change all occurrences of "Assignments" to "Dropbox" you can do that in the language management tool using language overrides.

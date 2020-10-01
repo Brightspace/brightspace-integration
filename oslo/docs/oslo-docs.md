@@ -1,17 +1,26 @@
 # What is OSLO?
+
 *Offstack Language Overrides*, or **OSLO** provides a way for offstack web components to be able to integrate with language overrides in the LMS. Overrides allow changing the displayed text of almost any term on the platform. For example, if you want to change all occurrences of "Assignments" to "Dropbox" you can do that in the language management tool using language overrides.
 
 *This documentation is intended for developers who would like to simply use language overrides in their web components. If you would like to see detailed documentation regarding architecture and implementation details, please visit this page [TODO - ADD LINK TO MAINTAINER DOCS]()*
 
+
 # Setting up OSLO for your Webcomponent
+
 
   1. [Use Serge for translations](#use-serge-for-translations)
   2. [Follow the OSLO langterm naming convention](#follow-the-oslo-langterm-naming-convention)
   3. [Include your web component within the BSI project](#include-your-web-component-within-the-bsi-project)
   4. [Create a mixin to expose the `localize()` method](#create-a-mixin-to-expose-the-localize-method)
+
+
 ## Use Serge for translations
+
 For more information on how to implement serge within your web component please read [Serge-Localize](https://docs.dev.d2l/index.php/Serge-Localize)
+
+
 ## Follow the OSLO langterm naming convention
+
 The LAIM tool used in the LMS can only accept a set of valid characters. Currently OSLO will accept any character and convert characters not supported by the LAIM tool into their equivalent Unicode representation `\uXXXX"`.
 
 
@@ -39,7 +48,9 @@ If you would like to test if your term name is valid visit https://regexr.com/ a
 ^[a-zA-Z0-9\\:_-@]*$
 ```
 
+
 ## Include your web component within the BSI project
+
 This can be done following the [docs](https://github.com/Brightspace/brightspace-integration/blob/master/docs/web-components.md) on the BSI repo.
 Specifically your component must do the following step:
 > **Lang Terms**
@@ -53,6 +64,7 @@ Specifically your component must do the following step:
 > }
 > ```
 
+
 ## Create a mixin to expose the `localize()` method
 
 For existing web components the `localize()` method would have been exposed when following the [`localize-mixin`](https://github.com/BrightspaceUI/core/blob/master/mixins/localize-mixin.md) documentation from `@Brightspace-UI/core`. In this case a few things will need to be changed.
@@ -61,7 +73,9 @@ For existing web components the `localize()` method would have been exposed when
 - return `getLocalizeOverrideResources()` inside at end of function
 **Important:** This will need to be done for each unique collection name you wish to have. (Each serge object will result in a new collection name)
 
+
 ### Example modifications to create an OSLO mixin
+
 ```diff
   import { LocalizeMixin } from '@brightspace-ui/core/mixins/localize-mixin.js';
 + import { getLocalizeOverrideResources } from '@brightspace-ui/core/helpers/getLocalizeResources.js'; // NEWLY ADDED FOR OSLO
@@ -114,7 +128,10 @@ For existing web components the `localize()` method would have been exposed when
       }
   }
 ```
+
+
 #### Resolve Override Function
+
 This function must return the collection name for the collection the mixin is being used for.  
 Your collection name is determined by npm package name combined with the serge object name.
 
@@ -249,6 +266,7 @@ The following example will result in a collection name of `"d2l-activities\activ
   }
 ```
 
+
 ## Hiding a collection
 
 Collections can be hidden from the language managment tool UI without deleting the terms or collection from the database.
@@ -276,8 +294,6 @@ public static HashSet<string> BlockedCollectionsHash {
 }
 ```
 
-## Deleting a collection
-TODO
 
 ## Creating a new term
 Term Names are created in the lang files referenced by the serge project. Please be aware of the [OSLO naming convention](#follow-the-oslo-langterm-naming-convention)
@@ -301,13 +317,17 @@ To create a new term name, simply add a new item to the object in the form:
 "{termNameFollowingNamingConvention}": "Default Value"}
 ```
 
-## Deleting a term
-TODO
 
 ## Usage in a web component
 1. Use the mixin created in the [Create a mixin](#create-a-mixin-to-expose-the-localize-method) section
 2. call `this.localize("your-desired-term-name")` in your `render()` method
 
+
+## Deleting a collection
+TODO
+
+## Deleting a term
+TODO
 # API documentation
 
 TODO

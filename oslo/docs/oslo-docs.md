@@ -371,6 +371,8 @@ An example of where this is done, can be found in this [migration script](https:
 5. The migration script can be tested locally by directly running it in SQL server, then querying the DB to see those terms have been deleted from the `LANG_OBJECTS` table.
 6. Create a pull request and after it's approved, merge the script into master. The updated DB with the terms removed should appear in the next build.
 
+### Langterms outside of web components
+These steps mentioned above should be followed for any LangTerms (not just WebComponents) that are deleted or renamed with the LAIM tool but not cleaned up from the database.
 
 
 # API documentation

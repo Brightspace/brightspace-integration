@@ -250,7 +250,10 @@ The following example will result in a collection name of `"d2l-activities\activ
 ```
 
 ## Hiding a collection
-In some cases, you may want to temporarily hide collections from appearing in the language management UI without deleting the terms or collection from the database. In this scenario you can add these collections to [this blocked collections list](https://github.com/Brightspace/lms/blob/master/lp/framework/core/D2L/lang/Provider/BlockedCollections.cs) and they will be hidden from the users in the Language Management UI.
+This should be used only sparingly and temporarily when needed, but there are some situations where you need to hide certain collections from the Language Management tool.
+
+In these cases you can hide collections from appearing in the language management UI without deleting the terms or collection from the database. In this scenario you can add these collections to [this blocked collections list](https://github.com/Brightspace/lms/blob/master/lp/framework/core/D2L/lang/Provider/BlockedCollections.cs) and they will be hidden from the users in the Language Management UI.
+
 
 
 

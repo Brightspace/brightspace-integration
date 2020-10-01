@@ -27,7 +27,8 @@
 
 *Offstack Language Overrides*, or **OSLO** provides a way for offstack web components to be able to integrate with language overrides in the LMS. Overrides allow changing the displayed text of almost any term on the platform. For example, if you want to change all occurrences of "Assignments" to "Dropbox" you can do that in the language management tool using language overrides.
 
-*This documentation is intended for developers who would like to simply use language overrides in their web components. If you would like to see detailed documentation regarding architecture and implementation details, please visit this page [TODO - ADD LINK TO MAINTAINER DOCS]()*
+*This documentation is intended for developers who would like to simply use language overrides in their web components. If you would like to see detailed documentation regarding architecture and implementation details, please see [Maintainer Documentation](#maintainer-documentation)*
+
 
 
 # Setting up OSLO for your Webcomponent

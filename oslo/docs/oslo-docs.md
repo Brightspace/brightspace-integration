@@ -31,7 +31,8 @@
 
 
 
-# Setting up OSLO for your Webcomponent
+# Setting up OSLO for your web component
+
 
 
   1. [Use Serge for translations](#use-serge-for-translations)

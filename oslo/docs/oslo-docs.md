@@ -243,7 +243,8 @@ Get to the tool by navigating in Brightspace:
 
 ![LangManagementTool](langmanagementtool.PNG)
 
-Selecting "Web Components" from the Tool Package dropdown and hitting search will yield the above table. The table has 6 columns:
+Selecting "WebComponents" from the Tool Package dropdown and hitting search will yield the above table. The table has 6 columns:
+
 - Package
 - Collection
 - Term Name

@@ -77,7 +77,8 @@ If you would like to test if your term name is valid visit https://regexr.com/ a
 
 
 **Illegal Characters:**
-The Full Stop character `.`  cannot be used and will cause the build to fail.
+The Full Stop character `.`  cannot be used and will cause the build to fail since it is already used by the LMS to determine the hierarchy of our langterms: `Package.Collection.termName`.
+
 
 ## Include your web component within the BSI project
 

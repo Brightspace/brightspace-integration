@@ -100,7 +100,9 @@ For existing web components the `localize()` method would have been exposed when
 - Add `resolveOverridesFunc()` to `getLocalizeResources`
 - return `getLocalizeOverrideResources()` inside `if` block
 - return `getLocalizeOverrideResources()` inside at end of function
-**Important:** This will need to be done for each unique collection name you wish to have. (Each serge object will result in a new collection name)
+
+**Important:** These steps will need to be done for each unique collection name you wish to have. (Each serge object will result in a new collection name)
+
 
 
 ### Example modifications to create an OSLO mixin

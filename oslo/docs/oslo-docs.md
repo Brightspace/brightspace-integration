@@ -463,7 +463,7 @@ Example here:
   - The lang helper will determine if OSLO is available and which of the two available ways to fetch the overrides:
     - If `CacheStorage` is available then a batch request method will be used
       - Will fetch the terms in the background, storing the requests in `CacheStorage` under `"d2l-oslo"`
-      - The `eTag` on the `OsloController` responses is compared against the version on the html element and only fetches when the version changes.
+      - The `ETag` on the `OsloController` responses is compared against the version on the html element and only fetches when the version changes.
     - If it's not available the collection route will be used to fetch a single override file at a time.
 
 

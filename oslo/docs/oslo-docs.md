@@ -445,7 +445,10 @@ Example here:
 [LMS OSLO build script](https://github.com/Brightspace/lms/blob/master/lp/build/Install-Oslo.ps1)  
 [LMS `oslo.build.include`](https://github.com/Brightspace/lms/blob/master/lp/build/oslo.build.include)  
 [OSLO controller, parsers and manifest](https://github.com/Brightspace/lms/tree/master/lp/framework/web/D2L.LP.Web/UI/Globalization/Oslo)
-  - During the build, definitions, translations and OSLO config are pulled into the build and will show up in `\lp\_lang_readonly\WebComponents` and `\lp\_config\Infrastructure`. The lang files are bundled with the other LMS lang files, and the config file is used to match use the correct parser when returning the overrides out of the LMS.
+  - The OSLO build step is called `oslo.install` and is found in the `oslo.build.include` file
+  - Definitions, translations and OSLO will show up in `\lp\_lang_readonly\WebComponents` and `\lp\_config\Infrastructure` after the LMS builds
+  - All Lang files are bundled together and the config file is used to match use the correct parser when returning the overrides out of the LMS.
+
 
 [OsloHtmlElementAttributeProvider](https://github.com/Brightspace/lms/blob/master/lp/framework/web/D2L.LP.Web/UI/JavaScript/Globalization/Locale/OsloHtmlElementAttributeProvider.cs)  
 

@@ -470,4 +470,6 @@ Example here:
 ## Oslo LMS controller route and fetching from the lang cache
 
 [OSLO controller in the LMS](https://github.com/Brightspace/lms/blob/master/lp/framework/web/D2L.LP.Web/UI/Globalization/Oslo/Controllers/OsloController.cs)
-  - The OsloController will use the OSLO config file brought in from the build step to match the passed in Collection. The config file is also used to know which parser to use, defined in the `serge.json` of the respective web component. Then using existing `LanguageSource` framework we fetch the collection and return it, with the `etag` on the response.
+  - The `OsloController` determines which parser to use and fetches the appropriate collection using the existing `LanguageSource` framework
+  - Parser is determined using the config file
+  - Collection is returned with an `etag` onthe response

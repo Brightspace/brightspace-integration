@@ -422,7 +422,8 @@ The OSLO rally feature:
 This section presents a collection of links to implementation code for OSLO
 
 ### BSI
-[Oslo Folder in brightSpace-integration](https://github.com/Brightspace/brightspace-integration/tree/master/oslo) 
+[Oslo Folder in brightSpace-integration](https://github.com/Brightspace/brightspace-integration/tree/master/oslo)  
+
 For each web component listed in the `.serge-mapping.json` in the BSI, the OSLO build step will fetch the languages files described in the `serge.json` from each web component. Then an XML language file matching the ones used by the LAIM tool is created to be used by the LMS. This is what generates `webcomponents.xml`
 
 A collection is created for each entry in the web components `serge.json`, named as `{PackageName}\{sergeEntry}`  

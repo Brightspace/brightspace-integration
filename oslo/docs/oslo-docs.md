@@ -472,4 +472,4 @@ Example here:
 [OSLO controller in the LMS](https://github.com/Brightspace/lms/blob/master/lp/framework/web/D2L.LP.Web/UI/Globalization/Oslo/Controllers/OsloController.cs)
   - The `OsloController` determines which parser to use and fetches the appropriate collection using the existing `LanguageSource` framework
   - Parser is determined using the config file
-  - Collection is returned with an `etag` onthe response
+  - Collection is returned with an `ETag` on the response

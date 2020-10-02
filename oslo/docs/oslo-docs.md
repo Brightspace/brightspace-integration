@@ -245,7 +245,9 @@ Selecting "Web Components" from the Tool Package dropdown and hitting search wil
 - Package
 - Collection
 - Term Name
-- Term Type Default Value
+- Term Type 
+- Default Value
+
 - Custom Value
 
 **Package**  

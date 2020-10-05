@@ -59,16 +59,16 @@ describe('Serge parsing', () => {
 
 			for (const char of ForbiddenCharacters) {
 				const js = `
-				import something from 'something-else';
+					import something from 'something-else';
 				
-				// comment to be noisy
+					// comment to be noisy
 				
-				const someConstant = 42;
+					const someConstant = 42;
 				
-				export default {
-					'termWith${char}InIt' : "Value"
-				};
-			`;
+					export default {
+						'termWith${char}InIt' : "Value"
+					};
+				`;
 
 				serge._parserPlugin = 'parse_js';
 				expect(() => serge._parse(js)).to.throw('OSLO error: Forbidden characters used in LangObject name');

@@ -55,7 +55,7 @@ describe('Serge parsing', () => {
 			}
 		});
 
-		it('throws error if a forbidden character is found in a term name', () => {
+		it('throws an error if a forbidden character is found in a term name', () => {
 
 			for (const char of ForbiddenCharacters) {
 				const js = `

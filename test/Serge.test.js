@@ -71,7 +71,10 @@ describe('Serge parsing', () => {
 				`;
 
 				serge._parserPlugin = 'parse_js';
-				expect(() => serge._parse(js)).to.throw('OSLO error: Forbidden characters used in LangObject name');
+				expect(
+					() => serge._parse(js),
+					`Expected OSLO error when parsing character '${char}'`
+				).to.throw('OSLO error: Forbidden characters used in LangObject name');
 			}
 		});
 	});

@@ -17,8 +17,6 @@ import '@brightspace-ui/core/components/dropdown/dropdown-content.js';
 // ContextMenu (MVC), PageActions, EditNavbar, NavbarItem, ContextMenu (legacy), ActionButtonMenu (legacy)
 // ButtonMenu (MVC), MediaPlayer
 import '@brightspace-ui/core/components/dropdown/dropdown-menu.js';
-// EditNavbar, Homepages
-import '@brightspace-ui/core/components/dropdown/dropdown-more.js';
 // ContextMenuPlaceholder, PageActionsMenu, Navigation, MenuFlyout, MenuFlyoutCustom, ButtonMenu,
 // ContextMenu placeholder (legacy), LayoutBuilder
 import '@brightspace-ui/core/components/dropdown/dropdown.js';

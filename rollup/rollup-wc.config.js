@@ -16,6 +16,7 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/button/button-subtle.js',
 	'./node_modules/@brightspace-ui/core/components/button/floating-buttons.js',
 	'./node_modules/@brightspace-ui/core/components/dialog/dialog-fullscreen.js',
+	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-button.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-button-subtle.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-content.js',

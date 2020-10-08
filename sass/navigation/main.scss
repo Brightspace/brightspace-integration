@@ -101,6 +101,7 @@
 	&:hover .d2l-navigation-s-group-wrapper d2l-icon,
 	&:focus .d2l-navigation-s-group-wrapper d2l-icon {
 		cursor: pointer;
+		outline: none;
 	}
 	&:hover .d2l-navigation-s-group-text,
 	&:focus .d2l-navigation-s-group-text {

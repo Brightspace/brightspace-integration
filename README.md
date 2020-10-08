@@ -127,3 +127,4 @@ The publish location will be: `https://s.brightspace.com/lib/bsi/{version}/`
 For non-hotfix releases, an automated process exists to automatically update Brightspace to point at the latest release of BSI.
 
 **Learn More:** [Brightspace BSI Sync Jobs](docs/sync-jobs.md)
+

@@ -11,12 +11,6 @@ import { clearDismissible, setDismissible } from '@brightspace-ui/core/helpers/d
 import { createClient } from '@brightspace-ui/logging';
 import { provideInstance, requestInstance } from '@brightspace-ui/core/mixins/provider-mixin.js';
 
-// MenuFlyout, Divider, TreeBrowserItemIcon, Icon, CollapsibleSection, Navigation (misc), RubricLink
-// FeedbackAttachment, ButtonMenu, IteratorButton, RubricBox, ImageLink, PersonalMenuHandle, LabyoutBuilder
-// Competencies (misc JS), Image (legacy), Grades (misc JS), Placeholder (legacy), PartialRendering,
-// Custom selector (legacy)
-import '@brightspace-ui/core/components/icons/icon.js';
-
 window.D2L = window.D2L || {};
 
 window.D2L.Intl = {

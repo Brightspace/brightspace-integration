@@ -75,9 +75,11 @@ A typical use-case for running a local BSI is to work on a local web component o
 
 ## Making a BSI Release
 
-To actually release changes to BSI and have them appear in Brightspace, you'll need to update the `package-lock.json` file, do a pull request, merge and wait for the automated tagging & releasing processes to kick in.
+From 7:30am EST to 5:30pm PST (8:30am EDT to 6:30pm PDT), a Github Actions workflow runs every hour to check for new BSI dependency releases.  If changes exist, a PR is opened with the `package-lock.json` updates (or the existing open PR is updated).  Approving and merging this PR will kick off the automated tagging & release processes and a new version of BSI will be released.
 
-### Refreshing `package-lock.json`
+If you need to add a new dependency to `package.json` or update a major version, you'll need to create this PR manually [using the steps below](#manually-refreshing-package-lockjson).  Updates to a cert or hotfix branch are also manual to make sure only what you need is updated.
+
+### Manually refreshing `package-lock.json`
 
 We use a `package-lock.json` file to lock our NPM dependencies. This ensures we only pick up changes to dependencies when we explicitly ask for them and are prepared to test them.
 

@@ -20,6 +20,8 @@ const ParseJsNameRegExp = /["']/g;
 const ParseJsEscapeRegExp = /\\(['"])/g;
 const ParseJsEscapeReplacer = (_, ch) => ch;
 
+let invalidTermFound = false;
+
 class Rewrite {
 
 	constructor(rewrite) {
@@ -158,20 +160,27 @@ class Serge {
 
 	_parse(text) {
 
+		let result;
 		switch (this._parserPlugin) {
 
 			case 'parse_json':
-				return this._parseJson(text);
-
+				result = this._parseJson(text);
+				break;
 			case 'parse_d2l_fra':
-				return this._parseFra(text);
-
+				result = this._parseFra(text);
+				break;
 			case 'parse_js':
-				return this._parseJs(text);
-
+				result = this._parseJs(text);
+				break;
 			default:
 				throw new Error(`Unsupported parser plugin for "${this._name}" ("${this._parserPlugin}")`);
 		}
+
+		if (invalidTermFound) {
+			throw 'OSLO error: Forbidden characters used in LangObject name';
+		}
+
+		return result;
 	}
 
 	_parseJson(text) {
@@ -182,8 +191,14 @@ class Serge {
 
 		for (const [name, defaultValue] of entries) {
 
-			const object = new LangObject(name, defaultValue, EmptyString);
-			collection.addObject(object);
+			const validName = Util.validLangObjectName(name, this._name);
+
+			if (validName) {
+				const object = new LangObject(name, defaultValue, EmptyString);
+				collection.addObject(object);
+			} else {
+				invalidTermFound = true;
+			}
 		}
 
 		return collection;
@@ -202,8 +217,14 @@ class Serge {
 				translation: defaultValue
 			}] = entry;
 
-			const object = new LangObject(name, defaultValue, description);
-			collection.addObject(object);
+			const validName = Util.validLangObjectName(name, this._name);
+
+			if (validName) {
+				const object = new LangObject(name, defaultValue, description);
+				collection.addObject(object);
+			} else {
+				invalidTermFound = true;
+			}
 		}
 
 		return collection;
@@ -226,8 +247,14 @@ class Serge {
 				ParseJsEscapeReplacer
 			);
 
-			const object = new LangObject(name, defaultValue, description);
-			collection.addObject(object);
+			const validName = Util.validLangObjectName(name, this._name);
+
+			if (validName) {
+				const object = new LangObject(name, defaultValue, description);
+				collection.addObject(object);
+			} else {
+				invalidTermFound = true;
+			}
 		}
 
 		return collection;

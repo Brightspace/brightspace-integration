@@ -16,6 +16,7 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/button/button-subtle.js',
 	'./node_modules/@brightspace-ui/core/components/button/floating-buttons.js',
 	'./node_modules/@brightspace-ui/core/components/dialog/dialog-fullscreen.js',
+	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-button.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-button-subtle.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-content.js',
@@ -23,7 +24,11 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-menu.js',
 	'./node_modules/@brightspace-ui/core/components/dropdown/dropdown-more.js',
 	'./node_modules/@brightspace-ui/core/components/expand-collapse/expand-collapse-content.js',
+	'./node_modules/@brightspace-ui/core/components/icons/icon.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-checkbox.js',
+	'./node_modules/@brightspace-ui/core/components/inputs/input-date.js',
+	'./node_modules/@brightspace-ui/core/components/inputs/input-date-time.js',
+	'./node_modules/@brightspace-ui/core/components/inputs/input-number.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-search.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-text.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-time.js',
@@ -40,6 +45,7 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/switch/switch-visibility.js',
 	'./node_modules/@brightspace-ui/core/components/tooltip/tooltip.js',
 	'./node_modules/@brightspace-ui-labs/media-player/media-player.js',
+	'./node_modules/@brightspace-ui/htmleditor/htmleditor.js',
 	'./node_modules/@brightspace-ui-labs/pagination/pagination.js',
 	'./node_modules/d2l-activities/components/d2l-subtitle/d2l-subtitle.js',
 	'./node_modules/d2l-button-group/d2l-button-group.js',
@@ -60,6 +66,9 @@ const componentFiles = [
 	'./node_modules/d2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js',
 	'./node_modules/d2l-save-status/d2l-save-status.js',
 	'./node_modules/d2l-users/components/d2l-profile-image-base.js',
+	'./node_modules/d2l-ads-scheduler/src/components/d2l-manage-schedules.js',
+	'./node_modules/d2l-ads-scheduler/src/components/d2l-schedule-logs.js',
+	'./node_modules/d2l-ads-scheduler/src/components/d2l-wizard-manager.js',
 	'./web-components/d2l-opt-in-flyout-webcomponent.js',
 	'./web-components/d2l-scroll-spy.js',
 	'./web-components/d2l-simple-overlay.js',
@@ -68,6 +77,8 @@ const componentFiles = [
 	'./web-components/intl-messageformat-parser.js'
 ];
 const appFiles = [
+	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-assignment-editor/d2l-activity-assignment-editor.js',
+	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-quiz-editor/d2l-activity-quiz-editor.js',
 	'./node_modules/d2l-engagement-dashboard/engagement-dashboard.js',
 	'./web-components/d2l-activity-alignments.js',
 	'./web-components/d2l-activity-collections.js',
@@ -75,6 +86,7 @@ const appFiles = [
 	'./web-components/d2l-activity-exemptions.js',
 	'./web-components/d2l-awards-leaderboard-ui.js',
 	'./web-components/d2l-cpd-report.js',
+	'./web-components/d2l-discovery-app.js',
 	'./web-components/d2l-enrollment-collection-widget.js',
 	'./web-components/d2l-enrollment-summary-view.js',
 	'./web-components/d2l-image-banner-overlay.js',
@@ -93,7 +105,8 @@ const appFiles = [
 	'./web-components/d2l-content-creation.js',
 	'./web-components/d2l-user-feedback.js',
 	'./node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation.js',
-	'./node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation-admin.js'
+	'./node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation-admin.js',
+	'./node_modules/d2l-outcomes-overall-achievement/src/mastery-view-table/mastery-view-table.js'
 ];
 // NOTE: Ideally these should all be dynamically imported by apps.
 //       Please don't add new entries to this list.

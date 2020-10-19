@@ -9,24 +9,7 @@ import { announce } from '@brightspace-ui/core/helpers/announce';
 import { registerGestureSwipe } from '@brightspace-ui/core/helpers/gestures.js';
 import { clearDismissible, setDismissible } from '@brightspace-ui/core/helpers/dismissible';
 import { createClient } from '@brightspace-ui/logging';
-
-// ActionButtonMenu (legacy), MediaPlayer
-import '@brightspace-ui/core/components/dropdown/dropdown-button.js';
-// Navbar, Flyout (MVC), LayoutBuilder
-import '@brightspace-ui/core/components/dropdown/dropdown-content.js';
-// ContextMenu (MVC), PageActions, EditNavbar, NavbarItem, ContextMenu (legacy), ActionButtonMenu (legacy)
-// ButtonMenu (MVC), MediaPlayer
-import '@brightspace-ui/core/components/dropdown/dropdown-menu.js';
-// EditNavbar, Homepages
-import '@brightspace-ui/core/components/dropdown/dropdown-more.js';
-// ContextMenuPlaceholder, PageActionsMenu, Navigation, MenuFlyout, MenuFlyoutCustom, ButtonMenu,
-// ContextMenu placeholder (legacy), LayoutBuilder
-import '@brightspace-ui/core/components/dropdown/dropdown.js';
-// MenuFlyout, Divider, TreeBrowserItemIcon, Icon, CollapsibleSection, Navigation (misc), RubricLink
-// FeedbackAttachment, ButtonMenu, IteratorButton, RubricBox, ImageLink, PersonalMenuHandle, LabyoutBuilder
-// Competencies (misc JS), Image (legacy), Grades (misc JS), Placeholder (legacy), PartialRendering,
-// Custom selector (legacy)
-import '@brightspace-ui/core/components/icons/icon.js';
+import { provideInstance, requestInstance } from '@brightspace-ui/core/mixins/provider-mixin.js';
 
 window.D2L = window.D2L || {};
 
@@ -85,4 +68,9 @@ window.D2L.Dismissible = {
 	Set: function(cb) {
 		return setDismissible(cb);
 	}
+};
+
+window.D2L.Provider = {
+	provideInstance: provideInstance,
+	requestInstance: requestInstance
 };

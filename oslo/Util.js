@@ -1,5 +1,10 @@
 'use strict';
 
+const ForbiddenCharacterAllowedList = [
+	'd2l-activities\\activityEditor',
+	'@d2l\\d2l-attachment\\d2l-attachment'
+];
+const ForbiddenCharacters = ['.'];
 const EscapeRegExp = /([^a-zA-Z0-9\\:_-])/g;
 const EscapeMap = new Map();
 const EscapeReplacer = (_, ch) => {
@@ -41,8 +46,21 @@ function backSlash(value) {
 	return value.replace(ForwardSlashRegExp, BackSlashChar);
 }
 
+function validLangObjectName(objectName, collectionName) {
+	const nameContainsForbiddenCharacter = ForbiddenCharacters.some(char => objectName.includes(char));
+
+	if (nameContainsForbiddenCharacter && !ForbiddenCharacterAllowedList.includes(collectionName)) {
+		console.error(`OSLO error: LangObject name "${objectName}" in collection "${collectionName}" cannot contain forbidden characters`);
+		return false;
+	}
+
+	return true;
+}
+
 exports.byFirstArrayItem = byFirstArrayItem;
 exports.escapeObjectName = escapeObjectName;
 exports.forwardSlash = forwardSlash;
 exports.backSlash = backSlash;
 exports.ForwardSlashChar = ForwardSlashChar;
+exports.validLangObjectName = validLangObjectName;
+exports.ForbiddenCharacters = ForbiddenCharacters;

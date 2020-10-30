@@ -151,7 +151,7 @@ export default merge(config, {
 		}),
 		replace({
 			define: 'defineNoYouDont', /* prevents UMD time bomb as fastdom will try to call define() on UMD FRA pages */
-			include: 'node_modules/fastdom/fastdom.js'
+			include: ['node_modules/fastdom/fastdom.js', 'node_modules/focus-visible/dist/focus-visible.js']
 		})
 	]
 });

@@ -34,7 +34,7 @@
     "@babel/preset-env": "^7",
     "@babel/register": "^7",
     "@brightspace-ui-labs/media-player": "^1",
-    "@brightspace-ui-labs/pagination": "^0",
+    "@brightspace-ui-labs/pagination": "^1",
     "@brightspace-ui-labs/user-feedback": "^1",
     "@brightspace-ui/core": "^1.78.0",
     "@brightspace-ui/htmleditor": "^0",

@@ -64,7 +64,7 @@
     "d2l-content-store": "Brightspace/d2l-content-store#semver:^0",
     "d2l-content-store-add-content": "Brightspace/content-store-add-content#semver:^0",
     "d2l-cpd": "Brightspace/continuous-professional-development#semver:^1",
-    "d2l-discovery-fra": "github:Brightspace/discovery-fra#semver:^3",
+    "d2l-discovery-fra": "github:Brightspace/discovery-fra#bsi-temp-fix",
     "d2l-engagement-dashboard": "github:Brightspace/insights-engagement-dashboard#semver:^1",
     "d2l-fetch": "Brightspace/d2l-fetch.git#semver:^2",
     "d2l-fetch-auth": "^1",

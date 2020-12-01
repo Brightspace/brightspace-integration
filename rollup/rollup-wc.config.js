@@ -83,6 +83,7 @@ const appFiles = [
 	'./node_modules/@brightspace-hmc/foundation-components/components/activity/editor/d2l-hc-activity-editor.js',
 	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-assignment-editor/d2l-activity-assignment-editor.js',
 	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-quiz-editor/d2l-activity-quiz-editor.js',
+	'./node_modules/d2l-activities/components/d2l-work-to-do/d2l-work-to-do.js',
 	'./node_modules/d2l-engagement-dashboard/engagement-dashboard.js',
 	'./web-components/d2l-activity-alignments.js',
 	'./web-components/d2l-activity-collections.js',
@@ -111,8 +112,7 @@ const appFiles = [
 	'./web-components/d2l-user-feedback.js',
 	'./node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation.js',
 	'./node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation-admin.js',
-	'./node_modules/d2l-outcomes-overall-achievement/src/mastery-view-table/mastery-view-table.js',
-	'./node_modules/d2l-activities/components/d2l-work-to-do/d2l-work-to-do.js'
+	'./node_modules/d2l-outcomes-overall-achievement/src/mastery-view-table/mastery-view-table.js'
 ];
 // NOTE: Ideally these should all be dynamically imported by apps.
 //       Please don't add new entries to this list.

@@ -75,7 +75,7 @@
     "d2l-my-courses": "Brightspace/d2l-my-courses-ui#semver:^11",
     "d2l-my-dashboards": "github:Brightspace/d2l-my-dashboards-ui#semver:^3",
     "d2l-navigation": "BrightspaceUI/navigation#semver:^4",
-    "d2l-opt-in-flyout-webcomponent": "Brightspace/d2l-opt-in-flyout-webcomponent#semver:^2",
+    "d2l-opt-in-flyout-webcomponent": "BrightspaceUILabs/opt-in-flyout#semver:^2",
     "d2l-organizations": "BrightspaceHypermediaComponents/organizations#semver:^5",
     "d2l-outcomes-level-of-achievements": "Brightspace/outcomes-level-of-achievement-ui.git#semver:^3",
     "d2l-outcomes-overall-achievement": "Brightspace/d2l-outcomes-overall-achievement.git#semver:^1",

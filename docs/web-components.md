@@ -15,7 +15,7 @@ As a GitHub reference:
 ```json
 // package.json
 {
-  "devDependencies": {
+  "dependencies": {
     "d2l-navigation": "BrightspaceUI/navigation#semver:^3"
   }
 }
@@ -28,7 +28,7 @@ Alternately, if your component is published to NPM you can pull it in that way:
 ```json
 // package.json
 {
-  "devDependencies": {
+  "dependencies": {
     "@brightspace-ui/core": "^1"
   }
 }

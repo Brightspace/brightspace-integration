@@ -21,8 +21,13 @@ const packages = [
 	'highcharts',
 	'mobx'
 ];
+const ignorePackages = ['polymer-cli'];
 
 function validate(json, depth, parentKey) {
+
+	const ignored = ignorePackages.indexOf(parentKey) > -1;
+	if (ignored) return;
+
 	depth++;
 	for (const key in json) {
 		if (depth > 1) {
@@ -38,6 +43,7 @@ function validate(json, depth, parentKey) {
 			validate(subDeps, depth, key);
 		}
 	}
+
 }
 
 fs.readFile(packageLockPath, { encoding: 'utf8' }, function(err, jsonString) {

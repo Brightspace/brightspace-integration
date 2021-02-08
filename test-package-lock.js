@@ -1,48 +1,40 @@
 'use strict';
 
 /* eslint-disable no-console */
-
-const fs = require('fs');
-const path = require('path');
+const chalk = require('chalk'),
+	fs = require('fs'),
+	path = require('path');
 
 const packageLockPath = path.join(__dirname, 'package-lock.json');
-const packages = [
-	'@adobe/lit-mobx',
-	'@brightspace-ui/core',
-	'@brightspace-ui/intl',
-	'd2l-fetch',
-	'd2l-fetch-auth',
-	'd2l-fetch-dedupe',
-	'd2l-fetch-simple-cache',
-	'd2l-hypermedia-constants',
-	'd2l-organization-hm-behavior',
-	'd2l-polymer-siren-behaviors',
-	'd2l-telemetry-browser-client',
-	'highcharts',
-	'mobx'
+const ignorePackages = [
+	'isarray' // d2l-capture-central -> page.js -> path-to-regexp -> isarray v0.0.1 (https://github.com/visionmedia/page.js/issues/462)
 ];
-const ignorePackages = ['polymer-cli'];
 
 function validate(json, depth, parentKey) {
 
-	const ignored = ignorePackages.indexOf(parentKey) > -1;
-	if (ignored) return;
+	let numErrors = 0;
 
 	depth++;
 	for (const key in json) {
-		if (depth > 1) {
-			const isPolymer = json[key].requires !== undefined && json[key].requires['@polymer/polymer'] !== undefined;
-			const isLit = json[key].requires !== undefined && (json[key].requires['lit-element'] !== undefined || json[key].requires['lit-html']);
-			if (isPolymer || isLit || packages.indexOf(key) > -1) {
-				console.error(`Duplicate dependency detected "${key}" in "${parentKey}". All front-end dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.`);
-				process.exitCode = 1;
+		const isDev = json[key].dev !== undefined;
+		if (!isDev) {
+			if (depth > 1) {
+				const isIgnored = ignorePackages.indexOf(key) > -1;
+				if (isIgnored) {
+					console.log(chalk.yellow(`Warning: ignoring "${key}" in "${parentKey}"`));
+				} else {
+					numErrors++;
+					console.log(`"${key}" in "${parentKey}"`);
+				}
+			}
+			const subDeps = json[key].dependencies;
+			if (subDeps !== undefined) {
+				numErrors += validate(subDeps, depth, key);
 			}
 		}
-		const subDeps = json[key].dependencies;
-		if (subDeps !== undefined) {
-			validate(subDeps, depth, key);
-		}
 	}
+
+	return numErrors;
 
 }
 
@@ -54,7 +46,19 @@ fs.readFile(packageLockPath, { encoding: 'utf8' }, function(err, jsonString) {
 		return;
 	}
 
+	console.log(chalk.blue('Checking front-end dependencies for duplicates...'));
+	console.group();
+
 	const json = JSON.parse(jsonString);
-	validate(json.dependencies, 0, '');
+	const numErrors = validate(json.dependencies, 0, '');
+
+	console.groupEnd();
+	if (numErrors === 0) {
+		console.log(chalk.green('Success!'));
+	} else {
+		console.log(chalk.red(`Validation failed -- ${numErrors} duplicates found.`));
+		console.log('\nAll front-end dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.');
+		process.exitCode = 1;
+	}
 
 });

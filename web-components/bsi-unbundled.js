@@ -27,8 +27,8 @@ d2lfetch.use({
 		enableTokenCache: true
 	}
 });
-d2lfetch.use({name: 'dedupe', fn: fetchDedupe});
-d2lfetch.use({name: 'simple-cache', fn: fetchSimpleCache});
+d2lfetch.use({ name: 'dedupe', fn: fetchDedupe });
+d2lfetch.use({ name: 'simple-cache', fn: fetchSimpleCache });
 window.d2lfetch = d2lfetch;
 
 window.D2L.Telemetry = {
@@ -42,7 +42,7 @@ window.D2L.Telemetry = {
 		if (endpoint === null) {
 			throw new Error('Unable to create telemetry client, missing endpoint.');
 		}
-		const client = new telemetry.Client({endpoint: endpoint});
+		const client = new telemetry.Client({ endpoint: endpoint });
 		return client;
 	}
 };
@@ -59,7 +59,7 @@ setCancelSyntheticClickEvents(false);
 window.D2L.Announce = announce;
 
 window.D2L.Gestures = window.D2L.Gestures || {};
-window.D2L.Gestures.Swipe = {register: registerGestureSwipe};
+window.D2L.Gestures.Swipe = { register: registerGestureSwipe };
 
 window.D2L.Dismissible = {
 	Clear: function(id) {

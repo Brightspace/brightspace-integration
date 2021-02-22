@@ -8,7 +8,7 @@ module.exports = {
 	dedupe: true,
 	hostname: 'localhost',
 	middlewares: [
-		cors({origin: '*'}),
+		cors({ origin: '*' }),
 		function rewrite(context, next) {
 			if (context.url.startsWith('/bsi.') || context.url.startsWith('/datagrid.') || context.url.startsWith('/homepages.') || context.url.startsWith('/images/')) {
 				context.url = '/build' + context.url;

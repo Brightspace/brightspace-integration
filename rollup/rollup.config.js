@@ -10,8 +10,8 @@ const jsConfig = {
 		commonjs(),
 		copy({
 			targets: [
-				{src: 'node_modules/@brightspace-ui/core/components/icons/images', dest: './build'},
-				{src: 'email-icons', dest: './build/images'}
+				{ src: 'node_modules/@brightspace-ui/core/components/icons/images', dest: './build' },
+				{ src: 'email-icons', dest: './build/images' }
 			]
 		})
 	],
@@ -40,7 +40,7 @@ const cssConfigs = [
 				minimize: true, /* uses cssnano */
 				plugins: [autoprefixer()],
 				use: [
-					['sass', {outputStyle: 'expanded'}]
+					['sass', { outputStyle: 'expanded' }]
 				]
 			})
 		],

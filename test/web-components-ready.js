@@ -1,5 +1,5 @@
 import wcr from '../js/d2l-web-components-ready.js';
-import {use} from 'chai';
+import { use } from 'chai';
 import sinonChai from 'sinon-chai';
 
 use(sinonChai).should();

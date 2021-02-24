@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 20
 
     env:
-      BRANCH_NAME: ghworkflow/bsi_auto_update
+      BRANCH_NAME: fixing_gh_auto_update
 
     steps:
       - name: Checkout Repository

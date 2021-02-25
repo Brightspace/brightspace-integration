@@ -17,7 +17,7 @@ jobs:
         fetch-depth: 0
     - name: Verify Release
       id: verify-release
-      run: bash -e .github/workflows/scripts/verify-release.sh
+      run: bash -e .github/workflows/verify-release.sh
       env:
         GITHUB_TAG: ${{ github.ref }}
         GITHUB_COMMIT_ID: ${{ github.sha }}
@@ -27,13 +27,13 @@ jobs:
     - name: Get JWT
       id: get-jwt
       if: steps.verify-release.outputs.bsi-version
-      run: bash -e .github/workflows/scripts/get-jwt.sh
+      run: bash -e .github/workflows/get-jwt.sh
       env:
         BSI_SYNC_PEM: ${{ secrets.BSI_SYNC_PEM }}
     - name: Get App Token
       id: get-app-token
       if: steps.verify-release.outputs.bsi-version
-      run: bash -e .github/workflows/scripts/get-app-token.sh
+      run: bash -e .github/workflows/get-app-token.sh
       env:
         BSI_SYNC_JWT: ${{ steps.get-jwt.outputs.jwt }}
     - name: Repository Dispatch

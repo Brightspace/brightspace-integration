@@ -165,7 +165,12 @@ export default merge(config, {
 		}),
 		replace({
 			define: 'defineNoYouDont', /* prevents UMD time bomb as fastdom will try to call define() on UMD FRA pages */
-			include: ['node_modules/fastdom/fastdom.js', 'node_modules/focus-visible/dist/focus-visible.js']
+			include: ['node_modules/fastdom/fastdom.js', 'node_modules/focus-visible/dist/focus-visible.js'],
+			preventAssignment: true
+		}),
+		replace({
+			'process.env.NODE_ENV': JSON.stringify('production'),
+			preventAssignment: true
 		}),
 		dynamicImportVars({
 			exclude: 'node_modules/d2l-html-editor/d2l-html-editor.js',

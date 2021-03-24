@@ -3,9 +3,6 @@ const $_documentContainer = document.createElement('template');
 
 $_documentContainer.innerHTML = `<custom-style>
 	<style is="custom-style" include="d2l-table-style">
-		.d2l-dialog-body d2l-table-wrapper {
-			--d2l-scroll-wrapper-action-offset: -10px;
-		}
 		.d2l-grid-mvc > * > tr > td {
 			vertical-align: top;
 		}

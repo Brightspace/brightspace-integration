@@ -32,6 +32,7 @@
     "@brightspace-ui-labs/media-player": "^1",
     "@brightspace-ui-labs/pagination": "^1",
     "@brightspace-ui-labs/user-feedback": "^1",
+    "@brightspace-ui-labs/user-profile-card": "^0.1.7",
     "@brightspace-ui/core": "^1.114.0",
     "@brightspace-ui/htmleditor": "^1",
     "@brightspace-ui/intl": "^3",

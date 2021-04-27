@@ -78,7 +78,7 @@ const componentFiles = [
 	'./node_modules/d2l-ads-scheduler/src/components/d2l-manage-schedules.js',
 	'./node_modules/d2l-ads-scheduler/src/components/d2l-schedule-logs.js',
 	'./node_modules/d2l-ads-scheduler/src/components/d2l-wizard-manager.js',
-	'./web-components/d2l-html-block.js'
+	'./web-components/d2l-html-block.js',
 	'./web-components/d2l-opt-in-flyout-webcomponent.js',
 	'./web-components/d2l-scroll-spy.js',
 	'./web-components/d2l-simple-overlay.js',

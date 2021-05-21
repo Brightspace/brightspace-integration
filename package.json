@@ -73,7 +73,6 @@
     "d2l-scroll-spy": "BrightspaceUI/scroll-spy#semver:^1",
     "d2l-sequences": "BrightspaceHypermediaComponents/sequences#semver:^2",
     "d2l-simple-overlay": "Brightspace/simple-overlay#semver:^3",
-    "d2l-table": "BrightspaceUI/table#semver:^2",
     "d2l-teacher-course-creation": "Brightspace/custom-teacher-course-creation#semver:^1",
     "d2l-users": "BrightspaceHypermediaComponents/users#semver:^2",
     "intl-messageformat-parser": "^3"

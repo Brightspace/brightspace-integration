@@ -106,7 +106,7 @@
     "node-sass": "^4",
     "rally": "^2",
     "rimraf": "^3",
-    "rollup": "^2",
+    "rollup": "2.48.0",
     "rollup-plugin-copy": "^3",
     "rollup-plugin-postcss": "^3",
     "rollup-plugin-uglify": "^6",

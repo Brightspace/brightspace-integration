@@ -29,7 +29,9 @@
   },
   "homepage": "https://github.com/Brightspace/brightspace-integration",
   "dependencies": {
+    "@brightspace-ui-labs/lit-router": "^1",
     "@brightspace-ui-labs/media-player": "^1",
+    "@brightspace-ui-labs/ou-filter": "^1",
     "@brightspace-ui-labs/pagination": "^1",
     "@brightspace-ui-labs/user-feedback": "^1",
     "@brightspace-ui-labs/user-profile-card": "^0.5.3",

@@ -65,6 +65,14 @@
 	&[primary]:focus, &[primary].d2l-button-focus {
 		@include _d2l-button-focus();
 	}
+	d2l-dialog-fullscreen &[slot="footer"] {
+		margin-bottom: 18px;
+		margin-right: 18px;
+	}
+	[dir="rtl"] d2l-dialog-fullscreen &[slot="footer"] {
+		margin-left: 18px;
+		margin-right: 0;
+	}
 }
 
 /* these are still referenced by a few FRAs, button-filter-groups, iterator */

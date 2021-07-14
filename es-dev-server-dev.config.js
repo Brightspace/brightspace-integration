@@ -21,7 +21,7 @@ module.exports = {
 		{
 			transform(context) {
 				// removing detection of "define" to avoid UMD time bomb with UMD FRAs
-				if (context.path === '/node_modules/fastdom/fastdom.js') {
+				if (context.path === '/node_modules/fastdom/fastdom.js' || context.path === '/node_modules/focus-visible/dist/focus-visible.js') {
 					const transformedBody = context.body.replace(/\bdefine\b/g, 'defineNoYouDont');
 					return { body: transformedBody };
 				}
